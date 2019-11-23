@@ -46,12 +46,12 @@
   };
 </script>
 
-  <meta name="description" content="1、生成第二个ssh key1ssh-keygen -t rsa -C &quot;catcat@gmail.com&quot; 2、打开ssh-agent,添加私钥123seven@Sevens-MacBook-Pro:~&#x2F;.ssh$ ssh-agent -sseven@Sevens-MacBook-Pro:~&#x2F;.ssh$ ssh-add ~&#x2F;.ssh&#x2F;id_rsaseven@Sevens-MacBook-Pro:">
+  <meta name="description" content="1、生成第二个ssh key1ssh-keygen -t rsa -C &quot;catcat@gmail.com&quot;2、打开ssh-agent,添加私钥123seven@Sevens-MacBook-Pro:~&#x2F;.ssh$ ssh-agent -sseven@Sevens-MacBook-Pro:~&#x2F;.ssh$ ssh-add ~&#x2F;.ssh&#x2F;id_rsaseven@Sevens-MacBook-Pro:~">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一台电脑部署两个GitHub账号">
 <meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;11&#x2F;23&#x2F;%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%83%A8%E7%BD%B2%E4%B8%A4%E4%B8%AAGitHub%E8%B4%A6%E5%8F%B7&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1、生成第二个ssh key1ssh-keygen -t rsa -C &quot;catcat@gmail.com&quot; 2、打开ssh-agent,添加私钥123seven@Sevens-MacBook-Pro:~&#x2F;.ssh$ ssh-agent -sseven@Sevens-MacBook-Pro:~&#x2F;.ssh$ ssh-add ~&#x2F;.ssh&#x2F;id_rsaseven@Sevens-MacBook-Pro:">
+<meta property="og:description" content="1、生成第二个ssh key1ssh-keygen -t rsa -C &quot;catcat@gmail.com&quot;2、打开ssh-agent,添加私钥123seven@Sevens-MacBook-Pro:~&#x2F;.ssh$ ssh-agent -sseven@Sevens-MacBook-Pro:~&#x2F;.ssh$ ssh-add ~&#x2F;.ssh&#x2F;id_rsaseven@Sevens-MacBook-Pro:~">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-11-23T09:20:24.952Z">
 <meta name="twitter:card" content="summary">
@@ -145,17 +145,27 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">0</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories<span class="badge">0</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>Sitemap</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>Commonweal 404</a>
 
   </li>
   </ul>
@@ -212,6 +222,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -222,8 +239,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1、生成第二个ssh-key"><a href="#1、生成第二个ssh-key" class="headerlink" title="1、生成第二个ssh key"></a>1、生成第二个ssh key</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"catcat@gmail.com"</span></span><br></pre></td></tr></table></figure>
-<h2 id="2、打开ssh-agent-添加私钥"><a href="#2、打开ssh-agent-添加私钥" class="headerlink" title="2、打开ssh-agent,添加私钥"></a>2、打开ssh-agent,添加私钥</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">seven@Sevens-MacBook-Pro:~/.ssh$ ssh-agent -s</span><br><span class="line">seven@Sevens-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa</span><br><span class="line">seven@Sevens-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa_catcat</span><br></pre></td></tr></table></figure>
+        <h2 id="1、生成第二个ssh-key"><a href="#1、生成第二个ssh-key" class="headerlink" title="1、生成第二个ssh key"></a>1、生成第二个ssh key</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"catcat@gmail.com"</span></span><br></pre></td></tr></table></figure><h2 id="2、打开ssh-agent-添加私钥"><a href="#2、打开ssh-agent-添加私钥" class="headerlink" title="2、打开ssh-agent,添加私钥"></a>2、打开ssh-agent,添加私钥</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">seven@Sevens-MacBook-Pro:~/.ssh$ ssh-agent -s</span><br><span class="line">seven@Sevens-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa</span><br><span class="line">seven@Sevens-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa_catcat</span><br></pre></td></tr></table></figure><a id="more"></a>
+
 <h2 id="3、创建并修改config文件"><a href="#3、创建并修改config文件" class="headerlink" title="3、创建并修改config文件"></a>3、创建并修改config文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">seven@Sevens-MacBook-Pro:~/.ssh$ touch config</span><br><span class="line">seven@Sevens-MacBook-Pro:~/.ssh$ vim config</span><br></pre></td></tr></table></figure>
 <p>结果如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># github</span></span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa</span><br><span class="line">    User dogdog</span><br><span class="line"></span><br><span class="line"><span class="comment"># github </span></span><br><span class="line">Host catcat.github.com <span class="comment">#这里的设置很关键，是第二个解析的别名，后续hexo依靠在__config.yml文件的对应设置（选择对应的ssh key）来部署到GitHub pages上</span></span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa_catcat</span><br><span class="line">    User catcat</span><br></pre></td></tr></table></figure>
@@ -250,6 +267,43 @@
     
     
     
+        <div class="reward-container">
+  <div>请我喝咖啡.</div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="John Doe WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="John Doe Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>John Doe
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="http://youyanglam.github.io/2019/11/23/%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%83%A8%E7%BD%B2%E4%B8%A4%E4%B8%AAGitHub%E8%B4%A6%E5%8F%B7/" title="一台电脑部署两个GitHub账号">http://youyanglam.github.io/2019/11/23/%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%83%A8%E7%BD%B2%E4%B8%A4%E4%B8%AAGitHub%E8%B4%A6%E5%8F%B7/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
 
       <footer class="post-footer">
 
@@ -365,6 +419,26 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 

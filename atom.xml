@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://youyanglam.github.io/"/>
+  <updated>2019-11-23T09:20:24.952Z</updated>
+  <id>http://youyanglam.github.io/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一台电脑部署两个GitHub账号</title>
+    <link href="http://youyanglam.github.io/2019/11/23/%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%83%A8%E7%BD%B2%E4%B8%A4%E4%B8%AAGitHub%E8%B4%A6%E5%8F%B7/"/>
+    <id>http://youyanglam.github.io/2019/11/23/%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%83%A8%E7%BD%B2%E4%B8%A4%E4%B8%AAGitHub%E8%B4%A6%E5%8F%B7/</id>
+    <published>2019-11-23T07:23:25.000Z</published>
+    <updated>2019-11-23T09:20:24.952Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1、生成第二个ssh-key"><a href="#1、生成第二个ssh-key" class="headerlink" title="1、生成第二个ssh key"></a>1、生成第二个ssh key</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"catcat@gmail.com"</span></span><br></pre></td></tr></table></figure><h2 id="2、打开ssh-agent-添加私钥"><a href="#2、打开ssh-agent-添加私钥" class="headerlink" title="2、打开ssh-agent,添加私钥"></a>2、打开ssh-agent,添加私钥</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">seven@Sevens-MacBook-Pro:~/.ssh$ ssh-agent -s</span><br><span class="line">seven@Sevens-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa</span><br><span class="line">seven@Sevens-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa_catcat</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="3、创建并修改config文件"><a href="#3、创建并修改config文件" class="headerlink" title="3、创建并修改config文件"></a>3、创建并修改config文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">seven@Sevens-MacBook-Pro:~/.ssh$ touch config</span><br><span class="line">seven@Sevens-MacBook-Pro:~/.ssh$ vim config</span><br></pre></td></tr></table></figure><p>结果如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># github</span></span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa</span><br><span class="line">    User dogdog</span><br><span class="line"></span><br><span class="line"><span class="comment"># github </span></span><br><span class="line">Host catcat.github.com <span class="comment">#这里的设置很关键，是第二个解析的别名，后续hexo依靠在__config.yml文件的对应设置（选择对应的ssh key）来部署到GitHub pages上</span></span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa_catcat</span><br><span class="line">    User catcat</span><br></pre></td></tr></table></figure><p>验证添加是否成功</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">seven@Sevens-MacBook-Pro:~/.ssh$ ssh -T git@github.com</span><br><span class="line">Hi dogdog! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br><span class="line"><span class="string">seven@Sevens-MacBook-Pro:~/.ssh$ ssh -T git@catcat.github.com</span></span><br><span class="line"><span class="string">Hi catcat! You'</span>ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure><h2 id="4、创建第二个Github账号的博客"><a href="#4、创建第二个Github账号的博客" class="headerlink" title="4、创建第二个Github账号的博客"></a>4、创建第二个Github账号的博客</h2><h3 id="4-1、创建catcat文件夹-下载hexo库"><a href="#4-1、创建catcat文件夹-下载hexo库" class="headerlink" title="4.1、创建catcat文件夹,下载hexo库"></a>4.1、创建catcat文件夹,下载hexo库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir catcat</span><br><span class="line"><span class="built_in">cd</span> catcat</span><br><span class="line">hexo init</span><br><span class="line"><span class="comment">#npm install</span></span><br></pre></td></tr></table></figure><h3 id="4-2、启动本地服务"><a href="#4-2、启动本地服务" class="headerlink" title="4.2、启动本地服务"></a>4.2、启动本地服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">seven@Sevens-MacBook-Pro:~/Blog/catcat$ hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure><p>效果如下：</p><p>假装是一张图.jpg</p><h3 id="4-3、部署到GitHub-pages"><a href="#4-3、部署到GitHub-pages" class="headerlink" title="4.3、部署到GitHub pages"></a>4.3、部署到GitHub pages</h3><p>设置配置文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">seven@Sevens-MacBook-Pro:~/Blog/catcat$ vim _config.yml</span><br></pre></td></tr></table></figure><p>发布</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">seven@Sevens-MacBook-Pro:~/Blog/catcat$ hexo clean</span><br><span class="line">seven@Sevens-MacBook-Pro:~/Blog/catcat$ hexo g -d</span><br></pre></td></tr></table></figure><h2 id="5、补充"><a href="#5、补充" class="headerlink" title="5、补充"></a>5、补充</h2><p>如果之前有设置全局用户名和邮箱的话，需要unset一下</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure><p>然后在不同的仓库下设置局部的用户名和邮箱<br>比如在公司的repository下</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name <span class="string">"yourname"</span> </span><br><span class="line">git config user.email <span class="string">"youremail"</span></span><br></pre></td></tr></table></figure><p>在自己的github的仓库再执行刚刚的命令一遍即可,这样就可以在不同的仓库，以不同的账号登录。</p><h2 id="6、参考链接"><a href="#6、参考链接" class="headerlink" title="6、参考链接"></a>6、参考链接</h2><p>1、<a href="https://www.jianshu.com/p/0ee8b976ceab" target="_blank" rel="noopener">多个github帐号更新多个hexo博客</a></p><p>2、<a href="https://zhuanlan.zhihu.com/p/69218641" target="_blank" rel="noopener">一台电脑部署两个或多个Hexo博客（一台电脑使用两个或多个 GitHub 账号）</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1、生成第二个ssh-key&quot;&gt;&lt;a href=&quot;#1、生成第二个ssh-key&quot; class=&quot;headerlink&quot; title=&quot;1、生成第二个ssh key&quot;&gt;&lt;/a&gt;1、生成第二个ssh key&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh-keygen -t rsa -C &lt;span class=&quot;string&quot;&gt;&quot;catcat@gmail.com&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&quot;2、打开ssh-agent-添加私钥&quot;&gt;&lt;a href=&quot;#2、打开ssh-agent-添加私钥&quot; class=&quot;headerlink&quot; title=&quot;2、打开ssh-agent,添加私钥&quot;&gt;&lt;/a&gt;2、打开ssh-agent,添加私钥&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;seven@Sevens-MacBook-Pro:~/.ssh$ ssh-agent -s&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;seven@Sevens-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;seven@Sevens-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa_catcat&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>文章标题</title>
+    <link href="http://youyanglam.github.io/2019/11/23/%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/"/>
+    <id>http://youyanglam.github.io/2019/11/23/%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/</id>
+    <published>2019-11-22T16:43:40.000Z</published>
+    <updated>2019-11-22T16:56:22.698Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h2><h3 id="标题三"><a href="#标题三" class="headerlink" title="标题三"></a>标题三</h3><p><a href="https://www.baidu.com" target="_blank" rel="noopener">link baidu.com</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">foo</span></span>()&#123;</span><br><span class="line">    console.log(<span class="string">'这是一段很牛逼的代码'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;标题二&quot;&gt;&lt;a href=&quot;#标题二&quot; class=&quot;headerlink&quot; title=&quot;标题二&quot;&gt;&lt;/a&gt;标题二&lt;/h2&gt;&lt;h3 id=&quot;标题三&quot;&gt;&lt;a href=&quot;#标题三&quot; class=&quot;headerlink&quot; title=&quot;标题三&quot;&gt;&lt;/a&gt;标题三&lt;/h
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://youyanglam.github.io/2019/11/22/hello-world/"/>
+    <id>http://youyanglam.github.io/2019/11/22/hello-world/</id>
+    <published>2019-11-22T10:29:05.234Z</published>
+    <updated>2019-11-22T10:29:05.234Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
