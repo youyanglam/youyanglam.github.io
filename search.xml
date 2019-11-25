@@ -3,7 +3,8 @@
   <entry>
     <title>vmrun命令操作VMWare Fusion</title>
     <url>/2019/11/25/vmrun%E5%91%BD%E4%BB%A4%E6%93%8D%E4%BD%9CVMWare-Fusion/</url>
-    <content><![CDATA[<h2 id="0、mac下路径有空格的环境变量设置"><a href="#0、mac下路径有空格的环境变量设置" class="headerlink" title="0、mac下路径有空格的环境变量设置"></a>0、mac下路径有空格的环境变量设置</h2><p>export XP=/Users/seven/Virtual\ Machines.localized/Windows\ XP\ Professional/Windows\ XP\ Professional.vmx<br>在正确导出变量时非常痛苦，总是确保在shell中引用变量时双引引变量，即：</p><a id="more"></a>
+    <content><![CDATA[<h2 id="0、mac下路径有空格的环境变量设置"><a href="#0、mac下路径有空格的环境变量设置" class="headerlink" title="0、mac下路径有空格的环境变量设置"></a>0、mac下路径有空格的环境变量设置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> XP=/Users/seven/Virtual\ Machines.localized/Windows\ XP\ Professional/Windows\ XP\ Professional.vmx</span><br></pre></td></tr></table></figure><p>在正确导出变量时非常痛苦，总是确保在shell中引用变量时双引引变量，即：</p><a id="more"></a>
+
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="string">"<span class="variable">$XP</span>"</span></span><br></pre></td></tr></table></figure>
 <p>而不是</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$XP</span></span><br></pre></td></tr></table></figure>
