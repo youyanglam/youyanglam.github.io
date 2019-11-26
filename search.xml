@@ -3,13 +3,14 @@
   <entry>
     <title>mac下自动分析恶意样本</title>
     <url>/2019/11/26/mac%E4%B8%8B%E8%87%AA%E5%8A%A8%E5%88%86%E6%9E%90%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC/</url>
-    <content><![CDATA[<p>在python中可以使用python-magic程序包确定文件的具体类型。</p><h2 id="1、安装libmagic-in-MacOS-for-python-magic"><a href="#1、安装libmagic-in-MacOS-for-python-magic" class="headerlink" title="1、安装libmagic in MacOS for python-magic"></a>1、安装libmagic in MacOS for python-magic</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install python-magic --user</span><br><span class="line">brew install libmagic</span><br></pre></td></tr></table></figure><p>其中安装libmagic有2个坑：</p><p>坑1:<br>强行升级homebrew，如下<br>Updating Homebrew…<br>取消自动更新命令</p><a id="more"></a>
+    <content><![CDATA[<p>在python中可以使用python-magic程序包确定文件的具体类型。</p><h2 id="1、安装libmagic-in-MacOS-for-python-magic"><a href="#1、安装libmagic-in-MacOS-for-python-magic" class="headerlink" title="1、安装libmagic in MacOS for python-magic"></a>1、安装libmagic in MacOS for python-magic</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install python-magic --user</span><br><span class="line">brew install libmagic</span><br></pre></td></tr></table></figure><p>其中安装libmagic有2个坑：</p><h3 id="1-1、强行升级homebrew"><a href="#1-1、强行升级homebrew" class="headerlink" title="1.1、强行升级homebrew"></a>1.1、强行升级homebrew</h3><a id="more"></a>
 
 
-
+<p>如下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Updating Homebrew...</span><br></pre></td></tr></table></figure>
+<p>取消自动更新命令</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> HOMEBREW_NO_AUTO_UPDATE=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>坑2:权限问题</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Error: The following directories are not writable by your user:</span><br><span class="line">/usr/<span class="built_in">local</span>/share/man/man5</span><br></pre></td></tr></table></figure>
+<h3 id="1-2、权限问题"><a href="#1-2、权限问题" class="headerlink" title="1.2、权限问题"></a>1.2、权限问题</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Error: The following directories are not writable by your user:</span><br><span class="line">/usr/<span class="built_in">local</span>/share/man/man5</span><br></pre></td></tr></table></figure>
 <p>修改权限，解决</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo chown -R `whoami`:admin /usr/<span class="built_in">local</span>/share</span><br></pre></td></tr></table></figure>
 <p>参考：<a href="https://www.cnblogs.com/wangyingblock/p/11121025.html" target="_blank" rel="noopener">安装 libmagic in Mac OS (for Python-magic)</a></p>
