@@ -19,7 +19,10 @@
 <p>也可以下载源码编译安装</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> --recursive https://github.com/VirusTotal/yara-python</span><br><span class="line">$ <span class="built_in">cd</span> yara-python</span><br><span class="line">$ python setup.py build</span><br><span class="line">$ sudo python setup.py install</span><br></pre></td></tr></table></figure>
 <p>参考：<a href="https://pypi.org/project/yara-python/" target="_blank" rel="noopener">yara-python 3.11.0</a></p>
-]]></content>
+<h2 id="4、tshark"><a href="#4、tshark" class="headerlink" title="4、tshark"></a>4、tshark</h2><p>tkshark -f 过滤参数出错</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tshark -i vmnet8 -w file.pcap -f host 172.16.244.221</span><br><span class="line">tshark: A capture filter was specified both with <span class="string">"-f"</span> and with additional <span class="built_in">command</span>-line arguments.</span><br></pre></td></tr></table></figure>
+<p>-f 后面要用””引起来，这样操作系统会当作一个字符串解析</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tshark -i vmnet8 -w file.pcap -f <span class="string">"host 172.16.244.221"</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Virus</category>
       </categories>

@@ -54,7 +54,7 @@
 <meta property="og:site_name" content="YouYang&#39;s bay">
 <meta property="og:description" content="在python中可以使用python-magic程序包确定文件的具体类型。1、安装libmagic in MacOS for python-magic12pip install python-magic --userbrew install libmagic其中安装libmagic有2个坑：坑1:强行升级homebrew，如下Updating Homebrew…取消自动更新命令">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-26T07:46:59.366Z">
+<meta property="og:updated_time" content="2019-11-26T09:12:48.202Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://youyanglam.github.io/2019/11/26/mac%E4%B8%8B%E8%87%AA%E5%8A%A8%E5%88%86%E6%9E%90%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC/">
@@ -235,7 +235,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2019-11-26 14:03:48 / Modified: 15:46:59" itemprop="dateCreated datePublished" datetime="2019-11-26T14:03:48+08:00">2019-11-26</time>
+              <time title="Created: 2019-11-26 14:03:48 / Modified: 17:12:48" itemprop="dateCreated datePublished" datetime="2019-11-26T14:03:48+08:00">2019-11-26</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -283,7 +283,10 @@
 <p>也可以下载源码编译安装</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> --recursive https://github.com/VirusTotal/yara-python</span><br><span class="line">$ <span class="built_in">cd</span> yara-python</span><br><span class="line">$ python setup.py build</span><br><span class="line">$ sudo python setup.py install</span><br></pre></td></tr></table></figure>
 <p>参考：<a href="https://pypi.org/project/yara-python/" target="_blank" rel="noopener">yara-python 3.11.0</a></p>
-
+<h2 id="4、tshark"><a href="#4、tshark" class="headerlink" title="4、tshark"></a>4、tshark</h2><p>tkshark -f 过滤参数出错</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tshark -i vmnet8 -w file.pcap -f host 172.16.244.221</span><br><span class="line">tshark: A capture filter was specified both with <span class="string">"-f"</span> and with additional <span class="built_in">command</span>-line arguments.</span><br></pre></td></tr></table></figure>
+<p>-f 后面要用””引起来，这样操作系统会当作一个字符串解析</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark -i vmnet8 -w file.pcap -f <span class="string">"host 172.16.244.221"</span></span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -374,7 +377,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、安装libmagic-in-MacOS-for-python-magic"><span class="nav-text">1、安装libmagic in MacOS for python-magic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、安装yara"><span class="nav-text">2、安装yara</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、安装yara-python"><span class="nav-text">3、安装yara-python</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、安装libmagic-in-MacOS-for-python-magic"><span class="nav-text">1、安装libmagic in MacOS for python-magic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、安装yara"><span class="nav-text">2、安装yara</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、安装yara-python"><span class="nav-text">3、安装yara-python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、tshark"><span class="nav-text">4、tshark</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
