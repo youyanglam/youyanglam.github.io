@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youyanglam.github.io/"/>
-  <updated>2019-11-28T10:57:08.574Z</updated>
+  <updated>2019-11-28T10:45:38.820Z</updated>
   <id>http://youyanglam.github.io/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>linux????</title>
-    <link href="http://youyanglam.github.io/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/"/>
-    <id>http://youyanglam.github.io/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</id>
-    <published>2019-11-28T10:47:45.000Z</published>
-    <updated>2019-11-28T10:57:08.574Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1-vim"><a href="#1-vim" class="headerlink" title="1?vim??"></a>1?vim??</h2><h3 id="1-1"><a href="#1-1" class="headerlink" title="1.1?????"></a>1.1?????</h3><p>??v??????<br>?????y?yank???</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y10 //????????10?</span><br><span class="line">10y //???10?</span><br></pre></td></tr></table></figure><p>???p?put???</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;1-vim&quot;&gt;&lt;a href=&quot;#1-vim&quot; class=&quot;headerlink&quot; title=&quot;1?vim??&quot;&gt;&lt;/a&gt;1?vim??&lt;/h2&gt;&lt;h3 id=&quot;1-1&quot;&gt;&lt;a href=&quot;#1-1&quot; class=&quot;headerlink&quot; title=&quot;1.1
-      
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="http://youyanglam.github.io/categories/linux/"/>
-    
-    
-      <category term="vim" scheme="http://youyanglam.github.io/tags/vim/"/>
-    
-  </entry>
   
   <entry>
     <title>hexo next主题自定义配置</title>
@@ -63,6 +37,32 @@
     
     
       <category term="hexo" scheme="http://youyanglam.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux????</title>
+    <link href="http://youyanglam.github.io/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/"/>
+    <id>http://youyanglam.github.io/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</id>
+    <published>2019-11-28T10:33:50.000Z</published>
+    <updated>2019-11-28T11:00:13.369Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-vim"><a href="#1-vim" class="headerlink" title="1?vim??"></a>1?vim??</h2><h3 id="1-1"><a href="#1-1" class="headerlink" title="1.1?????"></a>1.1?????</h3><p>??v??????<br>?????y?yank???</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y10 //????????10?</span><br><span class="line">10y //???10?</span><br></pre></td></tr></table></figure><p>???p?put???</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-vim&quot;&gt;&lt;a href=&quot;#1-vim&quot; class=&quot;headerlink&quot; title=&quot;1?vim??&quot;&gt;&lt;/a&gt;1?vim??&lt;/h2&gt;&lt;h3 id=&quot;1-1&quot;&gt;&lt;a href=&quot;#1-1&quot; class=&quot;headerlink&quot; title=&quot;1.1
+      
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://youyanglam.github.io/categories/linux/"/>
+    
+    
+      <category term="vim" scheme="http://youyanglam.github.io/tags/vim/"/>
     
   </entry>
   
