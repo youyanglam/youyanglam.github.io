@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>linux命令记录</title>
+    <title>linux????</title>
     <url>/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h2 id="1-vim"><a href="#1-vim" class="headerlink" title="1?vim??"></a>1?vim??</h2><h3 id="1-1"><a href="#1-1" class="headerlink" title="1.1?????"></a>1.1?????</h3><p>??v??????<br>?????y?yank???</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">y10 //????????10?</span><br><span class="line">10y //???10?</span><br></pre></td></tr></table></figure><p>???p?put???</p>]]></content>
       <categories>
