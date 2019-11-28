@@ -46,18 +46,17 @@
   };
 </script>
 
-  <meta name="description" content="在python中可以使用python-magic程序包确定文件的具体类型。1、安装libmagic in MacOS for python-magic12pip install python-magic --userbrew install libmagic其中安装libmagic有2个坑：1.1、强行升级homebrew">
-<meta name="keywords" content="Mac">
-<meta property="og:type" content="article">
-<meta property="og:title" content="mac下自动分析恶意样本">
-<meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;11&#x2F;26&#x2F;mac%E4%B8%8B%E8%87%AA%E5%8A%A8%E5%88%86%E6%9E%90%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC&#x2F;index.html">
+  <meta name="description" content="个人学习日记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="music">
+<meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;music&#x2F;index.html">
 <meta property="og:site_name" content="YouYang&#39;s bay">
-<meta property="og:description" content="在python中可以使用python-magic程序包确定文件的具体类型。1、安装libmagic in MacOS for python-magic12pip install python-magic --userbrew install libmagic其中安装libmagic有2个坑：1.1、强行升级homebrew">
+<meta property="og:description" content="个人学习日记">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-26T09:16:36.769Z">
+<meta property="og:updated_time" content="2019-11-28T10:23:30.204Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://youyanglam.github.io/2019/11/26/mac%E4%B8%8B%E8%87%AA%E5%8A%A8%E5%88%86%E6%9E%90%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC/">
+<link rel="canonical" href="http://youyanglam.github.io/music/">
 
 
 <script id="page-configurations">
@@ -65,13 +64,14 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: true,
-    isPage: false,
+    isPost: false,
+    isPage: true,
     isArchive: false
   };
 </script>
 
-  <title>mac下自动分析恶意样本 | YouYang's bay</title>
+  <title>music | YouYang's bay
+  </title>
   
 
 
@@ -222,156 +222,44 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+  
+  
 
           <div class="content">
             
 
   <div class="posts-expand">
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://youyanglam.github.io/2019/11/26/mac%E4%B8%8B%E8%87%AA%E5%8A%A8%E5%88%86%E6%9E%90%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="YouYang">
-      <meta itemprop="description" content="个人学习日记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YouYang's bay">
-    </span>
+    
+    
+    
+    <div class="post-block" lang="en">
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          mac下自动分析恶意样本
-        </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
+<h1 class="post-title" itemprop="name headline">music
+</h1>
 
-              <time title="Created: 2019-11-26 14:03:48 / Modified: 17:16:36" itemprop="dateCreated datePublished" datetime="2019-11-26T14:03:48+08:00">2019-11-26</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Virus/" itemprop="url" rel="index">
-                    <span itemprop="name">Virus</span>
-                  </a>
-                </span>
-            </span>
+<div class="post-meta">
+  
 
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
           
-            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <p>在python中可以使用python-magic程序包确定文件的具体类型。</p><h2 id="1、安装libmagic-in-MacOS-for-python-magic"><a href="#1、安装libmagic-in-MacOS-for-python-magic" class="headerlink" title="1、安装libmagic in MacOS for python-magic"></a>1、安装libmagic in MacOS for python-magic</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install python-magic --user</span><br><span class="line">brew install libmagic</span><br></pre></td></tr></table></figure><p>其中安装libmagic有2个坑：</p><h3 id="1-1、强行升级homebrew"><a href="#1-1、强行升级homebrew" class="headerlink" title="1.1、强行升级homebrew"></a>1.1、强行升级homebrew</h3><a id="more"></a>
-
-
-<p>如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Updating Homebrew...</span><br></pre></td></tr></table></figure>
-<p>取消自动更新命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> HOMEBREW_NO_AUTO_UPDATE=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h3 id="1-2、权限问题"><a href="#1-2、权限问题" class="headerlink" title="1.2、权限问题"></a>1.2、权限问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Error: The following directories are not writable by your user:</span><br><span class="line">/usr/<span class="built_in">local</span>/share/man/man5</span><br></pre></td></tr></table></figure>
-<p>修改权限，解决</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R `whoami`:admin /usr/<span class="built_in">local</span>/share</span><br></pre></td></tr></table></figure>
-<p>参考：<a href="https://www.cnblogs.com/wangyingblock/p/11121025.html" target="_blank" rel="noopener">安装 libmagic in Mac OS (for Python-magic)</a></p>
-<h2 id="2、安装yara"><a href="#2、安装yara" class="headerlink" title="2、安装yara"></a>2、安装yara</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install yara</span><br></pre></td></tr></table></figure>
-<h2 id="3、安装yara-python"><a href="#3、安装yara-python" class="headerlink" title="3、安装yara-python"></a>3、安装yara-python</h2><p>单独编译安装yara-python</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install yara-python --user</span><br></pre></td></tr></table></figure>
-<p>也可以下载源码编译安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> --recursive https://github.com/VirusTotal/yara-python</span><br><span class="line">$ <span class="built_in">cd</span> yara-python</span><br><span class="line">$ python setup.py build</span><br><span class="line">$ sudo python setup.py install</span><br></pre></td></tr></table></figure>
-<p>参考：<a href="https://pypi.org/project/yara-python/" target="_blank" rel="noopener">yara-python 3.11.0</a></p>
-<h2 id="4、tshark"><a href="#4、tshark" class="headerlink" title="4、tshark"></a>4、tshark</h2><p>tkshark -f 过滤参数出错</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tshark -i vmnet8 -w file.pcap -f host 172.16.244.221</span><br><span class="line">tshark: A capture filter was specified both with <span class="string">"-f"</span> and with additional <span class="built_in">command</span>-line arguments.</span><br></pre></td></tr></table></figure>
-<p>-f 后面要用””引起来，这样操作系统会当作一个字符串解析</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark -i vmnet8 -w file.pcap -f <span class="string">"host 172.16.244.221"</span></span><br></pre></td></tr></table></figure>
-    </div>
-
-    
-    
-    
-        <div class="reward-container">
-  <div>请我喝咖啡.</div>
-  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    Donate
-  </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
-        <img src="/images/wechatpay.png" alt="YouYang WeChat Pay">
-        <p>WeChat Pay</p>
       </div>
-
-  </div>
-</div>
-
-        
-
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>Post author:  </strong>YouYang
-  </li>
-  <li class="post-copyright-link">
-    <strong>Post link: </strong>
-    <a href="http://youyanglam.github.io/2019/11/26/mac%E4%B8%8B%E8%87%AA%E5%8A%A8%E5%88%86%E6%9E%90%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC/" title="mac下自动分析恶意样本">http://youyanglam.github.io/2019/11/26/mac%E4%B8%8B%E8%87%AA%E5%8A%A8%E5%88%86%E6%9E%90%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
-  </li>
-</ul>
-</div>
-
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Mac/" rel="tag"># Mac</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2019/11/25/vmrun%E5%91%BD%E4%BB%A4%E6%93%8D%E4%BD%9CVMWare-Fusion/" rel="prev" title="vmrun命令操作VMWare Fusion">
-      <i class="fa fa-chevron-left"></i> vmrun命令操作VMWare Fusion
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/11/27/mac%E4%B8%8Bvolatility%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/" rel="next" title="mac下volatility的安装和使用">
-      mac下volatility的安装和使用 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      
+      
+      
     </div>
-      </footer>
     
-  </article>
-  
-  
-  
 
+    
+    
+    
   </div>
 
 
@@ -401,7 +289,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、安装libmagic-in-MacOS-for-python-magic"><span class="nav-text">1、安装libmagic in MacOS for python-magic</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1、强行升级homebrew"><span class="nav-text">1.1、强行升级homebrew</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2、权限问题"><span class="nav-text">1.2、权限问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、安装yara"><span class="nav-text">2、安装yara</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、安装yara-python"><span class="nav-text">3、安装yara-python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、tshark"><span class="nav-text">4、tshark</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

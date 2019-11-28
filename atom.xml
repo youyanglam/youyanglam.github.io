@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youyanglam.github.io/"/>
-  <updated>2019-11-28T10:05:44.250Z</updated>
+  <updated>2019-11-28T10:55:24.996Z</updated>
   <id>http://youyanglam.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux命令记录</title>
+    <link href="http://youyanglam.github.io/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/"/>
+    <id>http://youyanglam.github.io/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</id>
+    <published>2019-11-28T10:47:45.000Z</published>
+    <updated>2019-11-28T10:55:24.996Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-vim"><a href="#1-vim" class="headerlink" title="1?vim??"></a>1?vim??</h2><h3 id="1-1"><a href="#1-1" class="headerlink" title="1.1?????"></a>1.1?????</h3><p>??v??????<br>?????y?yank???</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y10 //????????10?</span><br><span class="line">10y //???10?</span><br></pre></td></tr></table></figure><p>???p?put???</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-vim&quot;&gt;&lt;a href=&quot;#1-vim&quot; class=&quot;headerlink&quot; title=&quot;1?vim??&quot;&gt;&lt;/a&gt;1?vim??&lt;/h2&gt;&lt;h3 id=&quot;1-1&quot;&gt;&lt;a href=&quot;#1-1&quot; class=&quot;headerlink&quot; title=&quot;1.1
+      
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://youyanglam.github.io/categories/linux/"/>
+    
+    
+      <category term="vim" scheme="http://youyanglam.github.io/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo next主题自定义配置</title>
+    <link href="http://youyanglam.github.io/2019/11/28/hexo-next%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE/"/>
+    <id>http://youyanglam.github.io/2019/11/28/hexo-next%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE/</id>
+    <published>2019-11-28T10:33:50.000Z</published>
+    <updated>2019-11-28T10:45:38.820Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1、添加菜单"><a href="#1、添加菜单" class="headerlink" title="1、添加菜单"></a>1、添加菜单</h2><p>编辑themes/hexo-theme-next/_config.yml文件，添加格式如下</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  movie: /movie/ || file</span><br></pre></td></tr></table></figure><p>film为图标名称，需要的图标，在下面网站查找关键字，输入对应的名称即可<br><a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener">https://fontawesome.com/v4.7.0/icons/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1、添加菜单&quot;&gt;&lt;a href=&quot;#1、添加菜单&quot; class=&quot;headerlink&quot; title=&quot;1、添加菜单&quot;&gt;&lt;/a&gt;1、添加菜单&lt;/h2&gt;&lt;p&gt;编辑themes/hexo-theme-next/_config.yml文件，添加格式如下&lt;/p&gt;&lt;figu
+      
+    
+    </summary>
+    
+    
+    
+      <category term="hexo" scheme="http://youyanglam.github.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>mac下volatility的安装和使用</title>
