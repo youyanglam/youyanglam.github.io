@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youyanglam.github.io/"/>
-  <updated>2019-11-27T14:28:38.390Z</updated>
+  <updated>2019-11-28T09:28:28.442Z</updated>
   <id>http://youyanglam.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://youyanglam.github.io/2019/11/27/mac%E4%B8%8Bvolatility%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/"/>
     <id>http://youyanglam.github.io/2019/11/27/mac%E4%B8%8Bvolatility%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/</id>
     <published>2019-11-27T09:00:04.000Z</published>
-    <updated>2019-11-27T14:28:38.390Z</updated>
+    <updated>2019-11-28T09:28:28.442Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://code.google.com/archive/p/volatility/downloads</span><br></pre></td></tr></table></figure><h2 id="2、安装"><a href="#2、安装" class="headerlink" title="2、安装"></a>2、安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python2.7 setup.py install</span><br></pre></td></tr></table></figure><p>编译和安装后的文件放在了如下路径</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Installing vol.py script to /usr/<span class="built_in">local</span>/bin</span><br><span class="line"></span><br><span class="line">Installed /Library/Python/2.7/site-packages/volatility-2.3.1-py2.7.egg</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="3、使用"><a href="#3、使用" class="headerlink" title="3、使用"></a>3、使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py pslist -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://code.google.com/archive/p/volatility/downloads</span><br></pre></td></tr></table></figure><h2 id="2、安装"><a href="#2、安装" class="headerlink" title="2、安装"></a>2、安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python2.7 setup.py install</span><br></pre></td></tr></table></figure><p>编译和安装后的文件放在了如下路径</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Installing vol.py script to /usr/<span class="built_in">local</span>/bin</span><br><span class="line"></span><br><span class="line">Installed /Library/Python/2.7/site-packages/volatility-2.3.1-py2.7.egg</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="3、使用"><a href="#3、使用" class="headerlink" title="3、使用"></a>3、使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py pslist -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem</span><br></pre></td></tr></table></figure><h2 id="4、未找到（下载地址）的软件活着插件"><a href="#4、未找到（下载地址）的软件活着插件" class="headerlink" title="4、未找到（下载地址）的软件活着插件"></a>4、未找到（下载地址）的软件活着插件</h2><p>软件：<br>win32dd.exe<br>win64dd.exe<br>插件：<br>csrss_plist</p>]]></content>
     
     <summary type="html">
     
