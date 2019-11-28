@@ -6,10 +6,10 @@
     <content><![CDATA[<p>测试</p>]]></content>
       <categories>
         <category>book</category>
-        <category>运动</category>
-        <category>运动，球类运动</category>
         <category>movie</category>
         <category>music</category>
+        <category>运动</category>
+        <category>运动，球类运动</category>
       </categories>
   </entry>
   <entry>

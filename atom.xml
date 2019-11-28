@@ -37,13 +37,13 @@
     
       <category term="book" scheme="http://youyanglam.github.io/categories/book/"/>
     
-      <category term="运动" scheme="http://youyanglam.github.io/categories/%E8%BF%90%E5%8A%A8/"/>
-    
-      <category term="运动，球类运动" scheme="http://youyanglam.github.io/categories/%E8%BF%90%E5%8A%A8%EF%BC%8C%E7%90%83%E7%B1%BB%E8%BF%90%E5%8A%A8/"/>
-    
       <category term="movie" scheme="http://youyanglam.github.io/categories/movie/"/>
     
       <category term="music" scheme="http://youyanglam.github.io/categories/music/"/>
+    
+      <category term="运动" scheme="http://youyanglam.github.io/categories/%E8%BF%90%E5%8A%A8/"/>
+    
+      <category term="运动，球类运动" scheme="http://youyanglam.github.io/categories/%E8%BF%90%E5%8A%A8%EF%BC%8C%E7%90%83%E7%B1%BB%E8%BF%90%E5%8A%A8/"/>
     
     
   </entry>
