@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youyanglam.github.io/"/>
-  <updated>2019-11-28T15:50:11.236Z</updated>
+  <updated>2019-11-28T11:33:28.666Z</updated>
   <id>http://youyanglam.github.io/</id>
   
   <author>
@@ -15,38 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>book 测试</title>
-    <link href="http://youyanglam.github.io/2019/11/28/book-%E6%B5%8B%E8%AF%95/"/>
-    <id>http://youyanglam.github.io/2019/11/28/book-%E6%B5%8B%E8%AF%95/</id>
-    <published>2019-11-28T15:18:40.000Z</published>
-    <updated>2019-11-28T15:50:11.236Z</updated>
-    
-    <content type="html"><![CDATA[<p>测试</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;测试&lt;/p&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="book" scheme="http://youyanglam.github.io/categories/book/"/>
-    
-      <category term="movie" scheme="http://youyanglam.github.io/categories/movie/"/>
-    
-      <category term="music" scheme="http://youyanglam.github.io/categories/music/"/>
-    
-      <category term="运动" scheme="http://youyanglam.github.io/categories/%E8%BF%90%E5%8A%A8/"/>
-    
-      <category term="运动，球类运动" scheme="http://youyanglam.github.io/categories/%E8%BF%90%E5%8A%A8%EF%BC%8C%E7%90%83%E7%B1%BB%E8%BF%90%E5%8A%A8/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>linux命令记录</title>
