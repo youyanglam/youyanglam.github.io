@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>linux命令记录</title>
+    <url>/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="1、vim命令"><a href="#1、vim命令" class="headerlink" title="1、vim命令"></a>1、vim命令</h2><h3 id="1-1、复制粘贴"><a href="#1-1、复制粘贴" class="headerlink" title="1.1、复制粘贴"></a>1.1、复制粘贴</h3><p>使用v进入可视模式<br>复制命令是y（yank提起）</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">y10 //复制当前及紧跟的10行</span><br><span class="line">10y //复制第10行</span><br></pre></td></tr></table></figure><p>粘贴为p（put放下）</p>]]></content>
+  </entry>
+  <entry>
     <title>hexo next主题自定义配置</title>
     <url>/2019/11/28/hexo-next%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h2 id="1、添加菜单"><a href="#1、添加菜单" class="headerlink" title="1、添加菜单"></a>1、添加菜单</h2><p>编辑themes/hexo-theme-next/_config.yml文件，添加格式如下</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  movie: /movie/ || file</span><br></pre></td></tr></table></figure><p>film为图标名称，需要的图标，在下面网站查找关键字，输入对应的名称即可<br><a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener">https://fontawesome.com/v4.7.0/icons/</a></p>]]></content>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux????</title>
-    <url>/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h2 id="1-vim"><a href="#1-vim" class="headerlink" title="1?vim??"></a>1?vim??</h2><h3 id="1-1"><a href="#1-1" class="headerlink" title="1.1?????"></a>1.1?????</h3><p>??v??????<br>?????y?yank???</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">y10 //????????10?</span><br><span class="line">10y //???10?</span><br></pre></td></tr></table></figure><p>???p?put???</p>]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>vim</tag>
       </tags>
   </entry>
   <entry>

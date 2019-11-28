@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youyanglam.github.io/"/>
-  <updated>2019-11-28T10:45:38.820Z</updated>
+  <updated>2019-11-28T11:24:27.700Z</updated>
   <id>http://youyanglam.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux命令记录</title>
+    <link href="http://youyanglam.github.io/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/"/>
+    <id>http://youyanglam.github.io/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</id>
+    <published>2019-11-28T11:03:00.000Z</published>
+    <updated>2019-11-28T11:24:27.700Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1、vim命令"><a href="#1、vim命令" class="headerlink" title="1、vim命令"></a>1、vim命令</h2><h3 id="1-1、复制粘贴"><a href="#1-1、复制粘贴" class="headerlink" title="1.1、复制粘贴"></a>1.1、复制粘贴</h3><p>使用v进入可视模式<br>复制命令是y（yank提起）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y10 //复制当前及紧跟的10行</span><br><span class="line">10y //复制第10行</span><br></pre></td></tr></table></figure><p>粘贴为p（put放下）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1、vim命令&quot;&gt;&lt;a href=&quot;#1、vim命令&quot; class=&quot;headerlink&quot; title=&quot;1、vim命令&quot;&gt;&lt;/a&gt;1、vim命令&lt;/h2&gt;&lt;h3 id=&quot;1-1、复制粘贴&quot;&gt;&lt;a href=&quot;#1-1、复制粘贴&quot; class=&quot;headerli
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>hexo next主题自定义配置</title>
@@ -37,32 +59,6 @@
     
     
       <category term="hexo" scheme="http://youyanglam.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux????</title>
-    <link href="http://youyanglam.github.io/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/"/>
-    <id>http://youyanglam.github.io/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</id>
-    <published>2019-11-28T10:33:50.000Z</published>
-    <updated>2019-11-28T11:00:13.369Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1-vim"><a href="#1-vim" class="headerlink" title="1?vim??"></a>1?vim??</h2><h3 id="1-1"><a href="#1-1" class="headerlink" title="1.1?????"></a>1.1?????</h3><p>??v??????<br>?????y?yank???</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y10 //????????10?</span><br><span class="line">10y //???10?</span><br></pre></td></tr></table></figure><p>???p?put???</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;1-vim&quot;&gt;&lt;a href=&quot;#1-vim&quot; class=&quot;headerlink&quot; title=&quot;1?vim??&quot;&gt;&lt;/a&gt;1?vim??&lt;/h2&gt;&lt;h3 id=&quot;1-1&quot;&gt;&lt;a href=&quot;#1-1&quot; class=&quot;headerlink&quot; title=&quot;1.1
-      
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="http://youyanglam.github.io/categories/linux/"/>
-    
-    
-      <category term="vim" scheme="http://youyanglam.github.io/tags/vim/"/>
     
   </entry>
   
