@@ -7,7 +7,7 @@
 
 
 
-<h2 id="3、使用"><a href="#3、使用" class="headerlink" title="3、使用"></a>3、使用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py pslist -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem</span><br></pre></td></tr></table></figure>
+<h2 id="3、使用"><a href="#3、使用" class="headerlink" title="3、使用"></a>3、使用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py pslist -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem</span><br><span class="line"></span><br><span class="line">python2.7 /usr/<span class="built_in">local</span>/bin/vol.py dlllist -f prolaco.vmem -p 1724</span><br><span class="line">python2.7 /usr/<span class="built_in">local</span>/bin/vol.py pstree -f prolaco.vmem</span><br><span class="line">python2.7 /usr/<span class="built_in">local</span>/bin/vol.py filescan -f prolaco.vmem | grep Desktop</span><br></pre></td></tr></table></figure>
 <h2 id="4、未找到（下载地址）的软件或插件"><a href="#4、未找到（下载地址）的软件或插件" class="headerlink" title="4、未找到（下载地址）的软件或插件"></a>4、未找到（下载地址）的软件或插件</h2><p>软件：<br>win32dd.exe<br>win64dd.exe<br>插件：<br>csrss_plist</p>
 ]]></content>
       <categories>
