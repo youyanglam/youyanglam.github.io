@@ -4,6 +4,11 @@
     <title>book 测试</title>
     <url>/2019/11/28/book-%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<p>测试</p>]]></content>
+      <categories>
+        <category>book</category>
+        <category>运动</category>
+        <category>运动，球类运动</category>
+      </categories>
   </entry>
   <entry>
     <title>linux命令记录</title>
