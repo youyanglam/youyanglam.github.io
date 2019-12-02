@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youyanglam.github.io/"/>
-  <updated>2019-11-28T11:33:28.666Z</updated>
+  <updated>2019-12-02T09:28:25.653Z</updated>
   <id>http://youyanglam.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python语法记录</title>
+    <link href="http://youyanglam.github.io/2019/12/02/python%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/"/>
+    <id>http://youyanglam.github.io/2019/12/02/python%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</id>
+    <published>2019-12-02T09:23:58.000Z</published>
+    <updated>2019-12-02T09:28:25.653Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1、list打印"><a href="#1、list打印" class="headerlink" title="1、list打印"></a>1、list打印</h2><p>如下，pargs为类型list，打印其中的内容。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> <span class="string">"pcap cmd: "</span>+<span class="string">" "</span>.join(cmd <span class="keyword">for</span> cmd <span class="keyword">in</span> pargs)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1、list打印&quot;&gt;&lt;a href=&quot;#1、list打印&quot; class=&quot;headerlink&quot; title=&quot;1、list打印&quot;&gt;&lt;/a&gt;1、list打印&lt;/h2&gt;&lt;p&gt;如下，pargs为类型list，打印其中的内容。&lt;/p&gt;&lt;figure class=&quot;hig
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://youyanglam.github.io/categories/python/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>linux命令记录</title>

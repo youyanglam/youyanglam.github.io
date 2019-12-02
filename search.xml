@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>python语法记录</title>
+    <url>/2019/12/02/python%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="1、list打印"><a href="#1、list打印" class="headerlink" title="1、list打印"></a>1、list打印</h2><p>如下，pargs为类型list，打印其中的内容。</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span> <span class="string">"pcap cmd: "</span>+<span class="string">" "</span>.join(cmd <span class="keyword">for</span> cmd <span class="keyword">in</span> pargs)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
     <title>linux命令记录</title>
     <url>/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h2 id="1、vim命令"><a href="#1、vim命令" class="headerlink" title="1、vim命令"></a>1、vim命令</h2><h3 id="1-1、复制粘贴"><a href="#1-1、复制粘贴" class="headerlink" title="1.1、复制粘贴"></a>1.1、复制粘贴</h3><p>使用v进入可视模式<br>复制命令是y（yank提起）</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">y10 //复制当前及紧跟的10行</span><br><span class="line">10y //复制第10行</span><br></pre></td></tr></table></figure><p>粘贴为p（put放下）</p>]]></content>
