@@ -53,7 +53,7 @@
 <meta property="og:site_name" content="YouYang&#39;s Bay">
 <meta property="og:description" content="1、下载1https:&#x2F;&#x2F;code.google.com&#x2F;archive&#x2F;p&#x2F;volatility&#x2F;downloads2、安装1python2.7 setup.py install编译和安装后的文件放在了如下路径123Installing vol.py script to &#x2F;usr&#x2F;local&#x2F;binInstalled &#x2F;Library&#x2F;Python&#x2F;2.7&#x2F;site-packages&#x2F;volat">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-02T14:57:14.805Z">
+<meta property="og:updated_time" content="2019-12-02T15:57:18.193Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://youyanglam.github.io/2019/11/27/mac%E4%B8%8Bvolatility%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">
@@ -251,7 +251,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-02 22:57:14" itemprop="dateModified" datetime="2019-12-02T22:57:14+08:00">2019-12-02</time>
+                <time title="Modified: 2019-12-02 23:57:18" itemprop="dateModified" datetime="2019-12-02T23:57:18+08:00">2019-12-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -287,7 +287,7 @@
 
 
 
-<h2 id="3、使用"><a href="#3、使用" class="headerlink" title="3、使用"></a>3、使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py pslist -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem</span><br><span class="line"></span><br><span class="line">python2.7 /usr/<span class="built_in">local</span>/bin/vol.py dlllist -f prolaco.vmem -p 1724</span><br><span class="line">python2.7 /usr/<span class="built_in">local</span>/bin/vol.py pstree -f prolaco.vmem</span><br><span class="line">python2.7 /usr/<span class="built_in">local</span>/bin/vol.py filescan -f prolaco.vmem | grep Desktop</span><br><span class="line">vol -f ram.raw yarascan -y example.yara</span><br></pre></td></tr></table></figure>
+<h2 id="3、使用"><a href="#3、使用" class="headerlink" title="3、使用"></a>3、使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py pslist -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem</span><br><span class="line"></span><br><span class="line">python2.7 /usr/<span class="built_in">local</span>/bin/vol.py dlllist -f prolaco.vmem -p 1724</span><br><span class="line">python2.7 /usr/<span class="built_in">local</span>/bin/vol.py pstree -f prolaco.vmem</span><br><span class="line">python2.7 /usr/<span class="built_in">local</span>/bin/vol.py filescan -f prolaco.vmem | grep Desktop</span><br><span class="line">vol -f ram.raw yarascan -y example.yara</span><br><span class="line">vol impscan -p 1180 -f laqma.vmem //扫描目标进程的iat表，将结果导入IDA可以还原IAT的占位符为函数名</span><br></pre></td></tr></table></figure>
 <p>再如，查找病毒特征吗命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vol malfind -f silentbanker.vmem --dump-dir=outdir -p 1884</span><br></pre></td></tr></table></figure>
 <p>需要下载distorm3，才可以对指定进程的内存数据反汇编</p>
