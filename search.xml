@@ -3,7 +3,10 @@
   <entry>
     <title>编译iso工程</title>
     <url>/2019/12/03/%E7%BC%96%E8%AF%91iso%E5%B7%A5%E7%A8%8B/</url>
-    <content><![CDATA[<h2 id="1、pod"><a href="#1、pod" class="headerlink" title="1、pod"></a>1、pod</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure><p>依赖于工程目录下的Podfile文件</p><h2 id="2、carthage"><a href="#2、carthage" class="headerlink" title="2、carthage"></a>2、carthage</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">carthage update --no-use-binaries --platform ios</span><br></pre></td></tr></table></figure><p>依赖于工程目录下的Cartfile文件</p>]]></content>
+    <content><![CDATA[<h2 id="1、pod"><a href="#1、pod" class="headerlink" title="1、pod"></a>1、pod</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure><p>依赖于工程目录下的Podfile文件<br>如果出现问题：<br>[!] Unable to determine Swift version for the following pods:</p><ul>
+<li><code>RealmSwift</code> is integrated by multiple targets that use a different Swift version: <code>Potatso</code> (Swift 4.0), <code>TodayWidget</code> (Swift 5.0),<br>解决方法：<br>you can set the Swift version by including e.g. ENV[‘SWIFT_VERSION’] = ‘3’ at the top of your Podfile<h2 id="2、carthage"><a href="#2、carthage" class="headerlink" title="2、carthage"></a>2、carthage</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">carthage update --no-use-binaries --platform ios</span><br></pre></td></tr></table></figure>
+依赖于工程目录下的Cartfile文件</li>
+</ul>]]></content>
       <categories>
         <category>ios</category>
       </categories>
