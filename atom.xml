@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youyanglam.github.io/"/>
-  <updated>2019-12-03T04:55:41.833Z</updated>
+  <updated>2019-12-03T06:00:40.753Z</updated>
   <id>http://youyanglam.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>编译iso工程</title>
+    <link href="http://youyanglam.github.io/2019/12/03/%E7%BC%96%E8%AF%91iso%E5%B7%A5%E7%A8%8B/"/>
+    <id>http://youyanglam.github.io/2019/12/03/%E7%BC%96%E8%AF%91iso%E5%B7%A5%E7%A8%8B/</id>
+    <published>2019-12-03T05:16:45.000Z</published>
+    <updated>2019-12-03T06:00:40.753Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1、pod"><a href="#1、pod" class="headerlink" title="1、pod"></a>1、pod</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure><p>依赖于工程目录下的Podfile文件</p><h2 id="2、carthage"><a href="#2、carthage" class="headerlink" title="2、carthage"></a>2、carthage</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">carthage update --no-use-binaries --platform ios</span><br></pre></td></tr></table></figure><p>依赖于工程目录下的Cartfile文件</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1、pod&quot;&gt;&lt;a href=&quot;#1、pod&quot; class=&quot;headerlink&quot; title=&quot;1、pod&quot;&gt;&lt;/a&gt;1、pod&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="ios" scheme="http://youyanglam.github.io/categories/ios/"/>
+    
+    
+      <category term="xcode" scheme="http://youyanglam.github.io/tags/xcode/"/>
+    
+  </entry>
   
   <entry>
     <title>linux安装v2ray</title>
