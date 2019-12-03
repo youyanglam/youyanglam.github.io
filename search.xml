@@ -7,9 +7,12 @@
 <li>编辑文件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/apt/sources.list</span><br></pre></td></tr></table></figure></li>
 <li>添加阿里云源<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#aliyun 阿里云</span></span><br><span class="line">deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line">deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br></pre></td></tr></table></figure></li>
 <li>更新<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul><a id="more"></a>
 <h2 id="2、添加中文字体"><a href="#2、添加中文字体" class="headerlink" title="2、添加中文字体"></a>2、添加中文字体</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install ttf-wqy-microhei</span><br></pre></td></tr></table></figure>
-<h2 id="3、参考"><a href="#3、参考" class="headerlink" title="3、参考"></a>3、参考</h2><a href="https://www.xcnte.com/archives/732/" target="_blank" rel="noopener">https://www.xcnte.com/archives/732/</a></li>
-</ul>]]></content>
+<h2 id="3、参考"><a href="#3、参考" class="headerlink" title="3、参考"></a>3、参考</h2><p><a href="https://www.xcnte.com/archives/732/" target="_blank" rel="noopener">https://www.xcnte.com/archives/732/</a></p>
+]]></content>
       <categories>
         <category>linux</category>
       </categories>
