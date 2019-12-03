@@ -78,7 +78,11 @@
   <entry>
     <title>linux命令记录</title>
     <url>/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h2 id="1、vim命令"><a href="#1、vim命令" class="headerlink" title="1、vim命令"></a>1、vim命令</h2><h3 id="1-1、复制粘贴"><a href="#1-1、复制粘贴" class="headerlink" title="1.1、复制粘贴"></a>1.1、复制粘贴</h3><p>使用v进入可视模式<br>复制命令是y（yank提起）</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">y10 //复制当前及紧跟的10行</span><br><span class="line">10y //复制第10行</span><br></pre></td></tr></table></figure><p>粘贴为p（put放下）</p>]]></content>
+    <content><![CDATA[<h2 id="1、vim命令"><a href="#1、vim命令" class="headerlink" title="1、vim命令"></a>1、vim命令</h2><h3 id="1-1、复制粘贴"><a href="#1-1、复制粘贴" class="headerlink" title="1.1、复制粘贴"></a>1.1、复制粘贴</h3><ul>
+<li>方法1<br>使用v进入可视模式<br>复制命令是y（yank提起）<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">y10 //复制当前及紧跟的10行</span><br><span class="line">10y //复制第10行</span><br></pre></td></tr></table></figure></li>
+<li>方法2（加j）<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">y10j //复制当前行和接下来的10行</span><br></pre></td></tr></table></figure>
+粘贴为p（put放下）</li>
+</ul>]]></content>
       <categories>
         <category>linux</category>
       </categories>
