@@ -3,8 +3,7 @@
   <entry>
     <title>linux安装v2ray</title>
     <url>/2019/12/03/linux%E5%AE%89%E8%A3%85v2ray/</url>
-    <content><![CDATA[<p>##1、下载并安装v2ray</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -Ls https://install.direct/go.sh | sudo bash</span><br></pre></td></tr></table></figure><h2 id="2、编辑配置文件"><a href="#2、编辑配置文件" class="headerlink" title="2、编辑配置文件"></a>2、编辑配置文件</h2><p>配置文件的位置为：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/v2ray/config.json</span><br></pre></td></tr></table></figure><h2 id="3、启动v2ray服务"><a href="#3、启动v2ray服务" class="headerlink" title="3、启动v2ray服务"></a>3、启动v2ray服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/bin/v2ray/v2ray -config=/etc/v2ray/config.json</span><br></pre></td></tr></table></figure><a id="more"></a>
-
+    <content><![CDATA[<h2 id="1、下载并安装v2ray"><a href="#1、下载并安装v2ray" class="headerlink" title="1、下载并安装v2ray"></a>1、下载并安装v2ray</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -Ls https://install.direct/go.sh | sudo bash</span><br></pre></td></tr></table></figure><h2 id="2、编辑配置文件"><a href="#2、编辑配置文件" class="headerlink" title="2、编辑配置文件"></a>2、编辑配置文件</h2><p>配置文件的位置为：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/v2ray/config.json</span><br></pre></td></tr></table></figure><h2 id="3、启动v2ray服务"><a href="#3、启动v2ray服务" class="headerlink" title="3、启动v2ray服务"></a>3、启动v2ray服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/bin/v2ray/v2ray -config=/etc/v2ray/config.json</span><br></pre></td></tr></table></figure><a id="more"></a>
 
 
 
