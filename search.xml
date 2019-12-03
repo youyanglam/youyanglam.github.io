@@ -89,7 +89,7 @@
 <h2 id="4、未找到（下载地址）的软件或插件"><a href="#4、未找到（下载地址）的软件或插件" class="headerlink" title="4、未找到（下载地址）的软件或插件"></a>4、未找到（下载地址）的软件或插件</h2><p>软件：<br>win32dd.exe<br>win64dd.exe<br>插件：<br>csrss_plist</p>
 ]]></content>
       <categories>
-        <category>Virus</category>
+        <category>virus</category>
       </categories>
   </entry>
   <entry>
@@ -117,7 +117,7 @@
 <p>-f 后面要用””引起来，这样操作系统会当作一个字符串解析</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tshark -i vmnet8 -w file.pcap -f <span class="string">"host 172.16.244.221"</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Virus</category>
+        <category>virus</category>
       </categories>
       <tags>
         <tag>Mac</tag>
@@ -140,7 +140,7 @@
 <h2 id="5、参考"><a href="#5、参考" class="headerlink" title="5、参考"></a>5、参考</h2><p><a href="https://docs.vmware.com/cn/VMware-Fusion/11/com.vmware.fusion.using.doc/GUID-FF306A59-080E-497E-857D-F45125927FB3.html?hWord=N4IghgNiBcIE4FMBuC4BcAqB7AygOzAAcBnACyzRAF8g" target="_blank" rel="noopener">vmrun 命令示例</a></p>
 ]]></content>
       <categories>
-        <category>Virus</category>
+        <category>virus</category>
       </categories>
       <tags>
         <tag>Mac</tag>
@@ -173,7 +173,7 @@
 <p>2、<a href="https://zhuanlan.zhihu.com/p/69218641" target="_blank" rel="noopener">一台电脑部署两个或多个Hexo博客（一台电脑使用两个或多个 GitHub 账号）</a></p>
 ]]></content>
       <categories>
-        <category>Web</category>
+        <category>web</category>
       </categories>
       <tags>
         <tag>GitHub Pages</tag>
