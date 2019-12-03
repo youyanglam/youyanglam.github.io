@@ -92,34 +92,32 @@
 <h2 id="3、网络相关"><a href="#3、网络相关" class="headerlink" title="3、网络相关"></a>3、网络相关</h2><ul>
 <li>重启网络<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@bt:~<span class="comment"># /etc/init.d/networking restart</span></span><br></pre></td></tr></table></figure></li>
 <li>ssh登陆<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -t root@172.16.244.100 -p 20000</span><br></pre></td></tr></table></figure></li>
-<li>修改ip地址</li>
+<li>修改ip信息</li>
 </ul>
 <ol>
-<li>修改ip地址</li>
+<li><p>修改ip地址</p>
+<p> 即时生效:</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ifconfig eth0 172.16.244.100  netmask 255.255.255.0</span><br></pre></td></tr></table></figure>
+<p> 重启生效:</p>
+<p> 修改vi /etc/sysconfig/network-scripts/ifcfg-eth0</p>
+</li>
+<li><p>修改default gateway</p>
+<p> 即时生效:</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">route add default gw 192.168.1.1</span><br></pre></td></tr></table></figure>
+<p> 重启生效:</p>
+<p> 修改vi /etc/sysconfig/network-scripts/ifcfg-eth0</p>
+</li>
+<li><p>修改dns</p>
+<p> 修改vi /etc/resolv.conf<br> 修改后即时生效，重启同样有效</p>
+</li>
+<li><p>修改host name</p>
+<p> 即时生效:</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hostname test1</span><br></pre></td></tr></table></figure>
+<p> 重启生效:</p>
+<p> 修改vi /etc/sysconfig/network</p>
+<h2 id="4、其他指令"><a href="#4、其他指令" class="headerlink" title="4、其他指令"></a>4、其他指令</h2></li>
 </ol>
-<p>即时生效:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ifconfig eth0 172.16.244.100  netmask 255.255.255.0</span><br></pre></td></tr></table></figure>
-<p>重启生效:</p>
-<p>修改vi /etc/sysconfig/network-scripts/ifcfg-eth0</p>
-<ol start="2">
-<li>修改default gateway</li>
-</ol>
-<p>即时生效:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">route add default gw 192.168.1.1</span><br></pre></td></tr></table></figure>
-<p>重启生效:</p>
-<p>修改vi /etc/sysconfig/network-scripts/ifcfg-eth0</p>
-<ol start="3">
-<li>修改dns</li>
-</ol>
-<p>修改vi /etc/resolv.conf<br>修改后即时生效，重启同样有效</p>
-<ol start="4">
-<li>修改host name</li>
-</ol>
-<p>即时生效:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hostname test1</span><br></pre></td></tr></table></figure>
-<p>重启生效:</p>
-<p>修改vi /etc/sysconfig/network</p>
-<h2 id="4、其他指令"><a href="#4、其他指令" class="headerlink" title="4、其他指令"></a>4、其他指令</h2><ul>
+<ul>
 <li>查看文件夹大小<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">du -h --max-depth=1</span><br></pre></td></tr></table></figure></li>
 <li>依赖安装<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get -f install</span><br></pre></td></tr></table></figure></li>
 <li>挂载/system为可读写<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mount -o remount,rw /system</span><br></pre></td></tr></table></figure></li>
