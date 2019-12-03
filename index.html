@@ -627,7 +627,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-03 15:34:07" itemprop="dateModified" datetime="2019-12-03T15:34:07+08:00">2019-12-03</time>
+                <time title="Modified: 2019-12-03 17:25:18" itemprop="dateModified" datetime="2019-12-03T17:25:18+08:00">2019-12-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -656,7 +656,21 @@
 <li>方法1<br>使用v进入可视模式<br>复制命令是y（yank提起）<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y10 //复制当前及紧跟的10行</span><br><span class="line">10y //复制第10行</span><br></pre></td></tr></table></figure></li>
 <li>方法2（加j）<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y10j //复制当前行和接下来的10行</span><br></pre></td></tr></table></figure>
 粘贴为p（put放下）</li>
+</ul><h2 id="2、字符串、文件查找"><a href="#2、字符串、文件查找" class="headerlink" title="2、字符串、文件查找"></a>2、字符串、文件查找</h2><ul>
+<li>字符串查找<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -name <span class="string">"*.go"</span> | xargs grep <span class="string">"index.html"</span></span><br></pre></td></tr></table></figure></li>
+<li>文件查找<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /home/username/Soft/ -name <span class="string">'gdbserver'</span></span><br></pre></td></tr></table></figure></li>
+<li>定位命令<br>locate定位命令用来查找文件，如<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">locate 文件或者目录或部分名</span><br></pre></td></tr></table></figure>
+
+</li>
 </ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
