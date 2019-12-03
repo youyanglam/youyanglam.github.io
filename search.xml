@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>好句子</title>
+    <url>/2019/12/03/%E5%A5%BD%E5%8F%A5%E5%AD%90/</url>
+    <content><![CDATA[<h2 id="1、一命二运三风水，四积阴德五读书。"><a href="#1、一命二运三风水，四积阴德五读书。" class="headerlink" title="1、一命二运三风水，四积阴德五读书。"></a>1、一命二运三风水，四积阴德五读书。</h2>]]></content>
+      <categories>
+        <category>book</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python语法记录</title>
     <url>/2019/12/02/python%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h2 id="1、list打印"><a href="#1、list打印" class="headerlink" title="1、list打印"></a>1、list打印</h2><p>如下，pargs为类型list，打印其中的内容。</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span> <span class="string">"pcap cmd: "</span>+<span class="string">" "</span>.join(cmd <span class="keyword">for</span> cmd <span class="keyword">in</span> pargs)</span><br></pre></td></tr></table></figure>]]></content>
