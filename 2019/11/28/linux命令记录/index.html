@@ -46,15 +46,15 @@
   };
 </script>
 
-  <meta name="description" content="1、vim命令1.1、复制粘贴 方法1使用v进入可视模式复制命令是y（yank提起）12y10 &#x2F;&#x2F;复制当前及紧跟的10行10y &#x2F;&#x2F;复制第10行 方法2（加j）1y10j &#x2F;&#x2F;复制当前行和接下来的10行 粘贴为p（put放下） 2、字符串、文件查找 字符串查找1find . -name &quot;*.go&quot; | xargs grep &quot;index.html&quot; 文件查找1find &#x2F;home&#x2F;userna">
+  <meta name="description" content="1、vim命令1.1、复制粘贴 方法1使用v进入可视模式复制命令是y（yank提起）12y10 &#x2F;&#x2F;复制当前及紧跟的10行10y &#x2F;&#x2F;复制第10行 方法2（加j）1y10j &#x2F;&#x2F;复制当前行和接下来的10行 粘贴为p（put放下）1.2、查看文件编码1:set fileencoding 2、字符串、文件查找 字符串查找1find . -name &quot;*.go&quot; | xargs grep &quot;index.">
 <meta name="keywords" content="vim">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux命令记录">
 <meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;11&#x2F;28&#x2F;linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95&#x2F;index.html">
 <meta property="og:site_name" content="YouYang&#39;s Bay">
-<meta property="og:description" content="1、vim命令1.1、复制粘贴 方法1使用v进入可视模式复制命令是y（yank提起）12y10 &#x2F;&#x2F;复制当前及紧跟的10行10y &#x2F;&#x2F;复制第10行 方法2（加j）1y10j &#x2F;&#x2F;复制当前行和接下来的10行 粘贴为p（put放下） 2、字符串、文件查找 字符串查找1find . -name &quot;*.go&quot; | xargs grep &quot;index.html&quot; 文件查找1find &#x2F;home&#x2F;userna">
+<meta property="og:description" content="1、vim命令1.1、复制粘贴 方法1使用v进入可视模式复制命令是y（yank提起）12y10 &#x2F;&#x2F;复制当前及紧跟的10行10y &#x2F;&#x2F;复制第10行 方法2（加j）1y10j &#x2F;&#x2F;复制当前行和接下来的10行 粘贴为p（put放下）1.2、查看文件编码1:set fileencoding 2、字符串、文件查找 字符串查找1find . -name &quot;*.go&quot; | xargs grep &quot;index.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-03T12:04:09.291Z">
+<meta property="og:updated_time" content="2019-12-03T13:16:33.693Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://youyanglam.github.io/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/">
@@ -257,7 +257,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-03 20:04:09" itemprop="dateModified" datetime="2019-12-03T20:04:09+08:00">2019-12-03</time>
+                <time title="Modified: 2019-12-03 21:16:33" itemprop="dateModified" datetime="2019-12-03T21:16:33+08:00">2019-12-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -292,15 +292,14 @@
         <h2 id="1、vim命令"><a href="#1、vim命令" class="headerlink" title="1、vim命令"></a>1、vim命令</h2><h3 id="1-1、复制粘贴"><a href="#1-1、复制粘贴" class="headerlink" title="1.1、复制粘贴"></a>1.1、复制粘贴</h3><ul>
 <li>方法1<br>使用v进入可视模式<br>复制命令是y（yank提起）<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y10 //复制当前及紧跟的10行</span><br><span class="line">10y //复制第10行</span><br></pre></td></tr></table></figure></li>
 <li>方法2（加j）<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y10j //复制当前行和接下来的10行</span><br></pre></td></tr></table></figure>
-粘贴为p（put放下）</li>
-</ul><h2 id="2、字符串、文件查找"><a href="#2、字符串、文件查找" class="headerlink" title="2、字符串、文件查找"></a>2、字符串、文件查找</h2><ul>
+粘贴为p（put放下）<h3 id="1-2、查看文件编码"><a href="#1-2、查看文件编码" class="headerlink" title="1.2、查看文件编码"></a>1.2、查看文件编码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:<span class="built_in">set</span> fileencoding</span><br></pre></td></tr></table></figure>
+<h2 id="2、字符串、文件查找"><a href="#2、字符串、文件查找" class="headerlink" title="2、字符串、文件查找"></a>2、字符串、文件查找</h2></li>
 <li>字符串查找<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -name <span class="string">"*.go"</span> | xargs grep <span class="string">"index.html"</span></span><br></pre></td></tr></table></figure></li>
 <li>文件查找<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /home/username/Soft/ -name <span class="string">'gdbserver'</span></span><br></pre></td></tr></table></figure></li>
 <li>定位命令<br>locate定位命令用来查找文件，如<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">locate 文件或者目录或部分名</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul><a id="more"></a>
-
 <h2 id="3、网络相关"><a href="#3、网络相关" class="headerlink" title="3、网络相关"></a>3、网络相关</h2><ul>
 <li>重启网络<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@bt:~<span class="comment"># /etc/init.d/networking restart</span></span><br></pre></td></tr></table></figure></li>
 <li>ssh登陆<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -t root@172.16.244.100 -p 20000</span><br></pre></td></tr></table></figure>
@@ -406,7 +405,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、vim命令"><span class="nav-text">1、vim命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1、复制粘贴"><span class="nav-text">1.1、复制粘贴</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、字符串、文件查找"><span class="nav-text">2、字符串、文件查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、网络相关"><span class="nav-text">3、网络相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、其他指令"><span class="nav-text">4、其他指令</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、vim命令"><span class="nav-text">1、vim命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1、复制粘贴"><span class="nav-text">1.1、复制粘贴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2、查看文件编码"><span class="nav-text">1.2、查看文件编码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、字符串、文件查找"><span class="nav-text">2、字符串、文件查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、网络相关"><span class="nav-text">3、网络相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、其他指令"><span class="nav-text">4、其他指令</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
