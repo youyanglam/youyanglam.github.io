@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youyanglam.github.io/"/>
-  <updated>2019-12-03T07:14:20.611Z</updated>
+  <updated>2019-12-04T05:25:52.378Z</updated>
   <id>http://youyanglam.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>技术博客</title>
+    <link href="http://youyanglam.github.io/2019/12/04/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://youyanglam.github.io/2019/12/04/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/</id>
+    <published>2019-12-04T05:21:23.000Z</published>
+    <updated>2019-12-04T05:25:52.378Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>二进制漏洞</li></ul><ol><li><a href="http://3xp10it.cc/my-categories/" target="_blank" rel="noopener">http://3xp10it.cc/my-categories/</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;二进制漏洞&lt;/li&gt;
+&lt;/ul&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://3xp10it.cc/my-categories/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://3xp10it.cc/my-categories/
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>kali 2019.4 中文乱码</title>
