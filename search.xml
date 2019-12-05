@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>python终端输出打印彩色字体</title>
+    <url>/2019/12/05/python%E7%BB%88%E7%AB%AF%E8%BE%93%E5%87%BA%E6%89%93%E5%8D%B0%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%93/</url>
+    <content><![CDATA[<h3 id="1、如下命令"><a href="#1、如下命令" class="headerlink" title="1、如下命令"></a>1、如下命令</h3><p>其中pargs是一个list，其实%后面的括号中为要输出的字符串即可。</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">"\033[0;32m%s\033[0m"</span>) % (<span class="string">"vm cmd: "</span> + <span class="string">" "</span>.join(cmd <span class="keyword">for</span> cmd <span class="keyword">in</span> pargs))</span><br></pre></td></tr></table></figure><h3 id="2、-参考"><a href="#2、-参考" class="headerlink" title="2、 参考"></a>2、 参考</h3><p>Python终端输出打印彩色字体的方法<br><a href="https://www.cnblogs.com/huchong/p/7516712.html" target="_blank" rel="noopener">https://www.cnblogs.com/huchong/p/7516712.html</a></p>]]></content>
+  </entry>
+  <entry>
     <title>技术博客</title>
     <url>/2019/12/04/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h3 id="1、二进制漏洞"><a href="#1、二进制漏洞" class="headerlink" title="1、二进制漏洞"></a>1、二进制漏洞</h3><ul>
