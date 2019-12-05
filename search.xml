@@ -186,6 +186,9 @@
       <categories>
         <category>virus</category>
       </categories>
+      <tags>
+        <tag>Mac</tag>
+      </tags>
   </entry>
   <entry>
     <title>mac下自动分析恶意样本</title>
