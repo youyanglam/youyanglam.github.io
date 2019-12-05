@@ -53,7 +53,7 @@
 <meta property="og:site_name" content="YouYang&#39;s Bay">
 <meta property="og:description" content="1、下载1https:&#x2F;&#x2F;code.google.com&#x2F;archive&#x2F;p&#x2F;volatility&#x2F;downloads2、安装1python2.7 setup.py install编译和安装后的文件放在了如下路径123Installing vol.py script to &#x2F;usr&#x2F;local&#x2F;binInstalled &#x2F;Library&#x2F;Python&#x2F;2.7&#x2F;site-packages&#x2F;volat">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-03T06:12:28.691Z">
+<meta property="og:updated_time" content="2019-12-05T14:32:18.625Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://youyanglam.github.io/2019/11/27/mac%E4%B8%8Bvolatility%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">
@@ -252,7 +252,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-03 14:12:28" itemprop="dateModified" datetime="2019-12-03T14:12:28+08:00">2019-12-03</time>
+                <time title="Modified: 2019-12-05 22:32:18" itemprop="dateModified" datetime="2019-12-05T22:32:18+08:00">2019-12-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -296,7 +296,7 @@
 <p>结果如下</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Process: IEXPLORE.EXE Pid: 1884 Address: 0x1110000</span><br><span class="line">Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE</span><br><span class="line">Flags: CommitCharge: 1, MemCommit: 1, PrivateMemory: 1, Protection: 6</span><br><span class="line"></span><br><span class="line">0x01110000  d9 89 d4 77 05 8b ff 55 8b ec e9 cf 89 c3 76 00   ...w...U......v.</span><br><span class="line">0x01110010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................</span><br><span class="line">0x01110020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................</span><br><span class="line">0x01110030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................</span><br><span class="line"></span><br><span class="line">0x1110000 d9               DB 0xd9</span><br><span class="line">0x1110001 89d4             MOV ESP, EDX</span><br><span class="line">0x1110003 7705             JA 0x111000a</span><br><span class="line">0x1110005 8bff             MOV EDI, EDI</span><br><span class="line">0x1110007 55               PUSH EBP</span><br><span class="line">0x1110008 8bec             MOV EBP, ESP</span><br><span class="line">0x111000a e9cf89c376       JMP 0x77d489de</span><br><span class="line">0x111000f 0000             ADD [EAX], AL</span><br><span class="line">0x1110011 0000             ADD [EAX], AL</span><br><span class="line">0x1110013 0000             ADD [EAX], AL</span><br></pre></td></tr></table></figure>
 <h2 id="4、未找到（下载地址）的软件或插件"><a href="#4、未找到（下载地址）的软件或插件" class="headerlink" title="4、未找到（下载地址）的软件或插件"></a>4、未找到（下载地址）的软件或插件</h2><p>软件：<br>win32dd.exe<br>win64dd.exe<br>插件：<br>csrss_plist</p>
-
+<h2 id="5、python脚本打印出的部分命令"><a href="#5、python脚本打印出的部分命令" class="headerlink" title="5、python脚本打印出的部分命令"></a>5、python脚本打印出的部分命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vol cmd: /usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py pslist -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem</span><br><span class="line">vol cmd: /usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py connections -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem</span><br><span class="line">vol cmd: /usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py sockets -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem</span><br><span class="line">vol cmd: /usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py apihooks -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem -d .tmp</span><br><span class="line">vol cmd: /usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py malfind -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem yarascan -y ./auto/data/yara.rules</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -387,7 +387,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、下载"><span class="nav-text">1、下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、安装"><span class="nav-text">2、安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、使用"><span class="nav-text">3、使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、未找到（下载地址）的软件或插件"><span class="nav-text">4、未找到（下载地址）的软件或插件</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、下载"><span class="nav-text">1、下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、安装"><span class="nav-text">2、安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、使用"><span class="nav-text">3、使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、未找到（下载地址）的软件或插件"><span class="nav-text">4、未找到（下载地址）的软件或插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、python脚本打印出的部分命令"><span class="nav-text">5、python脚本打印出的部分命令</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
