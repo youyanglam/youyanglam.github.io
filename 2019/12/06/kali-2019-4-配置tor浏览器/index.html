@@ -46,15 +46,15 @@
   };
 </script>
 
-  <meta name="description" content="1、下载tor浏览器https:&#x2F;&#x2F;www.torproject.org&#x2F;download&#x2F;2、解压并注册为桌面app 解压1root@kali:&#x2F;opt# tar -xvJf tor-browser-linux64-9.0.2_en-US.tar.xz 注释掉限制root用户启动的命令12345root@kali:&#x2F;opt&#x2F;tor-browser_en-US&#x2F;Browser# vim start">
+  <meta name="description" content="1、下载tor浏览器https:&#x2F;&#x2F;www.torproject.org&#x2F;download&#x2F;2、解压并注册为桌面app2.1、解压1root@kali:&#x2F;opt# tar -xvJf tor-browser-linux64-9.0.2_en-US.tar.xz2.2、注释掉限制root用户启动的命令12345root@kali:&#x2F;opt&#x2F;tor-browser_en-US&#x2F;Browser# vim">
 <meta name="keywords" content="kali,tor">
 <meta property="og:type" content="article">
 <meta property="og:title" content="kali 2019.4 配置tor浏览器">
 <meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;06&#x2F;kali-2019-4-%E9%85%8D%E7%BD%AEtor%E6%B5%8F%E8%A7%88%E5%99%A8&#x2F;index.html">
 <meta property="og:site_name" content="YouYang&#39;s Bay">
-<meta property="og:description" content="1、下载tor浏览器https:&#x2F;&#x2F;www.torproject.org&#x2F;download&#x2F;2、解压并注册为桌面app 解压1root@kali:&#x2F;opt# tar -xvJf tor-browser-linux64-9.0.2_en-US.tar.xz 注释掉限制root用户启动的命令12345root@kali:&#x2F;opt&#x2F;tor-browser_en-US&#x2F;Browser# vim start">
+<meta property="og:description" content="1、下载tor浏览器https:&#x2F;&#x2F;www.torproject.org&#x2F;download&#x2F;2、解压并注册为桌面app2.1、解压1root@kali:&#x2F;opt# tar -xvJf tor-browser-linux64-9.0.2_en-US.tar.xz2.2、注释掉限制root用户启动的命令12345root@kali:&#x2F;opt&#x2F;tor-browser_en-US&#x2F;Browser# vim">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-06T08:33:07.194Z">
+<meta property="og:updated_time" content="2019-12-06T08:45:45.031Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://youyanglam.github.io/2019/12/06/kali-2019-4-%E9%85%8D%E7%BD%AEtor%E6%B5%8F%E8%A7%88%E5%99%A8/">
@@ -247,7 +247,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2019-12-06 16:13:55 / Modified: 16:33:07" itemprop="dateCreated datePublished" datetime="2019-12-06T16:13:55+08:00">2019-12-06</time>
+              <time title="Created: 2019-12-06 16:13:55 / Modified: 16:45:45" itemprop="dateCreated datePublished" datetime="2019-12-06T16:13:55+08:00">2019-12-06</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -279,12 +279,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1、下载tor浏览器"><a href="#1、下载tor浏览器" class="headerlink" title="1、下载tor浏览器"></a>1、下载tor浏览器</h3><pre><code>https://www.torproject.org/download/</code></pre><h3 id="2、解压并注册为桌面app"><a href="#2、解压并注册为桌面app" class="headerlink" title="2、解压并注册为桌面app"></a>2、解压并注册为桌面app</h3><ul>
-<li>解压<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:/opt<span class="comment"># tar -xvJf tor-browser-linux64-9.0.2_en-US.tar.xz</span></span><br></pre></td></tr></table></figure></li>
-<li>注释掉限制root用户启动的命令<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root@kali:/opt/tor-browser_en-US/Browser<span class="comment"># vim start-tor-browser</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">"`id -u`"</span> -eq 0 ; <span class="keyword">then</span></span><br><span class="line">complain <span class="string">"The Tor Browser Bundle should not be run as root. Exiting."</span></span><br><span class="line"><span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></li>
-<li>注册为桌面app<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:/opt/tor-browser_en-US<span class="comment">#./start-tor-browser.desktop --register-app</span></span><br></pre></td></tr></table></figure>
-<h3 id="3、启动tor并配置proxy"><a href="#3、启动tor并配置proxy" class="headerlink" title="3、启动tor并配置proxy"></a>3、启动tor并配置proxy</h3></li>
-</ul>
+        <h3 id="1、下载tor浏览器"><a href="#1、下载tor浏览器" class="headerlink" title="1、下载tor浏览器"></a>1、下载tor浏览器</h3><pre><code>https://www.torproject.org/download/</code></pre><h3 id="2、解压并注册为桌面app"><a href="#2、解压并注册为桌面app" class="headerlink" title="2、解压并注册为桌面app"></a>2、解压并注册为桌面app</h3><h4 id="2-1、解压"><a href="#2-1、解压" class="headerlink" title="2.1、解压"></a>2.1、解压</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:/opt<span class="comment"># tar -xvJf tor-browser-linux64-9.0.2_en-US.tar.xz</span></span><br></pre></td></tr></table></figure><h4 id="2-2、注释掉限制root用户启动的命令"><a href="#2-2、注释掉限制root用户启动的命令" class="headerlink" title="2.2、注释掉限制root用户启动的命令"></a>2.2、注释掉限制root用户启动的命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root@kali:/opt/tor-browser_en-US/Browser<span class="comment"># vim start-tor-browser</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">"`id -u`"</span> -eq 0 ; <span class="keyword">then</span></span><br><span class="line">complain <span class="string">"The Tor Browser Bundle should not be run as root. Exiting."</span></span><br><span class="line"><span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure><a id="more"></a>
+
+<h4 id="2-3、注册为桌面app"><a href="#2-3、注册为桌面app" class="headerlink" title="2.3、注册为桌面app"></a>2.3、注册为桌面app</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:/opt/tor-browser_en-US<span class="comment">#./start-tor-browser.desktop --register-app</span></span><br></pre></td></tr></table></figure>
+<h3 id="3、启动tor并配置proxy"><a href="#3、启动tor并配置proxy" class="headerlink" title="3、启动tor并配置proxy"></a>3、启动tor并配置proxy</h3>
     </div>
 
     
@@ -379,7 +377,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、下载tor浏览器"><span class="nav-text">1、下载tor浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、解压并注册为桌面app"><span class="nav-text">2、解压并注册为桌面app</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、启动tor并配置proxy"><span class="nav-text">3、启动tor并配置proxy</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、下载tor浏览器"><span class="nav-text">1、下载tor浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、解压并注册为桌面app"><span class="nav-text">2、解压并注册为桌面app</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1、解压"><span class="nav-text">2.1、解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2、注释掉限制root用户启动的命令"><span class="nav-text">2.2、注释掉限制root用户启动的命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3、注册为桌面app"><span class="nav-text">2.3、注册为桌面app</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、启动tor并配置proxy"><span class="nav-text">3、启动tor并配置proxy</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
