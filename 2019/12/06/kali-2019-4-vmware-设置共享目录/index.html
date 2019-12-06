@@ -46,17 +46,18 @@
   };
 </script>
 
-  <meta name="description" content="往者已矣，来者可追">
-<meta property="og:type" content="website">
-<meta property="og:title" content="movie">
-<meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;categories&#x2F;movie&#x2F;index.html">
+  <meta name="description" content="1、添加共享目录在mac上vmware给kali虚拟机添加共享目录2、映射到共享目录2.1、查看共享目录1root@kali:~# vmware-hgfsclient2.2、新建目录1root@kali:~# mkdir &#x2F;mnt&#x2F;hgfs2.3、创建映射1&#x2F;usr&#x2F;bin&#x2F;vmhgfs-fuse .host:&#x2F; &#x2F;mnt&#x2F;hgfs -o subtype=vmhgfs-fuse,allow_oth">
+<meta name="keywords" content="kali,vmware">
+<meta property="og:type" content="article">
+<meta property="og:title" content="kali 2019.4 vmware 设置共享目录">
+<meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;06&#x2F;kali-2019-4-vmware-%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95&#x2F;index.html">
 <meta property="og:site_name" content="YouYang&#39;s Bay">
-<meta property="og:description" content="往者已矣，来者可追">
+<meta property="og:description" content="1、添加共享目录在mac上vmware给kali虚拟机添加共享目录2、映射到共享目录2.1、查看共享目录1root@kali:~# vmware-hgfsclient2.2、新建目录1root@kali:~# mkdir &#x2F;mnt&#x2F;hgfs2.3、创建映射1&#x2F;usr&#x2F;bin&#x2F;vmhgfs-fuse .host:&#x2F; &#x2F;mnt&#x2F;hgfs -o subtype=vmhgfs-fuse,allow_oth">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-28T10:23:24.295Z">
+<meta property="og:updated_time" content="2019-12-06T08:43:31.142Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://youyanglam.github.io/categories/movie/">
+<link rel="canonical" href="http://youyanglam.github.io/2019/12/06/kali-2019-4-vmware-%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/">
 
 
 <script id="page-configurations">
@@ -64,14 +65,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>movie | YouYang's Bay
-  </title>
+  <title>kali 2019.4 vmware 设置共享目录 | YouYang's Bay</title>
   
 
 
@@ -213,56 +213,135 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
           <div class="content">
             
 
   <div class="posts-expand">
-    
-    
-    
-    <div class="post-block" lang="en">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">movie
-</h1>
-
-<div class="post-meta">
+      
   
-  <ul class="breadcrumb">
-          
-            <li><a href="/categories/">CATEGORIES</a></li>
-          <li>MOVIE</li>
-        
-  </ul>
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://youyanglam.github.io/2019/12/06/kali-2019-4-vmware-%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="YouYang">
+      <meta itemprop="description" content="往者已矣，来者可追">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YouYang's Bay">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          kali 2019.4 vmware 设置共享目录
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2019-12-06 16:37:59 / Modified: 16:43:31" itemprop="dateCreated datePublished" datetime="2019-12-06T16:37:59+08:00">2019-12-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="1、添加共享目录"><a href="#1、添加共享目录" class="headerlink" title="1、添加共享目录"></a>1、添加共享目录</h3><p>在mac上vmware给kali虚拟机添加共享目录</p><h3 id="2、映射到共享目录"><a href="#2、映射到共享目录" class="headerlink" title="2、映射到共享目录"></a>2、映射到共享目录</h3><h4 id="2-1、查看共享目录"><a href="#2-1、查看共享目录" class="headerlink" title="2.1、查看共享目录"></a>2.1、查看共享目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># vmware-hgfsclient</span></span><br></pre></td></tr></table></figure><h4 id="2-2、新建目录"><a href="#2-2、新建目录" class="headerlink" title="2.2、新建目录"></a>2.2、新建目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># mkdir /mnt/hgfs</span></span><br></pre></td></tr></table></figure><h4 id="2-3、创建映射"><a href="#2-3、创建映射" class="headerlink" title="2.3、创建映射"></a>2.3、创建映射</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>请我喝咖啡.</div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="YouYang WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+
+  </div>
 </div>
 
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
-    </div>
-    
-  <ul class="breadcrumb">
-          
-            <li><a href="/categories/">CATEGORIES</a></li>
-          <li>MOVIE</li>
         
-  </ul>
 
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>YouYang
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="http://youyanglam.github.io/2019/12/06/kali-2019-4-vmware-%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/" title="kali 2019.4 vmware 设置共享目录">http://youyanglam.github.io/2019/12/06/kali-2019-4-vmware-%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/kali/" rel="tag"># kali</a>
+              <a href="/tags/vmware/" rel="tag"># vmware</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/12/06/kali-2019-4-%E9%85%8D%E7%BD%AEtor%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="prev" title="kali 2019.4 配置tor浏览器">
+      <i class="fa fa-chevron-left"></i> kali 2019.4 配置tor浏览器
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
     
-    
-    
+  </article>
+  
+  
+  
+
   </div>
 
 
@@ -292,6 +371,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、添加共享目录"><span class="nav-text">1、添加共享目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、映射到共享目录"><span class="nav-text">2、映射到共享目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1、查看共享目录"><span class="nav-text">2.1、查看共享目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2、新建目录"><span class="nav-text">2.2、新建目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3、创建映射"><span class="nav-text">2.3、创建映射</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

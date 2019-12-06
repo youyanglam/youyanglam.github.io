@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>kali 2019.4 vmware 设置共享目录</title>
+    <url>/2019/12/06/kali-2019-4-vmware-%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/</url>
+    <content><![CDATA[<h3 id="1、添加共享目录"><a href="#1、添加共享目录" class="headerlink" title="1、添加共享目录"></a>1、添加共享目录</h3><p>在mac上vmware给kali虚拟机添加共享目录</p><h3 id="2、映射到共享目录"><a href="#2、映射到共享目录" class="headerlink" title="2、映射到共享目录"></a>2、映射到共享目录</h3><h4 id="2-1、查看共享目录"><a href="#2-1、查看共享目录" class="headerlink" title="2.1、查看共享目录"></a>2.1、查看共享目录</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@kali:~<span class="comment"># vmware-hgfsclient</span></span><br></pre></td></tr></table></figure><h4 id="2-2、新建目录"><a href="#2-2、新建目录" class="headerlink" title="2.2、新建目录"></a>2.2、新建目录</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@kali:~<span class="comment"># mkdir /mnt/hgfs</span></span><br></pre></td></tr></table></figure><h4 id="2-3、创建映射"><a href="#2-3、创建映射" class="headerlink" title="2.3、创建映射"></a>2.3、创建映射</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>kali</tag>
+        <tag>vmware</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>kali 2019.4 配置tor浏览器</title>
+    <url>/2019/12/06/kali-2019-4-%E9%85%8D%E7%BD%AEtor%E6%B5%8F%E8%A7%88%E5%99%A8/</url>
+    <content><![CDATA[<h3 id="1、下载tor浏览器"><a href="#1、下载tor浏览器" class="headerlink" title="1、下载tor浏览器"></a>1、下载tor浏览器</h3><pre><code>https://www.torproject.org/download/</code></pre><h3 id="2、解压并注册为桌面app"><a href="#2、解压并注册为桌面app" class="headerlink" title="2、解压并注册为桌面app"></a>2、解压并注册为桌面app</h3><ul>
+<li>解压<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@kali:/opt<span class="comment"># tar -xvJf tor-browser-linux64-9.0.2_en-US.tar.xz</span></span><br></pre></td></tr></table></figure></li>
+<li>注释掉限制root用户启动的命令<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@kali:/opt/tor-browser_en-US/Browser<span class="comment"># vim start-tor-browser</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">"`id -u`"</span> -eq 0 ; <span class="keyword">then</span></span><br><span class="line">complain <span class="string">"The Tor Browser Bundle should not be run as root. Exiting."</span></span><br><span class="line"><span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></li>
+<li>注册为桌面app<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@kali:/opt/tor-browser_en-US<span class="comment">#./start-tor-browser.desktop --register-app</span></span><br></pre></td></tr></table></figure>
+<h3 id="3、启动tor并配置proxy"><a href="#3、启动tor并配置proxy" class="headerlink" title="3、启动tor并配置proxy"></a>3、启动tor并配置proxy</h3></li>
+</ul>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>kali</tag>
+        <tag>tor</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python终端输出打印彩色字体</title>
     <url>/2019/12/05/python%E7%BB%88%E7%AB%AF%E8%BE%93%E5%87%BA%E6%89%93%E5%8D%B0%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%93/</url>
     <content><![CDATA[<h3 id="1、如下命令"><a href="#1、如下命令" class="headerlink" title="1、如下命令"></a>1、如下命令</h3><p>其中pargs是一个list，其实%后面的括号中为要输出的字符串即可。</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">"\033[0;32m%s\033[0m"</span>) % (<span class="string">"vm cmd: "</span> + <span class="string">" "</span>.join(cmd <span class="keyword">for</span> cmd <span class="keyword">in</span> pargs))</span><br></pre></td></tr></table></figure><h3 id="2、-参考"><a href="#2、-参考" class="headerlink" title="2、 参考"></a>2、 参考</h3><p>Python终端输出打印彩色字体的方法<br><a href="https://www.cnblogs.com/huchong/p/7516712.html" target="_blank" rel="noopener">https://www.cnblogs.com/huchong/p/7516712.html</a></p>]]></content>
