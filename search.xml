@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>PEB地址的取得</title>
+    <url>/2019/12/11/PEB%E5%9C%B0%E5%9D%80%E7%9A%84%E5%8F%96%E5%BE%97/</url>
+    <content><![CDATA[<h3 id="PEB地址的取得"><a href="#PEB地址的取得" class="headerlink" title="PEB地址的取得"></a>PEB地址的取得</h3><ul>
+<li>原理：FS段寄存器指向当前的TEB结构，在TEB偏移0x30处是PEB指针，通过这个指针即可取得PEB的地址。</li>
+<li>实现方法：<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">__asm</span><br><span class="line">&#123;</span><br><span class="line">  mov eax,fs:[<span class="number">0x30</span>]</span><br><span class="line">  mov PEB,eax</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>]]></content>
+      <categories>
+        <category>asm</category>
+      </categories>
+      <tags>
+        <tag>peb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IDA中堆栈不平衡</title>
+    <url>/2019/12/11/IDA%E4%B8%AD%E5%A0%86%E6%A0%88%E4%B8%8D%E5%B9%B3%E8%A1%A1/</url>
+    <content><![CDATA[<h3 id="F5堆栈不平衡，修改堆栈"><a href="#F5堆栈不平衡，修改堆栈" class="headerlink" title="F5堆栈不平衡，修改堆栈\"></a>F5堆栈不平衡，修改堆栈\</h3><p><img src="ida.jpg" alt="修改堆栈"></p>]]></content>
+      <categories>
+        <category>reverse</category>
+      </categories>
+      <tags>
+        <tag>ida</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo文章中插入图片</title>
+    <url>/2019/12/11/hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<h3 id="1、修改hexo的-config-yml文件"><a href="#1、修改hexo的-config-yml文件" class="headerlink" title="1、修改hexo的_config.yml文件"></a>1、修改hexo的_config.yml文件</h3><p>将_config.yml文件中的配置项post_asset_folder设为true后，执行命令$ hexo new post_name，在source/_posts中会生成文章post_name.md和同名文件夹post_name。将图片资源放在post_name中，文章就可以使用相对路径引用图片资源了。</p><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">post_asset_folder: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="2、测试"><a href="#2、测试" class="headerlink" title="2、测试"></a>2、测试</h3><p><img src="222.jpg" alt></p>
+]]></content>
+  </entry>
+  <entry>
     <title>kali 2019.4 vmware 设置共享目录</title>
     <url>/2019/12/06/kali-2019-4-vmware-%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/</url>
     <content><![CDATA[<h3 id="1、添加共享目录"><a href="#1、添加共享目录" class="headerlink" title="1、添加共享目录"></a>1、添加共享目录</h3><p>在mac上vmware给kali虚拟机添加共享目录</p><h3 id="2、映射到共享目录"><a href="#2、映射到共享目录" class="headerlink" title="2、映射到共享目录"></a>2、映射到共享目录</h3><h4 id="2-1、查看共享目录"><a href="#2-1、查看共享目录" class="headerlink" title="2.1、查看共享目录"></a>2.1、查看共享目录</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@kali:~<span class="comment"># vmware-hgfsclient</span></span><br></pre></td></tr></table></figure><h4 id="2-2、新建目录"><a href="#2-2、新建目录" class="headerlink" title="2.2、新建目录"></a>2.2、新建目录</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@kali:~<span class="comment"># mkdir /mnt/hgfs</span></span><br></pre></td></tr></table></figure><h4 id="2-3、创建映射"><a href="#2-3、创建映射" class="headerlink" title="2.3、创建映射"></a>2.3、创建映射</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure>]]></content>

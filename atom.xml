@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youyanglam.github.io/"/>
-  <updated>2019-12-06T08:43:31.142Z</updated>
+  <updated>2019-12-11T08:39:14.671Z</updated>
   <id>http://youyanglam.github.io/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PEB地址的取得</title>
+    <link href="http://youyanglam.github.io/2019/12/11/PEB%E5%9C%B0%E5%9D%80%E7%9A%84%E5%8F%96%E5%BE%97/"/>
+    <id>http://youyanglam.github.io/2019/12/11/PEB%E5%9C%B0%E5%9D%80%E7%9A%84%E5%8F%96%E5%BE%97/</id>
+    <published>2019-12-11T08:32:19.000Z</published>
+    <updated>2019-12-11T08:39:14.671Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="PEB地址的取得"><a href="#PEB地址的取得" class="headerlink" title="PEB地址的取得"></a>PEB地址的取得</h3><ul><li>原理：FS段寄存器指向当前的TEB结构，在TEB偏移0x30处是PEB指针，通过这个指针即可取得PEB的地址。</li><li>实现方法：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">__asm</span><br><span class="line">&#123;</span><br><span class="line">  mov eax,fs:[<span class="number">0x30</span>]</span><br><span class="line">  mov PEB,eax</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;PEB地址的取得&quot;&gt;&lt;a href=&quot;#PEB地址的取得&quot; class=&quot;headerlink&quot; title=&quot;PEB地址的取得&quot;&gt;&lt;/a&gt;PEB地址的取得&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;原理：FS段寄存器指向当前的TEB结构，在TEB偏移0x30处是PEB指针，通过
+      
+    
+    </summary>
+    
+    
+      <category term="asm" scheme="http://youyanglam.github.io/categories/asm/"/>
+    
+    
+      <category term="peb" scheme="http://youyanglam.github.io/tags/peb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDA中堆栈不平衡</title>
+    <link href="http://youyanglam.github.io/2019/12/11/IDA%E4%B8%AD%E5%A0%86%E6%A0%88%E4%B8%8D%E5%B9%B3%E8%A1%A1/"/>
+    <id>http://youyanglam.github.io/2019/12/11/IDA%E4%B8%AD%E5%A0%86%E6%A0%88%E4%B8%8D%E5%B9%B3%E8%A1%A1/</id>
+    <published>2019-12-11T08:24:08.000Z</published>
+    <updated>2019-12-11T08:40:59.965Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="F5堆栈不平衡，修改堆栈"><a href="#F5堆栈不平衡，修改堆栈" class="headerlink" title="F5堆栈不平衡，修改堆栈\"></a>F5堆栈不平衡，修改堆栈\</h3><p><img src="ida.jpg" alt="修改堆栈"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;F5堆栈不平衡，修改堆栈&quot;&gt;&lt;a href=&quot;#F5堆栈不平衡，修改堆栈&quot; class=&quot;headerlink&quot; title=&quot;F5堆栈不平衡，修改堆栈\&quot;&gt;&lt;/a&gt;F5堆栈不平衡，修改堆栈\&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;ida.jpg&quot; alt=&quot;修改堆栈
+      
+    
+    </summary>
+    
+    
+      <category term="reverse" scheme="http://youyanglam.github.io/categories/reverse/"/>
+    
+    
+      <category term="ida" scheme="http://youyanglam.github.io/tags/ida/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo文章中插入图片</title>
+    <link href="http://youyanglam.github.io/2019/12/11/hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
+    <id>http://youyanglam.github.io/2019/12/11/hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</id>
+    <published>2019-12-11T08:17:53.000Z</published>
+    <updated>2019-12-11T08:22:19.894Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1、修改hexo的-config-yml文件"><a href="#1、修改hexo的-config-yml文件" class="headerlink" title="1、修改hexo的_config.yml文件"></a>1、修改hexo的_config.yml文件</h3><p>将_config.yml文件中的配置项post_asset_folder设为true后，执行命令$ hexo new post_name，在source/_posts中会生成文章post_name.md和同名文件夹post_name。将图片资源放在post_name中，文章就可以使用相对路径引用图片资源了。</p><a id="more"></a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: <span class="literal">true</span></span><br></pre></td></tr></table></figure><h3 id="2、测试"><a href="#2、测试" class="headerlink" title="2、测试"></a>2、测试</h3><p><img src="222.jpg" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1、修改hexo的-config-yml文件&quot;&gt;&lt;a href=&quot;#1、修改hexo的-config-yml文件&quot; class=&quot;headerlink&quot; title=&quot;1、修改hexo的_config.yml文件&quot;&gt;&lt;/a&gt;1、修改hexo的_config.yml文件&lt;/h3&gt;&lt;p&gt;将_config.yml文件中的配置项post_asset_folder设为true后，执行命令$ hexo new post_name，在source/_posts中会生成文章post_name.md和同名文件夹post_name。将图片资源放在post_name中，文章就可以使用相对路径引用图片资源了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>kali 2019.4 vmware 设置共享目录</title>
