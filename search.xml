@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>汇编指令含义</title>
+    <url>/2019/12/11/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E5%90%AB%E4%B9%89/</url>
+    <content><![CDATA[<p>CMP OPR1，OPR2<br>OPR1OPR2运算，影响PF和ZF(OPR1=OPR2，ZF=1，PF=1;!=,ZF=0,PF=0)</p><p>LEA OPR1，OPR2<br>将OPR2的地址赋给OPR1</p><p>AND OPR1，OPR2<br>OPR1，OPR2与运算为0时，ZF标志位为1；与运算为1是，ZF为0。</p><p>IMUL OPR1，OPR2，OPR3<br>将OPR2*OPR3赋给OPR1。</p><a id="more"></a>
+
+
+
+<p>jge opr1,opr2    两数比较，前者大于等于后者则跳。jump if greater or eaual.</p>
+<p>rep stos dword ptr es:[edi]    rep重复操作前缀 stos从累加器EAX传送4个字节，到由EDI作为指针的目的串中，同时修改EDI以指向 串中的下一个单元。利用重复操作可以在串在建立一串相同的值。此指令对标志位无影响。</p>
+<p>rep 为repeat 重复之意<br>stos 为sotre string 保存字符串之意<br>ptr 为pointer 指针之意</p>
+<p>在一个函数中，它所申请的栈存放局部变量，在执行函数体运算的时候，将局部变量赋给寄存器（如eax），eax参加运算。结果保留在栈中</p>
+<p>ebp-8处存放 int i；<br>i+1；</p>
+<p>00411577 8b45f8          mov     eax,dword ptr [ebp-8]<br>0041157a 83c001          add     eax,1<br>0041157d 8945f8          mov     dword ptr [ebp-8],eax</p>
+]]></content>
+      <categories>
+        <category>asm</category>
+      </categories>
+  </entry>
+  <entry>
     <title>PEB地址的取得</title>
     <url>/2019/12/11/PEB%E5%9C%B0%E5%9D%80%E7%9A%84%E5%8F%96%E5%BE%97/</url>
     <content><![CDATA[<h3 id="PEB地址的取得"><a href="#PEB地址的取得" class="headerlink" title="PEB地址的取得"></a>PEB地址的取得</h3><ul>

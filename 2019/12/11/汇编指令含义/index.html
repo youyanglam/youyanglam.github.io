@@ -46,20 +46,17 @@
   };
 </script>
 
-  <meta name="description" content="F5堆栈不平衡，修改堆栈\">
-<meta name="keywords" content="ida">
+  <meta name="description" content="CMP OPR1，OPR2OPR1OPR2运算，影响PF和ZF(OPR1=OPR2，ZF=1，PF=1;!=,ZF=0,PF=0)LEA OPR1，OPR2将OPR2的地址赋给OPR1AND OPR1，OPR2OPR1，OPR2与运算为0时，ZF标志位为1；与运算为1是，ZF为0。IMUL OPR1，OPR2，OPR3将OPR2*OPR3赋给OPR1。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IDA中堆栈不平衡">
-<meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;11&#x2F;IDA%E4%B8%AD%E5%A0%86%E6%A0%88%E4%B8%8D%E5%B9%B3%E8%A1%A1&#x2F;index.html">
+<meta property="og:title" content="汇编指令含义">
+<meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;11&#x2F;%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E5%90%AB%E4%B9%89&#x2F;index.html">
 <meta property="og:site_name" content="YouYang&#39;s Bay">
-<meta property="og:description" content="F5堆栈不平衡，修改堆栈\">
+<meta property="og:description" content="CMP OPR1，OPR2OPR1OPR2运算，影响PF和ZF(OPR1=OPR2，ZF=1，PF=1;!=,ZF=0,PF=0)LEA OPR1，OPR2将OPR2的地址赋给OPR1AND OPR1，OPR2OPR1，OPR2与运算为0时，ZF标志位为1；与运算为1是，ZF为0。IMUL OPR1，OPR2，OPR3将OPR2*OPR3赋给OPR1。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;11&#x2F;IDA%E4%B8%AD%E5%A0%86%E6%A0%88%E4%B8%8D%E5%B9%B3%E8%A1%A1&#x2F;ida.jpg">
-<meta property="og:updated_time" content="2019-12-11T08:40:59.965Z">
+<meta property="og:updated_time" content="2019-12-11T08:46:00.615Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;11&#x2F;IDA%E4%B8%AD%E5%A0%86%E6%A0%88%E4%B8%8D%E5%B9%B3%E8%A1%A1&#x2F;ida.jpg">
 
-<link rel="canonical" href="http://youyanglam.github.io/2019/12/11/IDA%E4%B8%AD%E5%A0%86%E6%A0%88%E4%B8%8D%E5%B9%B3%E8%A1%A1/">
+<link rel="canonical" href="http://youyanglam.github.io/2019/12/11/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E5%90%AB%E4%B9%89/">
 
 
 <script id="page-configurations">
@@ -73,7 +70,7 @@
   };
 </script>
 
-  <title>IDA中堆栈不平衡 | YouYang's Bay</title>
+  <title>汇编指令含义 | YouYang's Bay</title>
   
 
 
@@ -224,7 +221,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://youyanglam.github.io/2019/12/11/IDA%E4%B8%AD%E5%A0%86%E6%A0%88%E4%B8%8D%E5%B9%B3%E8%A1%A1/">
+    <link itemprop="mainEntityOfPage" href="http://youyanglam.github.io/2019/12/11/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E5%90%AB%E4%B9%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -237,7 +234,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          IDA中堆栈不平衡
+          汇编指令含义
         </h1>
 
         <div class="post-meta">
@@ -249,7 +246,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2019-12-11 16:24:08 / Modified: 16:40:59" itemprop="dateCreated datePublished" datetime="2019-12-11T16:24:08+08:00">2019-12-11</time>
+              <time title="Created: 2019-12-11 16:44:08 / Modified: 16:46:00" itemprop="dateCreated datePublished" datetime="2019-12-11T16:44:08+08:00">2019-12-11</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -257,8 +254,8 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/reverse/" itemprop="url" rel="index">
-                    <span itemprop="name">reverse</span>
+                  <a href="/categories/asm/" itemprop="url" rel="index">
+                    <span itemprop="name">asm</span>
                   </a>
                 </span>
             </span>
@@ -281,7 +278,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="F5堆栈不平衡，修改堆栈"><a href="#F5堆栈不平衡，修改堆栈" class="headerlink" title="F5堆栈不平衡，修改堆栈\"></a>F5堆栈不平衡，修改堆栈\</h3><p><img src="ida.jpg" alt="修改堆栈"></p>
+        <p>CMP OPR1，OPR2<br>OPR1OPR2运算，影响PF和ZF(OPR1=OPR2，ZF=1，PF=1;!=,ZF=0,PF=0)</p><p>LEA OPR1，OPR2<br>将OPR2的地址赋给OPR1</p><p>AND OPR1，OPR2<br>OPR1，OPR2与运算为0时，ZF标志位为1；与运算为1是，ZF为0。</p><p>IMUL OPR1，OPR2，OPR3<br>将OPR2*OPR3赋给OPR1。</p><a id="more"></a>
+
+
+
+<p>jge opr1,opr2    两数比较，前者大于等于后者则跳。jump if greater or eaual.</p>
+<p>rep stos dword ptr es:[edi]    rep重复操作前缀 stos从累加器EAX传送4个字节，到由EDI作为指针的目的串中，同时修改EDI以指向 串中的下一个单元。利用重复操作可以在串在建立一串相同的值。此指令对标志位无影响。</p>
+<p>rep 为repeat 重复之意<br>stos 为sotre string 保存字符串之意<br>ptr 为pointer 指针之意</p>
+<p>在一个函数中，它所申请的栈存放局部变量，在执行函数体运算的时候，将局部变量赋给寄存器（如eax），eax参加运算。结果保留在栈中</p>
+<p>ebp-8处存放 int i；<br>i+1；</p>
+<p>00411577 8b45f8          mov     eax,dword ptr [ebp-8]<br>0041157a 83c001          add     eax,1<br>0041157d 8945f8          mov     dword ptr [ebp-8],eax</p>
+
     </div>
 
     
@@ -311,7 +318,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="http://youyanglam.github.io/2019/12/11/IDA%E4%B8%AD%E5%A0%86%E6%A0%88%E4%B8%8D%E5%B9%B3%E8%A1%A1/" title="IDA中堆栈不平衡">http://youyanglam.github.io/2019/12/11/IDA%E4%B8%AD%E5%A0%86%E6%A0%88%E4%B8%8D%E5%B9%B3%E8%A1%A1/</a>
+    <a href="http://youyanglam.github.io/2019/12/11/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E5%90%AB%E4%B9%89/" title="汇编指令含义">http://youyanglam.github.io/2019/12/11/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E5%90%AB%E4%B9%89/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -321,9 +328,6 @@
 
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/ida/" rel="tag"># ida</a>
-          </div>
 
         
 
@@ -331,13 +335,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/12/11/hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" rel="prev" title="hexo文章中插入图片">
-      <i class="fa fa-chevron-left"></i> hexo文章中插入图片
+    <a href="/2019/12/11/PEB%E5%9C%B0%E5%9D%80%E7%9A%84%E5%8F%96%E5%BE%97/" rel="prev" title="PEB地址的取得">
+      <i class="fa fa-chevron-left"></i> PEB地址的取得
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/12/11/PEB%E5%9C%B0%E5%9D%80%E7%9A%84%E5%8F%96%E5%BE%97/" rel="next" title="PEB地址的取得">
-      PEB地址的取得 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -375,7 +376,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#F5堆栈不平衡，修改堆栈"><span class="nav-text">F5堆栈不平衡，修改堆栈\</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
