@@ -60,7 +60,9 @@
 <ul>
 <li>安装方法也很简单<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure></li>
 <li>安装完成后，插件实际是存放在了下面的目录<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">\blog\node_modules\hexo-asset-image</span><br></pre></td></tr></table></figure></li>
-<li>想要卸载这个插件，直接删掉这个文件夹就可以了<h3 id="4、设置图片大小"><a href="#4、设置图片大小" class="headerlink" title="4、设置图片大小"></a>4、设置图片大小</h3></li>
+<li>想要卸载这个插件，直接删掉这个文件夹就可以了</li>
+</ul>
+<h3 id="4、设置图片大小"><a href="#4、设置图片大小" class="headerlink" title="4、设置图片大小"></a>4、设置图片大小</h3><ul>
 <li>下面是markdown插入图片的语法，但是好像不支持定义图片大小：<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">测试图片</span>](<span class="link">ida.jpg</span>)</span><br></pre></td></tr></table></figure></li>
 <li>所以用下面的html格式插入图片了<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"ida.jpg"</span> <span class="attr">width</span>=<span class="string">"90%"</span> <span class="attr">height</span>=<span class="string">"90%"</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
 </ul>
