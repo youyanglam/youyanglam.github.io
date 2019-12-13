@@ -47,16 +47,15 @@
 </script>
 
   <meta name="description" content="1、修改hexo的_config.yml文件将_config.yml文件中的配置项post_asset_folder设为true后，执行命令$ hexo new post_name，在source&#x2F;_posts中会生成文章post_name.md和同名文件夹post_name。将图片资源放在post_name中，文章就可以使用相对路径引用图片资源了。">
+<meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo文章中插入图片">
 <meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;11&#x2F;hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87&#x2F;index.html">
 <meta property="og:site_name" content="YouYang&#39;s Bay">
 <meta property="og:description" content="1、修改hexo的_config.yml文件将_config.yml文件中的配置项post_asset_folder设为true后，执行命令$ hexo new post_name，在source&#x2F;_posts中会生成文章post_name.md和同名文件夹post_name。将图片资源放在post_name中，文章就可以使用相对路径引用图片资源了。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;11&#x2F;hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87&#x2F;222.jpg">
-<meta property="og:updated_time" content="2019-12-11T08:22:19.894Z">
+<meta property="og:updated_time" content="2019-12-13T05:47:15.319Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;11&#x2F;hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87&#x2F;222.jpg">
 
 <link rel="canonical" href="http://youyanglam.github.io/2019/12/11/hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">
 
@@ -246,10 +245,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2019-12-11 16:17:53 / Modified: 16:22:19" itemprop="dateCreated datePublished" datetime="2019-12-11T16:17:53+08:00">2019-12-11</time>
+              <time title="Created: 2019-12-11 16:17:53" itemprop="dateCreated datePublished" datetime="2019-12-11T16:17:53+08:00">2019-12-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-13 13:47:15" itemprop="dateModified" datetime="2019-12-13T13:47:15+08:00">2019-12-13</time>
+              </span>
 
           
             <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
@@ -271,7 +276,14 @@
       
         <h3 id="1、修改hexo的-config-yml文件"><a href="#1、修改hexo的-config-yml文件" class="headerlink" title="1、修改hexo的_config.yml文件"></a>1、修改hexo的_config.yml文件</h3><p>将_config.yml文件中的配置项post_asset_folder设为true后，执行命令$ hexo new post_name，在source/_posts中会生成文章post_name.md和同名文件夹post_name。将图片资源放在post_name中，文章就可以使用相对路径引用图片资源了。</p><a id="more"></a>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h3 id="2、测试"><a href="#2、测试" class="headerlink" title="2、测试"></a>2、测试</h3><p><img src="222.jpg" alt></p>
+<h3 id="2、测试"><a href="#2、测试" class="headerlink" title="2、测试"></a>2、测试</h3><div style="width: 300px; margin: auto">![测试图片](222.jpg)</div>
+
+<h3 id="3、图片在首页中正常显示"><a href="#3、图片在首页中正常显示" class="headerlink" title="3、图片在首页中正常显示"></a>3、图片在首页中正常显示</h3><p>上述是 Markdown 的引用方式，图片只能在文章中显示，但无法在首页中正常显示。<br>因为目标文档中使用的是相对路径，在首页中同样是相对路径，首页中就找不到图片的实际位置，最终不能显示。<br>所以有人写了一款插件：hexo-asset-image，这款插件可以自动将图片地址替换为绝对路径。</p>
+<ul>
+<li>安装方法也很简单<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure></li>
+<li>安装完成后，插件实际是存放在了下面的目录<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\blog\node_modules\hexo-asset-image</span><br></pre></td></tr></table></figure></li>
+<li>想要卸载这个插件，直接删掉这个文件夹就可以了</li>
+</ul>
 
     </div>
 
@@ -312,6 +324,9 @@
 
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+          </div>
 
         
 
@@ -363,7 +378,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、修改hexo的-config-yml文件"><span class="nav-text">1、修改hexo的_config.yml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、测试"><span class="nav-text">2、测试</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、修改hexo的-config-yml文件"><span class="nav-text">1、修改hexo的_config.yml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、测试"><span class="nav-text">2、测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、图片在首页中正常显示"><span class="nav-text">3、图片在首页中正常显示</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
