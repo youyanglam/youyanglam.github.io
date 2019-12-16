@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Swift语音学习路径</title>
+    <url>/2019/12/16/Swift%E8%AF%AD%E9%9F%B3%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84/</url>
+    <content><![CDATA[<p><a href="https://www.zhihu.com/question/49328078" target="_blank" rel="noopener">https://www.zhihu.com/question/49328078</a><br><a href="https://juejin.im/post/5bd6af7451882526254942d5#heading-3" target="_blank" rel="noopener">https://juejin.im/post/5bd6af7451882526254942d5#heading-3</a></p>]]></content>
+      <tags>
+        <tag>Swift</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>汇编指令含义</title>
     <url>/2019/12/11/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E5%90%AB%E4%B9%89/</url>
     <content><![CDATA[<p>CMP OPR1，OPR2<br>OPR1OPR2运算，影响PF和ZF(OPR1=OPR2，ZF=1，PF=1;!=,ZF=0,PF=0)</p><p>LEA OPR1，OPR2<br>将OPR2的地址赋给OPR1</p><p>AND OPR1，OPR2<br>OPR1，OPR2与运算为0时，ZF标志位为1；与运算为1是，ZF为0。</p><p>IMUL OPR1，OPR2，OPR3<br>将OPR2*OPR3赋给OPR1。</p><a id="more"></a>
