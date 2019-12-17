@@ -306,9 +306,7 @@
     <title>mac下volatility2.3.1的安装和使用</title>
     <url>/2019/11/27/mac%E4%B8%8Bvolatility2.3.1%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h2 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h2><p>google 2.3.1版本下载地址：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://code.google.com/archive/p/volatility/downloads</span><br></pre></td></tr></table></figure><blockquote>
-<p><strong>最新的下载版本为2.6.1，地址为：</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt;https://github.com/volatilityfoundation/volatility</span><br></pre></td></tr></table></figure>
-<p><strong>安装和使用方法类似这篇文章的2.3.1版本</strong></p>
+<p><strong>最新的下载版本为2.6.1，地址为”<a href="https://github.com/volatilityfoundation/volatility&quot;" target="_blank" rel="noopener">https://github.com/volatilityfoundation/volatility&quot;</a><br>安装和使用方法类似这篇文章的2.3.1版本</strong></p>
 </blockquote><a id="more"></a>
 
 
