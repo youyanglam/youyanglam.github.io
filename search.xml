@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>mac中python的安装目录</title>
+    <url>/2019/12/17/mac%E4%B8%ADpython%E7%9A%84%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95/</url>
+    <content><![CDATA[<h3 id="python3-7的安装目录"><a href="#python3-7的安装目录" class="headerlink" title="python3.7的安装目录"></a>python3.7的安装目录</h3><p>被安装在“usr/local/Cellar”目录下</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/Cellar/python/3.7.3/Frameworks/Python.framework/Versions/3.7</span><br></pre></td></tr></table></figure><p>相应的，其pip等插件被安装在</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/Cellar/python/3.7.3/Frameworks/Python.framework/Versions/3.7/bin/pip</span><br><span class="line">/usr/<span class="built_in">local</span>/Cellar/python/3.7.3/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pip</span><br></pre></td></tr></table></figure><a id="more"></a>
+
+
+
+<p>同被安装在Cellar目录下的应用还有：yara、ruby、tree、ldid、等</p>
+<h3 id="python2-7的安装目录"><a href="#python2-7的安装目录" class="headerlink" title="python2.7的安装目录"></a>python2.7的安装目录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/System/Library/Frameworks/Python.framework/Versions/2.7</span><br></pre></td></tr></table></figure>
+<p>但pip工具被安装在了目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~/Library/Python/2.7/lib/python/site-packages/pip</span><br></pre></td></tr></table></figure>
+<p>同被安装在该“site-packages”目录下的有很多第三方模块，如“pefile.py”、”magic.py”、“pyspider”、“scrapy”、“pyecharts”等<br>另其他一些第三方库，如“bs4”、“requests”等被安装在如下路径</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="regexp">/Library/</span>Python<span class="regexp">/2.7/</span>site-packages</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Swift语音学习路径</title>
     <url>/2019/12/16/Swift%E8%AF%AD%E9%9F%B3%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84/</url>
     <content><![CDATA[<p><a href="https://www.zhihu.com/question/49328078" target="_blank" rel="noopener">https://www.zhihu.com/question/49328078</a><br><a href="https://juejin.im/post/5bd6af7451882526254942d5#heading-3" target="_blank" rel="noopener">https://juejin.im/post/5bd6af7451882526254942d5#heading-3</a></p>]]></content>
