@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youyanglam.github.io/"/>
-  <updated>2019-12-17T08:16:56.889Z</updated>
+  <updated>2019-12-18T15:41:53.559Z</updated>
   <id>http://youyanglam.github.io/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>wingIDE调试idapython脚本</title>
+    <link href="http://youyanglam.github.io/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/"/>
+    <id>http://youyanglam.github.io/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/</id>
+    <published>2019-12-18T14:54:39.000Z</published>
+    <updated>2019-12-18T15:41:53.559Z</updated>
+    
+    <content type="html"><![CDATA[<p>可以使用wingIDE作为外部调试器，调试idapython脚本。具体设置见wingIDE说明文档–<br>“Table of Contents &gt;&gt; How-Tos &gt;&gt; Unmaintained How-Tos &gt;&gt; Using Wing with IDA Python”</p><a id="more"></a><h3 id="1、配置wingIDE环境，下断点"><a href="#1、配置wingIDE环境，下断点" class="headerlink" title="1、配置wingIDE环境，下断点"></a>1、配置wingIDE环境，下断点</h3><p>根据说明配置好后，用wingIDE打开目标idapython脚本，并且在目标idapython文件中下好断点</p><h3 id="2、运行idapython脚本"><a href="#2、运行idapython脚本" class="headerlink" title="2、运行idapython脚本"></a>2、运行idapython脚本</h3><p>打开ida，加载分析好的idb文件，文件菜单，运行目标idapython脚本，则触发断点，开始调试</p><h3 id="3、自己的两点总结："><a href="#3、自己的两点总结：" class="headerlink" title="3、自己的两点总结："></a>3、自己的两点总结：</h3><ul><li>wingide是调试器，ida运行idapython脚本作为客户端，调试的时候ida处于挂起状态<br><img src="/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/wingide_ida.png" width="90%" height="90%"><br>可以看到ida在调试过程中挂起了<img src="/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/ida.png" width="90%" height="90%"></li><li>一次调试完成后，要重新运行ida，才可以进行第二次调试，否则第二次断点断不下来</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;可以使用wingIDE作为外部调试器，调试idapython脚本。具体设置见wingIDE说明文档–&lt;br&gt;“Table of Contents &amp;gt;&amp;gt; How-Tos &amp;gt;&amp;gt; Unmaintained How-Tos &amp;gt;&amp;gt; Using Wing with IDA Python”&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="ida" scheme="http://youyanglam.github.io/tags/ida/"/>
+    
+      <category term="idapython" scheme="http://youyanglam.github.io/tags/idapython/"/>
+    
+      <category term="wingide" scheme="http://youyanglam.github.io/tags/wingide/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>idapython的编写</title>
+    <link href="http://youyanglam.github.io/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/"/>
+    <id>http://youyanglam.github.io/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/</id>
+    <published>2019-12-18T08:14:10.000Z</published>
+    <updated>2019-12-18T08:28:33.935Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1、idapython模块简单介绍"><a href="#1、idapython模块简单介绍" class="headerlink" title="1、idapython模块简单介绍"></a>1、idapython模块简单介绍</h3><p>idapython的主要模块为“idaapi.py”、“idautils.py”、“idc.py”。</p><ul><li>idaapi.py:　　    负责访问核心IDA API。</li><li>idautils.py:     提供大量的使用函数。</li><li>idc.py:          负责提供IDC中所有函数的功能。<br>以上模块在ida运行时使用内部python插件运行(IDAPython脚本会自动导入idc和idautils模块,idaapi模块,需要显式手动导入)。<br>但是这几个模块在不使用ida上下文，单独编写idapython脚本时，是无法使用的，会提示找不到模块。<h3 id="2、单独编辑idapython时，引入idaapi等的设置"><a href="#2、单独编辑idapython时，引入idaapi等的设置" class="headerlink" title="2、单独编辑idapython时，引入idaapi等的设置"></a>2、单独编辑idapython时，引入idaapi等的设置</h3></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1、idapython模块简单介绍&quot;&gt;&lt;a href=&quot;#1、idapython模块简单介绍&quot; class=&quot;headerlink&quot; title=&quot;1、idapython模块简单介绍&quot;&gt;&lt;/a&gt;1、idapython模块简单介绍&lt;/h3&gt;&lt;p&gt;idapython的
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Windows Memory Forensics Cheat Sheet</title>
@@ -467,54 +514,6 @@
     
     
       <category term="hexo" scheme="http://youyanglam.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mac下volatility2.3.1的安装和使用</title>
-    <link href="http://youyanglam.github.io/2019/11/27/mac%E4%B8%8Bvolatility2.3.1%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/"/>
-    <id>http://youyanglam.github.io/2019/11/27/mac%E4%B8%8Bvolatility2.3.1%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/</id>
-    <published>2019-11-27T09:00:04.000Z</published>
-    <updated>2019-12-17T07:41:12.946Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h2><p>google 2.3.1版本下载地址：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://code.google.com/archive/p/volatility/downloads</span><br></pre></td></tr></table></figure><blockquote><p><strong>最新的下载版本为2.6.1，地址为”<a href="https://github.com/volatilityfoundation/volatility&quot;" target="_blank" rel="noopener">https://github.com/volatilityfoundation/volatility&quot;</a><br>安装和使用方法类似这篇文章的2.3.1版本,详细的使用见这篇文章“<a href="https://xz.aliyun.com/t/2497”" target="_blank" rel="noopener">https://xz.aliyun.com/t/2497”</a></strong></p></blockquote><a id="more"></a><h2 id="2、安装"><a href="#2、安装" class="headerlink" title="2、安装"></a>2、安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python2 setup.py install</span><br></pre></td></tr></table></figure><p>编译和安装后的文件放在了如下路径</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Installing vol.py script to /usr/<span class="built_in">local</span>/bin</span><br><span class="line"></span><br><span class="line">Installed /Library/Python/2.7/site-packages/volatility-2.3.1-py2.7.egg</span><br></pre></td></tr></table></figure><h2 id="3、使用"><a href="#3、使用" class="headerlink" title="3、使用"></a>3、使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py pslist -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem</span><br><span class="line"></span><br><span class="line">python2.7 /usr/<span class="built_in">local</span>/bin/vol.py dlllist -f prolaco.vmem -p 1724</span><br><span class="line">python2.7 /usr/<span class="built_in">local</span>/bin/vol.py pstree -f prolaco.vmem</span><br><span class="line">python2.7 /usr/<span class="built_in">local</span>/bin/vol.py filescan -f prolaco.vmem | grep Desktop</span><br><span class="line">vol -f ram.raw yarascan -y example.yara</span><br><span class="line">vol impscan -p 1180 -f laqma.vmem //扫描目标进程的iat表，将结果导入IDA可以还原IAT的占位符为函数名</span><br></pre></td></tr></table></figure><p>再如，查找病毒特征吗命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vol malfind -f silentbanker.vmem --dump-dir=outdir -p 1884</span><br></pre></td></tr></table></figure><p>需要下载distorm3，才可以对指定进程的内存数据反汇编</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install distorm3 --user</span><br></pre></td></tr></table></figure><p>结果如下</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Process: IEXPLORE.EXE Pid: 1884 Address: 0x1110000</span><br><span class="line">Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE</span><br><span class="line">Flags: CommitCharge: 1, MemCommit: 1, PrivateMemory: 1, Protection: 6</span><br><span class="line"></span><br><span class="line">0x01110000  d9 89 d4 77 05 8b ff 55 8b ec e9 cf 89 c3 76 00   ...w...U......v.</span><br><span class="line">0x01110010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................</span><br><span class="line">0x01110020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................</span><br><span class="line">0x01110030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................</span><br><span class="line"></span><br><span class="line">0x1110000 d9               DB 0xd9</span><br><span class="line">0x1110001 89d4             MOV ESP, EDX</span><br><span class="line">0x1110003 7705             JA 0x111000a</span><br><span class="line">0x1110005 8bff             MOV EDI, EDI</span><br><span class="line">0x1110007 55               PUSH EBP</span><br><span class="line">0x1110008 8bec             MOV EBP, ESP</span><br><span class="line">0x111000a e9cf89c376       JMP 0x77d489de</span><br><span class="line">0x111000f 0000             ADD [EAX], AL</span><br><span class="line">0x1110011 0000             ADD [EAX], AL</span><br><span class="line">0x1110013 0000             ADD [EAX], AL</span><br></pre></td></tr></table></figure><h2 id="4、未找到（下载地址）的软件或插件"><a href="#4、未找到（下载地址）的软件或插件" class="headerlink" title="4、未找到（下载地址）的软件或插件"></a>4、未找到（下载地址）的软件或插件</h2><p>软件：<br>win32dd.exe<br>win64dd.exe<br>插件：<br>csrss_plist</p><h2 id="5、python脚本打印出的部分命令"><a href="#5、python脚本打印出的部分命令" class="headerlink" title="5、python脚本打印出的部分命令"></a>5、python脚本打印出的部分命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vol cmd: /usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py pslist -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem</span><br><span class="line">vol cmd: /usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py connections -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem</span><br><span class="line">vol cmd: /usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py sockets -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem</span><br><span class="line">vol cmd: /usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py apihooks -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem -d .tmp</span><br><span class="line">vol cmd: /usr/bin/python /usr/<span class="built_in">local</span>/bin/vol.py malfind -f /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional-9b67ab90.vmem yarascan -y ./auto/data/yara.rules</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;1、下载&quot;&gt;&lt;a href=&quot;#1、下载&quot; class=&quot;headerlink&quot; title=&quot;1、下载&quot;&gt;&lt;/a&gt;1、下载&lt;/h2&gt;&lt;p&gt;google 2.3.1版本下载地址：&lt;/p&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;https://code.google.com/archive/p/volatility/downloads&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;最新的下载版本为2.6.1，地址为”&lt;a href=&quot;https://github.com/volatilityfoundation/volatility&amp;quot;&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/volatilityfoundation/volatility&amp;quot;&lt;/a&gt;&lt;br&gt;安装和使用方法类似这篇文章的2.3.1版本,详细的使用见这篇文章“&lt;a href=&quot;https://xz.aliyun.com/t/2497”&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://xz.aliyun.com/t/2497”&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="virus" scheme="http://youyanglam.github.io/categories/virus/"/>
-    
-    
-      <category term="mac" scheme="http://youyanglam.github.io/tags/mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mac下自动分析恶意样本</title>
-    <link href="http://youyanglam.github.io/2019/11/26/mac%E4%B8%8B%E8%87%AA%E5%8A%A8%E5%88%86%E6%9E%90%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC/"/>
-    <id>http://youyanglam.github.io/2019/11/26/mac%E4%B8%8B%E8%87%AA%E5%8A%A8%E5%88%86%E6%9E%90%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC/</id>
-    <published>2019-11-26T06:03:48.000Z</published>
-    <updated>2019-12-17T08:25:58.673Z</updated>
-    
-    <content type="html"><![CDATA[<p>在python中可以使用python-magic程序包确定文件的具体类型。</p><h2 id="1、安装libmagic-in-MacOS-for-python-magic"><a href="#1、安装libmagic-in-MacOS-for-python-magic" class="headerlink" title="1、安装libmagic in MacOS for python-magic"></a>1、安装libmagic in MacOS for python-magic</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install python-magic --user</span><br><span class="line">brew install libmagic</span><br></pre></td></tr></table></figure><p>其中安装libmagic有2个坑：</p><h3 id="1-1、强行升级homebrew"><a href="#1-1、强行升级homebrew" class="headerlink" title="1.1、强行升级homebrew"></a>1.1、强行升级homebrew</h3><a id="more"></a><p>如下</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Updating Homebrew...</span><br></pre></td></tr></table></figure><p>取消自动更新命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> HOMEBREW_NO_AUTO_UPDATE=<span class="literal">true</span></span><br></pre></td></tr></table></figure><h3 id="1-2、权限问题"><a href="#1-2、权限问题" class="headerlink" title="1.2、权限问题"></a>1.2、权限问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Error: The following directories are not writable by your user:</span><br><span class="line">/usr/<span class="built_in">local</span>/share/man/man5</span><br></pre></td></tr></table></figure><p>修改权限，解决</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R `whoami`:admin /usr/<span class="built_in">local</span>/share</span><br></pre></td></tr></table></figure><p>参考：<a href="https://www.cnblogs.com/wangyingblock/p/11121025.html" target="_blank" rel="noopener">安装 libmagic in Mac OS (for Python-magic)</a></p><h2 id="2、安装yara"><a href="#2、安装yara" class="headerlink" title="2、安装yara"></a>2、安装yara</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install yara</span><br></pre></td></tr></table></figure><h2 id="3、安装yara-python"><a href="#3、安装yara-python" class="headerlink" title="3、安装yara-python"></a>3、安装yara-python</h2><p>单独编译安装yara-python</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install yara-python --user</span><br></pre></td></tr></table></figure><p>也可以下载源码编译安装</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> --recursive https://github.com/VirusTotal/yara-python</span><br><span class="line">$ <span class="built_in">cd</span> yara-python</span><br><span class="line">$ python setup.py build</span><br><span class="line">$ sudo python setup.py install</span><br></pre></td></tr></table></figure><p>参考：<a href="https://pypi.org/project/yara-python/" target="_blank" rel="noopener">yara-python 3.11.0</a></p><h2 id="4、tshark"><a href="#4、tshark" class="headerlink" title="4、tshark"></a>4、tshark</h2><p>tkshark -f 过滤参数出错</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tshark -i vmnet8 -w file.pcap -f host 172.16.244.221</span><br><span class="line">tshark: A capture filter was specified both with <span class="string">"-f"</span> and with additional <span class="built_in">command</span>-line arguments.</span><br></pre></td></tr></table></figure><p>-f 后面要用””引起来，这样操作系统会当作一个字符串解析</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark -i vmnet8 -w file.pcap -f <span class="string">"host 172.16.244.221"</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在python中可以使用python-magic程序包确定文件的具体类型。&lt;/p&gt;&lt;h2 id=&quot;1、安装libmagic-in-MacOS-for-python-magic&quot;&gt;&lt;a href=&quot;#1、安装libmagic-in-MacOS-for-python-magic&quot; class=&quot;headerlink&quot; title=&quot;1、安装libmagic in MacOS for python-magic&quot;&gt;&lt;/a&gt;1、安装libmagic in MacOS for python-magic&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip install python-magic --user&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;brew install libmagic&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;其中安装libmagic有2个坑：&lt;/p&gt;&lt;h3 id=&quot;1-1、强行升级homebrew&quot;&gt;&lt;a href=&quot;#1-1、强行升级homebrew&quot; class=&quot;headerlink&quot; title=&quot;1.1、强行升级homebrew&quot;&gt;&lt;/a&gt;1.1、强行升级homebrew&lt;/h3&gt;
-    
-    </summary>
-    
-    
-      <category term="virus" scheme="http://youyanglam.github.io/categories/virus/"/>
-    
-    
-      <category term="mac" scheme="http://youyanglam.github.io/tags/mac/"/>
     
   </entry>
   

@@ -146,7 +146,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">15</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">17</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -166,7 +166,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">23</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">25</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -380,6 +380,136 @@
             </div>
           <!--/noindex-->
         
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://youyanglam.github.io/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="YouYang">
+      <meta itemprop="description" content="往者已矣，来者可追">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YouYang's Bay">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/" class="post-title-link" itemprop="url">wingIDE调试idapython脚本</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2019-12-18 22:54:39 / Modified: 23:41:53" itemprop="dateCreated datePublished" datetime="2019-12-18T22:54:39+08:00">2019-12-18</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>可以使用wingIDE作为外部调试器，调试idapython脚本。具体设置见wingIDE说明文档–<br>“Table of Contents &gt;&gt; How-Tos &gt;&gt; Unmaintained How-Tos &gt;&gt; Using Wing with IDA Python”</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://youyanglam.github.io/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="YouYang">
+      <meta itemprop="description" content="往者已矣，来者可追">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YouYang's Bay">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/" class="post-title-link" itemprop="url">idapython的编写</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2019-12-18 16:14:10 / Modified: 16:28:33" itemprop="dateCreated datePublished" datetime="2019-12-18T16:14:10+08:00">2019-12-18</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="1、idapython模块简单介绍"><a href="#1、idapython模块简单介绍" class="headerlink" title="1、idapython模块简单介绍"></a>1、idapython模块简单介绍</h3><p>idapython的主要模块为“idaapi.py”、“idautils.py”、“idc.py”。</p><ul>
+<li>idaapi.py:　　    负责访问核心IDA API。</li>
+<li>idautils.py:     提供大量的使用函数。</li>
+<li>idc.py:          负责提供IDC中所有函数的功能。<br>以上模块在ida运行时使用内部python插件运行(IDAPython脚本会自动导入idc和idautils模块,idaapi模块,需要显式手动导入)。<br>但是这几个模块在不使用ida上下文，单独编写idapython脚本时，是无法使用的，会提示找不到模块。<h3 id="2、单独编辑idapython时，引入idaapi等的设置"><a href="#2、单独编辑idapython时，引入idaapi等的设置" class="headerlink" title="2、单独编辑idapython时，引入idaapi等的设置"></a>2、单独编辑idapython时，引入idaapi等的设置</h3></li>
+</ul>
       
     </div>
 
@@ -828,151 +958,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://youyanglam.github.io/2019/12/11/hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="YouYang">
-      <meta itemprop="description" content="往者已矣，来者可追">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YouYang's Bay">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/11/hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" class="post-title-link" itemprop="url">hexo文章中插入图片</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-12-11 16:17:53" itemprop="dateCreated datePublished" datetime="2019-12-11T16:17:53+08:00">2019-12-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-13 14:23:48" itemprop="dateModified" datetime="2019-12-13T14:23:48+08:00">2019-12-13</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="1、修改hexo的-config-yml文件"><a href="#1、修改hexo的-config-yml文件" class="headerlink" title="1、修改hexo的_config.yml文件"></a>1、修改hexo的_config.yml文件</h3><blockquote>
-<p>将_config.yml文件中的配置项post_asset_folder设为true后，执行命令$ hexo new post_name，在source/_posts中会生成文章post_name.md和同名文件夹post_name。将图片资源放在post_name中，文章就可以使用相对路径引用图片资源了。</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/12/11/hexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://youyanglam.github.io/2019/12/06/kali-2019-4-vmware-%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="YouYang">
-      <meta itemprop="description" content="往者已矣，来者可追">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YouYang's Bay">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/06/kali-2019-4-vmware-%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/" class="post-title-link" itemprop="url">kali 2019.4 vmware 设置共享目录</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2019-12-06 16:37:59 / Modified: 16:43:31" itemprop="dateCreated datePublished" datetime="2019-12-06T16:37:59+08:00">2019-12-06</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="1、添加共享目录"><a href="#1、添加共享目录" class="headerlink" title="1、添加共享目录"></a>1、添加共享目录</h3><p>在mac上vmware给kali虚拟机添加共享目录</p><h3 id="2、映射到共享目录"><a href="#2、映射到共享目录" class="headerlink" title="2、映射到共享目录"></a>2、映射到共享目录</h3><h4 id="2-1、查看共享目录"><a href="#2-1、查看共享目录" class="headerlink" title="2.1、查看共享目录"></a>2.1、查看共享目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># vmware-hgfsclient</span></span><br></pre></td></tr></table></figure><h4 id="2-2、新建目录"><a href="#2-2、新建目录" class="headerlink" title="2.2、新建目录"></a>2.2、新建目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># mkdir /mnt/hgfs</span></span><br></pre></td></tr></table></figure><h4 id="2-3、创建映射"><a href="#2-3、创建映射" class="headerlink" title="2.3、创建映射"></a>2.3、创建映射</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1023,7 +1008,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1036,7 +1021,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
