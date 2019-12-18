@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youyanglam.github.io/"/>
-  <updated>2019-12-18T15:43:57.131Z</updated>
+  <updated>2019-12-18T15:45:20.260Z</updated>
   <id>http://youyanglam.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://youyanglam.github.io/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/"/>
     <id>http://youyanglam.github.io/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/</id>
     <published>2019-12-18T14:54:39.000Z</published>
-    <updated>2019-12-18T15:43:57.131Z</updated>
+    <updated>2019-12-18T15:45:20.260Z</updated>
     
-    <content type="html"><![CDATA[<p>可以使用wingIDE作为外部调试器，调试idapython脚本。具体设置见wingIDE说明文档–<br>“Table of Contents &gt;&gt; How-Tos &gt;&gt; Unmaintained How-Tos &gt;&gt; Using Wing with IDA Python”</p><a id="more"></a><h3 id="1、配置wingIDE环境，下断点"><a href="#1、配置wingIDE环境，下断点" class="headerlink" title="1、配置wingIDE环境，下断点"></a>1、配置wingIDE环境，下断点</h3><p>根据说明配置好后，用wingIDE打开目标idapython脚本，并且在目标idapython文件中下好断点</p><h3 id="2、运行idapython脚本"><a href="#2、运行idapython脚本" class="headerlink" title="2、运行idapython脚本"></a>2、运行idapython脚本</h3><p>打开ida，加载分析好的idb文件，文件菜单，运行目标idapython脚本，则触发断点，开始调试</p><h3 id="3、自己的两点总结："><a href="#3、自己的两点总结：" class="headerlink" title="3、自己的两点总结："></a>3、自己的两点总结：</h3><ul><li>wingide是调试器，ida运行idapython脚本作为客户端，调试的时候ida处于挂起状态<br><img src="/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/wingide_ida.png" width="90%" height="90%"><br>可以看到ida在调试过程中挂起了<img src="/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/ida.png" width="90%" height="90%"></li><li>一次调试完成后，要重新运行ida，才可以进行第二次调试，否则第二次断点断不下来</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>可以使用wingIDE作为外部调试器，调试idapython脚本。具体设置见wingIDE说明文档–<br>“Table of Contents &gt;&gt; How-Tos &gt;&gt; Unmaintained How-Tos &gt;&gt; Using Wing with IDA Python”</p><a id="more"></a><h3 id="1、配置wingIDE环境，下断点"><a href="#1、配置wingIDE环境，下断点" class="headerlink" title="1、配置wingIDE环境，下断点"></a>1、配置wingIDE环境，下断点</h3><p>根据说明配置好后，用wingIDE打开目标idapython脚本，并且在目标idapython文件中下好断点</p><h3 id="2、运行idapython脚本"><a href="#2、运行idapython脚本" class="headerlink" title="2、运行idapython脚本"></a>2、运行idapython脚本</h3><p>打开ida，加载分析好的idb文件，文件菜单，运行目标idapython脚本，则触发断点，开始调试</p><h3 id="3、自己的两点总结："><a href="#3、自己的两点总结：" class="headerlink" title="3、自己的两点总结："></a>3、自己的两点总结：</h3><ul><li>wingide是调试器，ida运行idapython脚本作为客户端，调试的时候ida处于挂起状态\<img src="/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/wingide_ida.png" width="90%" height="90%">可以看到ida在调试过程中挂起了<img src="/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/ida.png" width="90%" height="90%"></li><li>一次调试完成后，要重新运行ida，才可以进行第二次调试，否则第二次断点断不下来</li></ul>]]></content>
     
     <summary type="html">
     
@@ -44,16 +44,17 @@
     <link href="http://youyanglam.github.io/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/"/>
     <id>http://youyanglam.github.io/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/</id>
     <published>2019-12-18T08:14:10.000Z</published>
-    <updated>2019-12-18T15:43:24.959Z</updated>
+    <updated>2019-12-18T15:45:50.288Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="1、idapython模块简单介绍"><a href="#1、idapython模块简单介绍" class="headerlink" title="1、idapython模块简单介绍"></a>1、idapython模块简单介绍</h3><p>idapython的主要模块为“idaapi.py”、“idautils.py”、“idc.py”。</p><ul><li>idaapi.py:　　    负责访问核心IDA API。</li><li>idautils.py:     提供大量的使用函数。</li><li>idc.py:          负责提供IDC中所有函数的功能。<br>以上模块在ida运行时使用内部python插件运行(IDAPython脚本会自动导入idc和idautils模块,idaapi模块,需要显式手动导入)。<br>但是这几个模块在不使用ida上下文，单独编写idapython脚本时，是无法使用的，会提示找不到模块。<h3 id="2、单独编辑idapython时，引入idaapi等的设置"><a href="#2、单独编辑idapython时，引入idaapi等的设置" class="headerlink" title="2、单独编辑idapython时，引入idaapi等的设置"></a>2、单独编辑idapython时，引入idaapi等的设置</h3></li></ul>]]></content>
+    <content type="html"><![CDATA[<h3 id="1、idapython模块简单介绍"><a href="#1、idapython模块简单介绍" class="headerlink" title="1、idapython模块简单介绍"></a>1、idapython模块简单介绍</h3><p>idapython的主要模块为“idaapi.py”、“idautils.py”、“idc.py”。</p><ul><li>idaapi.py:　　    负责访问核心IDA API。</li><li>idautils.py:     提供大量的使用函数。</li><li>idc.py:          负责提供IDC中所有函数的功能。<br>以上模块在ida运行时使用内部python插件运行(IDAPython脚本会自动导入idc和idautils模块,idaapi模块,需要显式手动导入)。<br>但是这几个模块在不使用ida上下文，单独编写idapython脚本时，是无法使用的，会提示找不到模块。</li></ul><a id="more"></a><h3 id="2、单独编辑idapython时，引入idaapi等的设置"><a href="#2、单独编辑idapython时，引入idaapi等的设置" class="headerlink" title="2、单独编辑idapython时，引入idaapi等的设置"></a>2、单独编辑idapython时，引入idaapi等的设置</h3>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h3 id=&quot;1、idapython模块简单介绍&quot;&gt;&lt;a href=&quot;#1、idapython模块简单介绍&quot; class=&quot;headerlink&quot; title=&quot;1、idapython模块简单介绍&quot;&gt;&lt;/a&gt;1、idapython模块简单介绍&lt;/h3&gt;&lt;p&gt;idapython的
-      
+      &lt;h3 id=&quot;1、idapython模块简单介绍&quot;&gt;&lt;a href=&quot;#1、idapython模块简单介绍&quot; class=&quot;headerlink&quot; title=&quot;1、idapython模块简单介绍&quot;&gt;&lt;/a&gt;1、idapython模块简单介绍&lt;/h3&gt;&lt;p&gt;idapython的主要模块为“idaapi.py”、“idautils.py”、“idc.py”。&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;idaapi.py:　　    负责访问核心IDA API。&lt;/li&gt;
+&lt;li&gt;idautils.py:     提供大量的使用函数。&lt;/li&gt;
+&lt;li&gt;idc.py:          负责提供IDC中所有函数的功能。&lt;br&gt;以上模块在ida运行时使用内部python插件运行(IDAPython脚本会自动导入idc和idautils模块,idaapi模块,需要显式手动导入)。&lt;br&gt;但是这几个模块在不使用ida上下文，单独编写idapython脚本时，是无法使用的，会提示找不到模块。&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
