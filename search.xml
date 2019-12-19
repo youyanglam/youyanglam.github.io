@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>wingIDE使用记录</title>
+    <url>/2019/12/19/wingIDE%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h3 id="1、快捷键"><a href="#1、快捷键" class="headerlink" title="1、快捷键"></a>1、快捷键</h3><p>注释/取消注释    command+：</p>]]></content>
+      <tags>
+        <tag>wingIDE</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>wingIDE调试idapython脚本</title>
     <url>/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/</url>
     <content><![CDATA[<p>可以使用wingIDE作为外部调试器，调试idapython脚本。具体设置见wingIDE说明文档–<br>“Table of Contents &gt;&gt; How-Tos &gt;&gt; Unmaintained How-Tos &gt;&gt; Using Wing with IDA Python”</p><a id="more"></a>
@@ -27,10 +35,10 @@
 <li>idc.py:          负责提供IDC中所有函数的功能。<br>以上模块在ida运行时使用内部python插件运行(IDAPython脚本会自动导入idc和idautils模块,idaapi模块,需要显式手动导入)。<br>但是这几个模块在不使用ida上下文，单独编写idapython脚本时，是无法使用的，会提示找不到模块。</li>
 </ul><a id="more"></a>
 
-<h3 id="2、使用ide单独编辑idapython时，引入idaapi等的设置"><a href="#2、使用ide单独编辑idapython时，引入idaapi等的设置" class="headerlink" title="2、使用ide单独编辑idapython时，引入idaapi等的设置"></a>2、使用ide单独编辑idapython时，引入idaapi等的设置</h3><ul>
-<li>使用wingIDE编写，环境变量中加入idapython相关模块的路径<img src="/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/idapython_modules.png" width="90%" height="90%"></li>
-<li>脚本中显示导入用到的模块，如“idaapi.py”、“idautils.py”、“idc.py”等，否则ide不认识相关函数，无法提示补全<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> idaapi <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> idautils <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> idc <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure></li>
-</ul>
+<h3 id="2、使用ide单独编辑idapython时，引入idaapi等模块的设置"><a href="#2、使用ide单独编辑idapython时，引入idaapi等模块的设置" class="headerlink" title="2、使用ide单独编辑idapython时，引入idaapi等模块的设置"></a>2、使用ide单独编辑idapython时，引入idaapi等模块的设置</h3><p>在ida里写python有两个难受的地方，一个是类型推断，一个是代码补全，所以我们选择使用ide。<br><strong>在ide中脚本中要显示导入用到的模块，如“idaapi.py”、“idautils.py”、“idc.py”等，否则ide不认识相关函数，无法提示补全</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> idaapi <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> idautils <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> idc <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure>
+<h4 id="2-1、使用wingIDE，环境变量中加入idapython相关模块的路径"><a href="#2-1、使用wingIDE，环境变量中加入idapython相关模块的路径" class="headerlink" title="2.1、使用wingIDE，环境变量中加入idapython相关模块的路径"></a>2.1、使用wingIDE，环境变量中加入idapython相关模块的路径</h4><p><img src="/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/idapython_modules.png" width="90%" height="90%">\</p>
+<h4 id="2-2、使用pycharm，环境变量中加入idapython相关模块的路径"><a href="#2-2、使用pycharm，环境变量中加入idapython相关模块的路径" class="headerlink" title="2.2、使用pycharm，环境变量中加入idapython相关模块的路径"></a>2.2、使用pycharm，环境变量中加入idapython相关模块的路径</h4><p>Preference/Settings – Project – Project Interpreter – Show All – Show paths for the selected interpreter<br><img src="/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/python27_module.png" width="90%" height="90%"></p>
 ]]></content>
       <tags>
         <tag>idapython</tag>
@@ -54,12 +62,13 @@
 
 
 
-<p>同被安装在Cellar目录下的应用还有：yara、ruby、tree、ldid、等</p>
+<p>同被安装在Cellar目录下的应用还有：yara、ruby、tree、ldid、等<br><img src="/2019/12/17/mac%E4%B8%ADpython%E7%9A%84%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95/python3_module.png" width="90%" height="90%"></p>
 <h3 id="2、python2-7的安装目录"><a href="#2、python2-7的安装目录" class="headerlink" title="2、python2.7的安装目录"></a>2、python2.7的安装目录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/System/Library/Frameworks/Python.framework/Versions/2.7</span><br></pre></td></tr></table></figure>
 <p>但pip工具被安装在了目录</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~/Library/Python/2.7/lib/python/site-packages/pip</span><br></pre></td></tr></table></figure>
 <p>同被安装在该“site-packages”目录下的有很多第三方模块，如“pefile.py”、”magic.py”、“pyspider”、“scrapy”、“pyecharts”等<br>另其他一些第三方库，如“bs4”、“requests”等被安装在如下路径</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="regexp">/Library/</span>Python<span class="regexp">/2.7/</span>site-packages</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="regexp">/Library/</span>Python<span class="regexp">/2.7/</span>site-packages</span><br></pre></td></tr></table></figure>
+<img src="/2019/12/17/mac%E4%B8%ADpython%E7%9A%84%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95/python27_module.png" width="90%" height="90%">]]></content>
       <categories>
         <category>python</category>
       </categories>
