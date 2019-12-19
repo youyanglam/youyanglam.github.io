@@ -37,9 +37,10 @@
 
 <h3 id="2、使用ide单独编辑idapython时，引入idaapi等模块的设置"><a href="#2、使用ide单独编辑idapython时，引入idaapi等模块的设置" class="headerlink" title="2、使用ide单独编辑idapython时，引入idaapi等模块的设置"></a>2、使用ide单独编辑idapython时，引入idaapi等模块的设置</h3><p>在ida里写python有两个难受的地方，一个是类型推断，一个是代码补全，所以我们选择使用ide。<br><strong>在ide中脚本中要显示导入用到的模块，如“idaapi.py”、“idautils.py”、“idc.py”等，否则ide不认识相关函数，无法提示补全</strong></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> idaapi <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> idautils <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> idc <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure>
-<h4 id="2-1、使用wingIDE，环境变量中加入idapython相关模块的路径"><a href="#2-1、使用wingIDE，环境变量中加入idapython相关模块的路径" class="headerlink" title="2.1、使用wingIDE，环境变量中加入idapython相关模块的路径"></a>2.1、使用wingIDE，环境变量中加入idapython相关模块的路径</h4><p><img src="/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/idapython_modules.png" width="90%" height="90%">\</p>
-<h4 id="2-2、使用pycharm，环境变量中加入idapython相关模块的路径"><a href="#2-2、使用pycharm，环境变量中加入idapython相关模块的路径" class="headerlink" title="2.2、使用pycharm，环境变量中加入idapython相关模块的路径"></a>2.2、使用pycharm，环境变量中加入idapython相关模块的路径</h4><p>Preference/Settings – Project – Project Interpreter – Show All – Show paths for the selected interpreter<br><img src="/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/python27_module.png" width="90%" height="90%"></p>
-]]></content>
+<h4 id="2-1、使用wingIDE，环境变量中加入idapython相关模块的路径"><a href="#2-1、使用wingIDE，环境变量中加入idapython相关模块的路径" class="headerlink" title="2.1、使用wingIDE，环境变量中加入idapython相关模块的路径"></a>2.1、使用wingIDE，环境变量中加入idapython相关模块的路径</h4><img src="/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/idapython_modules.png" width="90%" height="90%">
+#### 2.2、使用pycharm，环境变量中加入idapython相关模块的路径
+Preference/Settings – Project – Project Interpreter – Show All – Show paths for the selected interpreter
+<img src="/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/python27_module.png" width="90%" height="90%">]]></content>
       <tags>
         <tag>idapython</tag>
       </tags>
