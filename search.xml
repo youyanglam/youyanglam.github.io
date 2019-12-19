@@ -27,7 +27,11 @@
 <li>idc.py:          负责提供IDC中所有函数的功能。<br>以上模块在ida运行时使用内部python插件运行(IDAPython脚本会自动导入idc和idautils模块,idaapi模块,需要显式手动导入)。<br>但是这几个模块在不使用ida上下文，单独编写idapython脚本时，是无法使用的，会提示找不到模块。</li>
 </ul><a id="more"></a>
 
-<h3 id="2、单独编辑idapython时，引入idaapi等的设置"><a href="#2、单独编辑idapython时，引入idaapi等的设置" class="headerlink" title="2、单独编辑idapython时，引入idaapi等的设置"></a>2、单独编辑idapython时，引入idaapi等的设置</h3>]]></content>
+<h3 id="2、使用ide单独编辑idapython时，引入idaapi等的设置"><a href="#2、使用ide单独编辑idapython时，引入idaapi等的设置" class="headerlink" title="2、使用ide单独编辑idapython时，引入idaapi等的设置"></a>2、使用ide单独编辑idapython时，引入idaapi等的设置</h3><ul>
+<li>使用wingIDE编写，环境变量中加入idapython相关模块的路径<img src="/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/idapython_modules.png" width="90%" height="90%"></li>
+<li>脚本中显示导入用到的模块，如“idaapi.py”、“idautils.py”、“idc.py”等，否则ide不认识相关函数，无法提示补全<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> idaapi <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> idautils <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> idc <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
       <tags>
         <tag>idapython</tag>
       </tags>

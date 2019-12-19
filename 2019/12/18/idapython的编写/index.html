@@ -54,8 +54,10 @@
 <meta property="og:site_name" content="YouYang&#39;s Bay">
 <meta property="og:description" content="1、idapython模块简单介绍idapython的主要模块为“idaapi.py”、“idautils.py”、“idc.py”。 idaapi.py:　　    负责访问核心IDA API。 idautils.py:     提供大量的使用函数。 idc.py:          负责提供IDC中所有函数的功能。以上模块在ida运行时使用内部python插件运行(IDAPython脚本会自动">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-18T15:45:50.288Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;18&#x2F;idapython%E7%9A%84%E7%BC%96%E5%86%99&#x2F;idapython_modules.png">
+<meta property="og:updated_time" content="2019-12-19T03:29:15.502Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;18&#x2F;idapython%E7%9A%84%E7%BC%96%E5%86%99&#x2F;idapython_modules.png">
 
 <link rel="canonical" href="http://youyanglam.github.io/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/">
 
@@ -245,10 +247,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2019-12-18 16:14:10 / Modified: 23:45:50" itemprop="dateCreated datePublished" datetime="2019-12-18T16:14:10+08:00">2019-12-18</time>
+              <time title="Created: 2019-12-18 16:14:10" itemprop="dateCreated datePublished" datetime="2019-12-18T16:14:10+08:00">2019-12-18</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-19 11:29:15" itemprop="dateModified" datetime="2019-12-19T11:29:15+08:00">2019-12-19</time>
+              </span>
 
           
             <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
@@ -274,7 +282,11 @@
 <li>idc.py:          负责提供IDC中所有函数的功能。<br>以上模块在ida运行时使用内部python插件运行(IDAPython脚本会自动导入idc和idautils模块,idaapi模块,需要显式手动导入)。<br>但是这几个模块在不使用ida上下文，单独编写idapython脚本时，是无法使用的，会提示找不到模块。</li>
 </ul><a id="more"></a>
 
-<h3 id="2、单独编辑idapython时，引入idaapi等的设置"><a href="#2、单独编辑idapython时，引入idaapi等的设置" class="headerlink" title="2、单独编辑idapython时，引入idaapi等的设置"></a>2、单独编辑idapython时，引入idaapi等的设置</h3>
+<h3 id="2、使用ide单独编辑idapython时，引入idaapi等的设置"><a href="#2、使用ide单独编辑idapython时，引入idaapi等的设置" class="headerlink" title="2、使用ide单独编辑idapython时，引入idaapi等的设置"></a>2、使用ide单独编辑idapython时，引入idaapi等的设置</h3><ul>
+<li>使用wingIDE编写，环境变量中加入idapython相关模块的路径<img src="/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/idapython_modules.png" width="90%" height="90%"></li>
+<li>脚本中显示导入用到的模块，如“idaapi.py”、“idautils.py”、“idc.py”等，否则ide不认识相关函数，无法提示补全<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> idaapi <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> idautils <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> idc <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure></li>
+</ul>
+
     </div>
 
     
@@ -368,7 +380,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、idapython模块简单介绍"><span class="nav-text">1、idapython模块简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、单独编辑idapython时，引入idaapi等的设置"><span class="nav-text">2、单独编辑idapython时，引入idaapi等的设置</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、idapython模块简单介绍"><span class="nav-text">1、idapython模块简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、使用ide单独编辑idapython时，引入idaapi等的设置"><span class="nav-text">2、使用ide单独编辑idapython时，引入idaapi等的设置</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
