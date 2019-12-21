@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>python命名规范</title>
+    <url>/2019/12/21/python%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<p><a href="https://www.jianshu.com/p/a793c0d960fe" target="_blank" rel="noopener">https://www.jianshu.com/p/a793c0d960fe</a><br><a href="https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/" target="_blank" rel="noopener">https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/</a></p>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
     <title>wingIDE使用记录</title>
     <url>/2019/12/19/wingIDE%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h3 id="1、快捷键"><a href="#1、快捷键" class="headerlink" title="1、快捷键"></a>1、快捷键</h3><p>注释/取消注释    command+：</p>]]></content>
