@@ -37,18 +37,19 @@
   <entry>
     <title>idapython的编写</title>
     <url>/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/</url>
-    <content><![CDATA[<h3 id="1、idapython模块简单介绍"><a href="#1、idapython模块简单介绍" class="headerlink" title="1、idapython模块简单介绍"></a>1、idapython模块简单介绍</h3><p>idapython的主要模块为“idaapi.py”、“idautils.py”、“idc.py”。</p><ul>
+    <content><![CDATA[<p>IDA Pro是一款静态反汇编的利器，具有良好的交互性、可编程性、可扩展性及对多处理器的支持。<br>对于IDA Pro的可扩展性表现在两个方面，一是采用内置的脚本语言IDC写脚本；二是采用Hex-rays提供的SDK写插件Plug-in。<br><strong>简单的任务交由脚本完成，复杂的任务则需要定制满足需求的插件</strong></p><h3 id="1、idapython模块简单介绍"><a href="#1、idapython模块简单介绍" class="headerlink" title="1、idapython模块简单介绍"></a>1、idapython模块简单介绍</h3><a id="more"></a>
+<p>idapython的主要模块为“idaapi.py”、“idautils.py”、“idc.py”。</p>
+<ul>
 <li>idaapi.py:　　    负责访问核心IDA API。</li>
 <li>idautils.py:     提供大量的使用函数。</li>
 <li>idc.py:          负责提供IDC中所有函数的功能。<br>以上模块在ida运行时使用内部python插件运行(IDAPython脚本会自动导入idc和idautils模块,idaapi模块,需要显式手动导入)。<br>但是这几个模块在不使用ida上下文，单独编写idapython脚本时，是无法使用的，会提示找不到模块。</li>
-</ul><a id="more"></a>
-
+</ul>
 <h3 id="2、使用ide单独编辑idapython时，引入idaapi等模块的设置"><a href="#2、使用ide单独编辑idapython时，引入idaapi等模块的设置" class="headerlink" title="2、使用ide单独编辑idapython时，引入idaapi等模块的设置"></a>2、使用ide单独编辑idapython时，引入idaapi等模块的设置</h3><p>在ida里写python有两个难受的地方，一个是类型推断，一个是代码补全，所以我们选择使用ide。<br><strong>在ide中脚本中要显示导入用到的模块，如“idaapi.py”、“idautils.py”、“idc.py”等，否则ide不认识相关函数，无法提示补全</strong></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> idaapi <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> idautils <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> idc <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure>
 <h4 id="2-1、使用wingIDE，环境变量中加入idapython相关模块的路径"><a href="#2-1、使用wingIDE，环境变量中加入idapython相关模块的路径" class="headerlink" title="2.1、使用wingIDE，环境变量中加入idapython相关模块的路径"></a>2.1、使用wingIDE，环境变量中加入idapython相关模块的路径</h4><img src="/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/idapython_modules.png" width="90%" height="90%">
 
 <h4 id="2-2、使用pycharm，环境变量中加入idapython相关模块的路径"><a href="#2-2、使用pycharm，环境变量中加入idapython相关模块的路径" class="headerlink" title="2.2、使用pycharm，环境变量中加入idapython相关模块的路径"></a>2.2、使用pycharm，环境变量中加入idapython相关模块的路径</h4><p>Preference/Settings – Project – Project Interpreter – Show All – Show paths for the selected interpreter<br><img src="/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/python27_module.png" width="90%" height="90%"></p>
-]]></content>
+<h3 id="3、脚本-也可以以插件的形式重写如下脚本"><a href="#3、脚本-也可以以插件的形式重写如下脚本" class="headerlink" title="3、脚本(也可以以插件的形式重写如下脚本)"></a>3、脚本(也可以以插件的形式重写如下脚本)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> idaapi <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FuncPath</span><span class="params">(DBG_Hooks)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Our breakpoint handler</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dbg_bpt</span><span class="params">(self, tid, ea)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"[*] Hit: 0x%08x"</span> % ea</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Add our function coverage debugger hook</span></span><br><span class="line">debugger = FuncPath ()</span><br><span class="line">debugger.hook()</span><br><span class="line"></span><br><span class="line">current_addr = ScreenEA()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Find all functions and add breakpoints</span></span><br><span class="line"><span class="keyword">for</span> function <span class="keyword">in</span> Functions(SegStart( current_addr ), SegEnd( current_addr )):</span><br><span class="line">    AddBpt( function )</span><br><span class="line">    SetBptAttr( function, BPTATTR_FLAGS, BPT_ENABLED|BPT_TRACE)<span class="comment">#设置断点的属性为跟踪</span></span><br><span class="line"></span><br><span class="line">num_breakpoints = GetBptQty()</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"[*] Set %d breakpoints."</span> % num_breakpoints</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>idapython</tag>
       </tags>
