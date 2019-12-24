@@ -46,16 +46,20 @@
   };
 </script>
 
-  <meta name="description" content="往者已矣，来者可追">
-<meta property="og:type" content="website">
-<meta property="og:title" content="YouYang&#39;s Bay">
-<meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;tags&#x2F;idapython&#x2F;index.html">
+  <meta name="description" content="1、安装1234git clone https:&#x2F;&#x2F;github.com&#x2F;fjh658&#x2F;keystone-engine.gitcd keystone-enginegit submodule update --init --recursivesudo python setup.py install --verbose">
+<meta name="keywords" content="ida,mac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mac下IDA 7.0 安装keypatch插件">
+<meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;24&#x2F;mac%E4%B8%8BIDA-7-0-%E5%AE%89%E8%A3%85keypatch%E6%8F%92%E4%BB%B6&#x2F;index.html">
 <meta property="og:site_name" content="YouYang&#39;s Bay">
-<meta property="og:description" content="往者已矣，来者可追">
+<meta property="og:description" content="1、安装1234git clone https:&#x2F;&#x2F;github.com&#x2F;fjh658&#x2F;keystone-engine.gitcd keystone-enginegit submodule update --init --recursivesudo python setup.py install --verbose">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;24&#x2F;mac%E4%B8%8BIDA-7-0-%E5%AE%89%E8%A3%85keypatch%E6%8F%92%E4%BB%B6&#x2F;keypatch.jpg">
+<meta property="og:updated_time" content="2019-12-24T11:11:25.949Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;24&#x2F;mac%E4%B8%8BIDA-7-0-%E5%AE%89%E8%A3%85keypatch%E6%8F%92%E4%BB%B6&#x2F;keypatch.jpg">
 
-<link rel="canonical" href="http://youyanglam.github.io/tags/idapython/">
+<link rel="canonical" href="http://youyanglam.github.io/2019/12/24/mac%E4%B8%8BIDA-7-0-%E5%AE%89%E8%A3%85keypatch%E6%8F%92%E4%BB%B6/">
 
 
 <script id="page-configurations">
@@ -63,13 +67,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>Tag: idapython | YouYang's Bay</title>
+  <title>mac下IDA 7.0 安装keypatch插件 | YouYang's Bay</title>
   
 
 
@@ -215,70 +219,125 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">idapython
-          <small>Tag</small>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://youyanglam.github.io/2019/12/24/mac%E4%B8%8BIDA-7-0-%E5%AE%89%E8%A3%85keypatch%E6%8F%92%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="YouYang">
+      <meta itemprop="description" content="往者已矣，来者可追">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YouYang's Bay">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          mac下IDA 7.0 安装keypatch插件
         </h1>
-      </div>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2019-12-24 18:36:20 / Modified: 19:11:25" itemprop="dateCreated datePublished" datetime="2019-12-24T18:36:20+08:00">2019-12-24</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
+        <h3 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/fjh658/keystone-engine.git</span><br><span class="line"><span class="built_in">cd</span> keystone-engine</span><br><span class="line">git submodule update --init --recursive</span><br><span class="line">sudo python setup.py install --verbose</span><br></pre></td></tr></table></figure><a id="more"></a>
+<p>可以看到可以看到，keystone_engine被成功安装在了下面目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">running install_data</span><br><span class="line">copying src/build/llvm/lib/libkeystone.dylib -&gt; /Library/Python/2.7/site-packages/keystone</span><br><span class="line">running install_egg_info</span><br><span class="line">Writing /Library/Python/2.7/site-packages/keystone_engine-0.9.1_3-py2.7.egg-info</span><br></pre></td></tr></table></figure>
+<h3 id="2、安装keypatch"><a href="#2、安装keypatch" class="headerlink" title="2、安装keypatch"></a>2、安装keypatch</h3><p>链接<br><a href="http://www.keystone-engine.org/keypatch/" target="_blank" rel="noopener">http://www.keystone-engine.org/keypatch/</a><br>拷贝keypatch.py到“/Applications/IDA Pro 7.0/ida.app/Contents/MacOS/plugins”目录</p>
+<h3 id="3、结果"><a href="#3、结果" class="headerlink" title="3、结果"></a>3、结果</h3><img src="/2019/12/24/mac%E4%B8%8BIDA-7-0-%E5%AE%89%E8%A3%85keypatch%E6%8F%92%E4%BB%B6/keypatch.jpg" width="50%" height="50%">
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-18T22:54:39+08:00"
-              content="2019-12-18">
-          12-18
-        </time>
+    
+    
+    
+        <div class="reward-container">
+  <div>请我喝咖啡.</div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="YouYang WeChat Pay">
+        <p>WeChat Pay</p>
       </div>
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/" itemprop="url">
-            <span itemprop="name">wingIDE调试idapython脚本</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-18T16:14:10+08:00"
-              content="2019-12-18">
-          12-18
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/12/18/idapython%E7%9A%84%E7%BC%96%E5%86%99/" itemprop="url">
-            <span itemprop="name">idapython的编写</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-    </div>
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>YouYang
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="http://youyanglam.github.io/2019/12/24/mac%E4%B8%8BIDA-7-0-%E5%AE%89%E8%A3%85keypatch%E6%8F%92%E4%BB%B6/" title="mac下IDA 7.0 安装keypatch插件">http://youyanglam.github.io/2019/12/24/mac%E4%B8%8BIDA-7-0-%E5%AE%89%E8%A3%85keypatch%E6%8F%92%E4%BB%B6/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ida/" rel="tag"># ida</a>
+              <a href="/tags/mac/" rel="tag"># mac</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/12/21/python%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" rel="prev" title="python命名规范">
+      <i class="fa fa-chevron-left"></i> python命名规范
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
   
   
   
 
-  
-
+  </div>
 
 
           </div>
@@ -307,6 +366,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、安装"><span class="nav-text">1、安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、安装keypatch"><span class="nav-text">2、安装keypatch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、结果"><span class="nav-text">3、结果</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
