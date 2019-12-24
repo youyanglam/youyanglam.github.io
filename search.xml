@@ -7,7 +7,7 @@
 <p>可以看到可以看到，keystone_engine被成功安装在了下面目录</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">running install_data</span><br><span class="line">copying src/build/llvm/lib/libkeystone.dylib -&gt; /Library/Python/2.7/site-packages/keystone</span><br><span class="line">running install_egg_info</span><br><span class="line">Writing /Library/Python/2.7/site-packages/keystone_engine-0.9.1_3-py2.7.egg-info</span><br></pre></td></tr></table></figure>
 <h3 id="2、安装keypatch"><a href="#2、安装keypatch" class="headerlink" title="2、安装keypatch"></a>2、安装keypatch</h3><p>链接<br><a href="http://www.keystone-engine.org/keypatch/" target="_blank" rel="noopener">http://www.keystone-engine.org/keypatch/</a><br>拷贝keypatch.py到“/Applications/IDA Pro 7.0/ida.app/Contents/MacOS/plugins”目录</p>
-<h3 id="3、结果"><a href="#3、结果" class="headerlink" title="3、结果"></a>3、结果</h3><img src="/2019/12/24/mac%E4%B8%8BIDA-7-0-%E5%AE%89%E8%A3%85keypatch%E6%8F%92%E4%BB%B6/keypatch.jpg" width="50%" height="50%">]]></content>
+<h3 id="3、结果"><a href="#3、结果" class="headerlink" title="3、结果"></a>3、结果</h3><img src="/2019/12/24/mac%E4%B8%8BIDA-7-0-%E5%AE%89%E8%A3%85keypatch%E6%8F%92%E4%BB%B6/keypatch.png" width="50%" height="50%">]]></content>
       <tags>
         <tag>ida</tag>
         <tag>mac</tag>
