@@ -3,11 +3,16 @@
   <entry>
     <title>mac下IDA 7.0 安装keypatch插件</title>
     <url>/2019/12/24/mac%E4%B8%8BIDA-7-0-%E5%AE%89%E8%A3%85keypatch%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<h3 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/fjh658/keystone-engine.git</span><br><span class="line"><span class="built_in">cd</span> keystone-engine</span><br><span class="line">git submodule update --init --recursive</span><br><span class="line">sudo python setup.py install --verbose</span><br></pre></td></tr></table></figure><a id="more"></a>
+    <content><![CDATA[<h3 id="1、安装keystone-engine"><a href="#1、安装keystone-engine" class="headerlink" title="1、安装keystone-engine"></a>1、安装keystone-engine</h3><p>先是尝试使用“$ sudo pip install keystone-engine”安装，但是使用cmake编译（该pip命令会自动编译安装）的时候报如下错误：<br>The C compiler “/Library/Developer/CommandLineTools/usr/bin/cc” is not able to compile a simple test program<br>然后手动安装如下：</p><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/fjh658/keystone-engine.git</span><br><span class="line"><span class="built_in">cd</span> keystone-engine</span><br><span class="line">git submodule update --init --recursive</span><br><span class="line">sudo python setup.py install --verbose</span><br></pre></td></tr></table></figure>
 <p>可以看到可以看到，keystone_engine被成功安装在了下面目录</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">running install_data</span><br><span class="line">copying src/build/llvm/lib/libkeystone.dylib -&gt; /Library/Python/2.7/site-packages/keystone</span><br><span class="line">running install_egg_info</span><br><span class="line">Writing /Library/Python/2.7/site-packages/keystone_engine-0.9.1_3-py2.7.egg-info</span><br></pre></td></tr></table></figure>
-<h3 id="2、安装keypatch"><a href="#2、安装keypatch" class="headerlink" title="2、安装keypatch"></a>2、安装keypatch</h3><p>链接<br><a href="http://www.keystone-engine.org/keypatch/" target="_blank" rel="noopener">http://www.keystone-engine.org/keypatch/</a><br>拷贝keypatch.py到“/Applications/IDA Pro 7.0/ida.app/Contents/MacOS/plugins”目录</p>
-<h3 id="3、结果"><a href="#3、结果" class="headerlink" title="3、结果"></a>3、结果</h3><img src="/2019/12/24/mac%E4%B8%8BIDA-7-0-%E5%AE%89%E8%A3%85keypatch%E6%8F%92%E4%BB%B6/keypatch.png" width="90%" height="90%">]]></content>
+<h3 id="2、安装keypatch"><a href="#2、安装keypatch" class="headerlink" title="2、安装keypatch"></a>2、安装keypatch</h3><p>链接“<a href="https://github.com/keystone-engine/keypatch”，下载当前最新zip包（v2.2）。" target="_blank" rel="noopener">https://github.com/keystone-engine/keypatch”，下载当前最新zip包（v2.2）。</a><br>拷贝keypatch.py到“/Applications/IDA Pro 7.0/ida.app/Contents/MacOS/plugins”目录，重启IDA就可以了。</p>
+<h3 id="3、结果"><a href="#3、结果" class="headerlink" title="3、结果"></a>3、结果</h3><img src="/2019/12/24/mac%E4%B8%8BIDA-7-0-%E5%AE%89%E8%A3%85keypatch%E6%8F%92%E4%BB%B6/keypatch.png" width="90%" height="90%">
+<img src="/2019/12/24/mac%E4%B8%8BIDA-7-0-%E5%AE%89%E8%A3%85keypatch%E6%8F%92%E4%BB%B6/keypatchv.png" width="90%" height="90%">
+
+<h3 id="4、参考"><a href="#4、参考" class="headerlink" title="4、参考"></a>4、参考</h3><p><a href="http://www.keystone-engine.org/keypatch/" target="_blank" rel="noopener">http://www.keystone-engine.org/keypatch/</a></p>
+]]></content>
       <tags>
         <tag>ida</tag>
         <tag>mac</tag>
