@@ -46,17 +46,17 @@
   };
 </script>
 
-  <meta name="description" content="IDA Pro是一款静态反汇编的利器，具有良好的交互性、可编程性、可扩展性及对多处理器的支持。对于IDA Pro的可扩展性表现在两个方面，一是采用内置的脚本语言IDC写脚本；二是采用Hex-rays提供的SDK写插件Plug-in。简单的任务交由脚本完成，复杂的任务则需要定制满足需求的插件1、idapython模块简单介绍">
+  <meta name="description" content="IDA Pro是一款静态反汇编的利器，具有良好的交互性、可编程性、可扩展性及对多处理器的支持。对于IDA Pro的可扩展性表现在两个方面，一是采用内置的脚本语言IDC写脚本；二是采用Hex-rays提供的SDK写插件Plug-in。简单的任务交由脚本完成，复杂的任务则需要定制满足需求的插件0、先介绍一下IDA插件历史：">
 <meta name="keywords" content="idapython">
 <meta property="og:type" content="article">
 <meta property="og:title" content="idapython的编写">
 <meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;18&#x2F;idapython%E7%9A%84%E7%BC%96%E5%86%99&#x2F;index.html">
 <meta property="og:site_name" content="YouYang&#39;s Bay">
-<meta property="og:description" content="IDA Pro是一款静态反汇编的利器，具有良好的交互性、可编程性、可扩展性及对多处理器的支持。对于IDA Pro的可扩展性表现在两个方面，一是采用内置的脚本语言IDC写脚本；二是采用Hex-rays提供的SDK写插件Plug-in。简单的任务交由脚本完成，复杂的任务则需要定制满足需求的插件1、idapython模块简单介绍">
+<meta property="og:description" content="IDA Pro是一款静态反汇编的利器，具有良好的交互性、可编程性、可扩展性及对多处理器的支持。对于IDA Pro的可扩展性表现在两个方面，一是采用内置的脚本语言IDC写脚本；二是采用Hex-rays提供的SDK写插件Plug-in。简单的任务交由脚本完成，复杂的任务则需要定制满足需求的插件0、先介绍一下IDA插件历史：">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;18&#x2F;idapython%E7%9A%84%E7%BC%96%E5%86%99&#x2F;idapython_modules.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;18&#x2F;idapython%E7%9A%84%E7%BC%96%E5%86%99&#x2F;python27_module.png">
-<meta property="og:updated_time" content="2019-12-23T15:56:39.039Z">
+<meta property="og:updated_time" content="2019-12-27T03:30:59.644Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;18&#x2F;idapython%E7%9A%84%E7%BC%96%E5%86%99&#x2F;idapython_modules.png">
 
@@ -256,7 +256,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-23 23:56:39" itemprop="dateModified" datetime="2019-12-23T23:56:39+08:00">2019-12-23</time>
+                <time title="Modified: 2019-12-27 11:30:59" itemprop="dateModified" datetime="2019-12-27T11:30:59+08:00">2019-12-27</time>
               </span>
 
           
@@ -277,8 +277,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>IDA Pro是一款静态反汇编的利器，具有良好的交互性、可编程性、可扩展性及对多处理器的支持。<br>对于IDA Pro的可扩展性表现在两个方面，一是采用内置的脚本语言IDC写脚本；二是采用Hex-rays提供的SDK写插件Plug-in。<br><strong>简单的任务交由脚本完成，复杂的任务则需要定制满足需求的插件</strong></p><h3 id="1、idapython模块简单介绍"><a href="#1、idapython模块简单介绍" class="headerlink" title="1、idapython模块简单介绍"></a>1、idapython模块简单介绍</h3><a id="more"></a>
-<p>idapython的主要模块为“idaapi.py”、“idautils.py”、“idc.py”。</p>
+        <p>IDA Pro是一款静态反汇编的利器，具有良好的交互性、可编程性、可扩展性及对多处理器的支持。<br>对于IDA Pro的可扩展性表现在两个方面，一是采用内置的脚本语言IDC写脚本；二是采用Hex-rays提供的SDK写插件Plug-in。<br><strong>简单的任务交由脚本完成，复杂的任务则需要定制满足需求的插件</strong></p><h3 id="0、先介绍一下IDA插件历史："><a href="#0、先介绍一下IDA插件历史：" class="headerlink" title="0、先介绍一下IDA插件历史："></a>0、先介绍一下IDA插件历史：</h3><a id="more"></a>
+<p>来自（<a href="https://reverseengineering.stackovernet.com/cn/q/3050）" target="_blank" rel="noopener">https://reverseengineering.stackovernet.com/cn/q/3050）</a></p>
+<h4 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h4><p>In IDA’s documentation, there are references to modules named ida_*, as well as idc, idaapi and idautils. The former modules seem to be the lower level ones. Almost always it says that IDA Plugin SDK API wrapper: <some_module>.</some_module></p>
+<p>I have a few specific questions about the documentation and IDAPython:</p>
+<p>1.What is this IDA plugin SDK? Is it the C like API available in IDC?<br>2.Do the higher level API allow access to all the lower level functionalities?<br>3.What can’t I seem to load lower level modules? (When I try to import ida_lines, IDA says ImportError: No module named ida_lines)</p>
+<h4 id="回答："><a href="#回答：" class="headerlink" title="回答："></a>回答：</h4><p>A bit of history: (aka an aging guy blabbering about)</p>
+<p>In the old days, we didn’t have python in IDA and when an individual wanted to develop an IDA plugin he had to implement it in C and use the SDK available from hex-ray’s download center using credentials received when you purchase an IDA license. We did have, however, IDC. IDC is IDA’s old, proprietary and somewhat deprecated scripting language, this is not related to C however there is evident effort using a C-like syntax. It was commonly used in the past but IDAPython nearly replaced it completely. The only reason to see IDC now is for old code, that precedes IDAPython.</p>
+<p>Since then, IDAPython was developed (originally as a plugin using the aforementioned SDK, and then adopted by hex-rays and made part of IDA). Up until the recent IDA 6.95, we only had a single module exposing all of IDA’s C SDK in python. That module was idaapi. idc is implementing higher level functions that were migrated from IDC into IDAPython. idautils implements some more high level functions, that weren’t there before. those are rough divisions, and not entirely accurate. The important point here is that there was a single (long) python file exposing all SDK functions (that are exposed to python using SWIG).</p>
+<p>In IDA 6.95 we still have that, but it was also the first version to include multiple ida_* modules where are to replace the broad idaapi. idaapi is only included in 6.95 for backwards compatibility and should be expected to be dropped in IDA 7. Generally, the names of the modules (what follows the ida_ prefix) are the names of the header files in which those functions are defined. For example, ida_lines will expose functions defined in lines.h.</p>
+<p><strong>Actual answers:</strong></p>
+<p>1.The IDA plugin SDK is a collection of C header files and binary libraries that allow a third party develop IDA plugins using the provided API. It can be downloaded from the download center and it’s documentation is available here.<br>2.While the C SDK is pretty well documented, the IDAPython not so much. I often find browsing the SDK useful when developing IDAPython plugins, as functions are usually exposed to python but not documented or described as well as they are in the SDK. basically most of the functions correspond and you’ll find the same functions having the same name in both IDAPython and the SDK (as this is mostly automatically generated code by/for SWIG).<br>3.First guess would be you’re using an older version of IDA, where ida_* modules don’t yet exist. generally, using idaapi instead of every other module will do just fine.<br>Developing for IDA:</p>
+<p><strong>A person interested in developing for IDA has three options:</strong></p>
+<p>1.Writing C code using the IDA SDK and compiling it, having a plw or a p64 binary as output.<br>2.Writing IDC code. This is a decent scripting language recembling a simplified C in syntax. output would be a text file.<br>3.Writing IDAPython code. This is mostly python using the additional modules available when running from within IDA, plus a simple IDA plugin interface required to register as a plugin.</p>
+<h3 id="1、idapython模块简单介绍"><a href="#1、idapython模块简单介绍" class="headerlink" title="1、idapython模块简单介绍"></a>1、idapython模块简单介绍</h3><p>idapython的主要模块为“idaapi.py”、“idautils.py”、“idc.py”。</p>
 <ul>
 <li>idaapi.py:　　    负责访问核心IDA API。</li>
 <li>idautils.py:     提供大量的使用函数。</li>
@@ -384,7 +396,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、idapython模块简单介绍"><span class="nav-text">1、idapython模块简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、使用ide单独编辑idapython时，引入idaapi等模块的设置"><span class="nav-text">2、使用ide单独编辑idapython时，引入idaapi等模块的设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1、使用wingIDE，环境变量中加入idapython相关模块的路径"><span class="nav-text">2.1、使用wingIDE，环境变量中加入idapython相关模块的路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2、使用pycharm，环境变量中加入idapython相关模块的路径"><span class="nav-text">2.2、使用pycharm，环境变量中加入idapython相关模块的路径</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、脚本-也可以以插件的形式重写如下脚本"><span class="nav-text">3、脚本(也可以以插件的形式重写如下脚本)</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0、先介绍一下IDA插件历史："><span class="nav-text">0、先介绍一下IDA插件历史：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题："><span class="nav-text">问题：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#回答："><span class="nav-text">回答：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1、idapython模块简单介绍"><span class="nav-text">1、idapython模块简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、使用ide单独编辑idapython时，引入idaapi等模块的设置"><span class="nav-text">2、使用ide单独编辑idapython时，引入idaapi等模块的设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1、使用wingIDE，环境变量中加入idapython相关模块的路径"><span class="nav-text">2.1、使用wingIDE，环境变量中加入idapython相关模块的路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2、使用pycharm，环境变量中加入idapython相关模块的路径"><span class="nav-text">2.2、使用pycharm，环境变量中加入idapython相关模块的路径</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、脚本-也可以以插件的形式重写如下脚本"><span class="nav-text">3、脚本(也可以以插件的形式重写如下脚本)</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
