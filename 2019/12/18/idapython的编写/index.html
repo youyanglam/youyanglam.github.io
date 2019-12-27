@@ -56,7 +56,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;18&#x2F;idapython%E7%9A%84%E7%BC%96%E5%86%99&#x2F;idapython_modules.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;18&#x2F;idapython%E7%9A%84%E7%BC%96%E5%86%99&#x2F;python27_module.png">
-<meta property="og:updated_time" content="2019-12-27T06:10:20.217Z">
+<meta property="og:updated_time" content="2019-12-27T07:47:53.185Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;18&#x2F;idapython%E7%9A%84%E7%BC%96%E5%86%99&#x2F;idapython_modules.png">
 
@@ -256,7 +256,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-27 14:10:20" itemprop="dateModified" datetime="2019-12-27T14:10:20+08:00">2019-12-27</time>
+                <time title="Modified: 2019-12-27 15:47:53" itemprop="dateModified" datetime="2019-12-27T15:47:53+08:00">2019-12-27</time>
               </span>
 
           
@@ -310,6 +310,8 @@
 <p><font color="red" size="3" face="华文中宋">也可以以插件的形式重写如下脚本，需要注意的是，在IDA的插件目录，所有python插件脚本的”插件继承类”的类名不能重复，否则重复类名的插件在IDA中加载不出来</font></p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> idaapi <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FuncPath</span><span class="params">(DBG_Hooks)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Our breakpoint handler</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dbg_bpt</span><span class="params">(self, tid, ea)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"[*] Hit: 0x%08x"</span> % ea</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Add our function coverage debugger hook</span></span><br><span class="line">debugger = FuncPath ()</span><br><span class="line">debugger.hook()</span><br><span class="line"></span><br><span class="line">current_addr = ScreenEA()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Find all functions and add breakpoints</span></span><br><span class="line"><span class="keyword">for</span> function <span class="keyword">in</span> Functions(SegStart( current_addr ), SegEnd( current_addr )):</span><br><span class="line">    AddBpt( function )</span><br><span class="line">    SetBptAttr( function, BPTATTR_FLAGS, BPT_ENABLED|BPT_TRACE)<span class="comment">#设置断点的属性为跟踪</span></span><br><span class="line"></span><br><span class="line">num_breakpoints = GetBptQty()</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"[*] Set %d breakpoints."</span> % num_breakpoints</span><br></pre></td></tr></table></figure>
+<h3 id="4、参考"><a href="#4、参考" class="headerlink" title="4、参考"></a>4、参考</h3><p>IDAPRO的python插件-IDAPython<br><a href="https://blog.csdn.net/ojshilu/article/details/12905405" target="_blank" rel="noopener">https://blog.csdn.net/ojshilu/article/details/12905405</a></p>
+
     </div>
 
     
@@ -403,7 +405,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0、先介绍一下IDA插件历史："><span class="nav-text">0、先介绍一下IDA插件历史：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题："><span class="nav-text">问题：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#回答："><span class="nav-text">回答：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1、idapython模块简单介绍"><span class="nav-text">1、idapython模块简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、使用ide单独编辑idapython时，引入idaapi等模块的设置"><span class="nav-text">2、使用ide单独编辑idapython时，引入idaapi等模块的设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1、使用wingIDE，环境变量中加入idapython相关模块的路径"><span class="nav-text">2.1、使用wingIDE，环境变量中加入idapython相关模块的路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2、使用pycharm，环境变量中加入idapython相关模块的路径"><span class="nav-text">2.2、使用pycharm，环境变量中加入idapython相关模块的路径</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、脚本"><span class="nav-text">3、脚本</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0、先介绍一下IDA插件历史："><span class="nav-text">0、先介绍一下IDA插件历史：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题："><span class="nav-text">问题：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#回答："><span class="nav-text">回答：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1、idapython模块简单介绍"><span class="nav-text">1、idapython模块简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、使用ide单独编辑idapython时，引入idaapi等模块的设置"><span class="nav-text">2、使用ide单独编辑idapython时，引入idaapi等模块的设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1、使用wingIDE，环境变量中加入idapython相关模块的路径"><span class="nav-text">2.1、使用wingIDE，环境变量中加入idapython相关模块的路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2、使用pycharm，环境变量中加入idapython相关模块的路径"><span class="nav-text">2.2、使用pycharm，环境变量中加入idapython相关模块的路径</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、脚本"><span class="nav-text">3、脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、参考"><span class="nav-text">4、参考</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
