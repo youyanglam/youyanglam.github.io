@@ -46,18 +46,18 @@
   };
 </script>
 
-  <meta name="description" content="1、pod1pod install依赖于工程目录下的Podfile文件 如果出现问题：[!] Unable to determine Swift version for the following pods:RealmSwift is integrated by multiple targets that use a different Swift version: Potatso (Swift">
-<meta name="keywords" content="xcode">
+  <meta name="description" content="1、报错场景在正确输入了MySQL用户名和密码后，phpMyAdmin连接MySQL8.0报错2054，无法登录MySQL服务器2、报错原因由于mysql8.0默认使用了新的密码验证插件caching_sha2_password，而之前的PHP版本中所带的mysqlnd不能支持新的验证方式。3、解决方法">
+<meta name="keywords" content="phpMyAdmin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="编译ios工程">
-<meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;03&#x2F;%E7%BC%96%E8%AF%91ios%E5%B7%A5%E7%A8%8B&#x2F;index.html">
+<meta property="og:title" content="phpMyAdmin连接MySQL8.0报错2054">
+<meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2020&#x2F;03&#x2F;04&#x2F;phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054&#x2F;index.html">
 <meta property="og:site_name" content="YouYang&#39;s Bay">
-<meta property="og:description" content="1、pod1pod install依赖于工程目录下的Podfile文件 如果出现问题：[!] Unable to determine Swift version for the following pods:RealmSwift is integrated by multiple targets that use a different Swift version: Potatso (Swift">
+<meta property="og:description" content="1、报错场景在正确输入了MySQL用户名和密码后，phpMyAdmin连接MySQL8.0报错2054，无法登录MySQL服务器2、报错原因由于mysql8.0默认使用了新的密码验证插件caching_sha2_password，而之前的PHP版本中所带的mysqlnd不能支持新的验证方式。3、解决方法">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-05T14:46:04.328Z">
+<meta property="og:updated_time" content="2020-03-04T15:42:55.973Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://youyanglam.github.io/2019/12/03/%E7%BC%96%E8%AF%91ios%E5%B7%A5%E7%A8%8B/">
+<link rel="canonical" href="http://youyanglam.github.io/2020/03/04/phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054/">
 
 
 <script id="page-configurations">
@@ -71,7 +71,7 @@
   };
 </script>
 
-  <title>编译ios工程 | YouYang's Bay</title>
+  <title>phpMyAdmin连接MySQL8.0报错2054 | YouYang's Bay</title>
   
 
 
@@ -222,7 +222,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://youyanglam.github.io/2019/12/03/%E7%BC%96%E8%AF%91ios%E5%B7%A5%E7%A8%8B/">
+    <link itemprop="mainEntityOfPage" href="http://youyanglam.github.io/2020/03/04/phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -235,7 +235,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          编译ios工程
+          phpMyAdmin连接MySQL8.0报错2054
         </h1>
 
         <div class="post-meta">
@@ -245,24 +245,18 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2019-12-03 13:16:45" itemprop="dateCreated datePublished" datetime="2019-12-03T13:16:45+08:00">2019-12-03</time>
+              <time title="Created: 2020-03-04 23:26:01 / Modified: 23:42:55" itemprop="dateCreated datePublished" datetime="2020-03-04T23:26:01+08:00">2020-03-04</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-05 22:46:04" itemprop="dateModified" datetime="2019-12-05T22:46:04+08:00">2019-12-05</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ios/" itemprop="url" rel="index">
-                    <span itemprop="name">ios</span>
+                  <a href="/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
                   </a>
                 </span>
             </span>
@@ -285,15 +279,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1、pod"><a href="#1、pod" class="headerlink" title="1、pod"></a>1、pod</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure><p>依赖于工程目录下的Podfile文件</p><ul>
-<li>如果出现问题：<br>[!] Unable to determine Swift version for the following pods:<br><code>RealmSwift</code> is integrated by multiple targets that use a different Swift version: <code>Potatso</code> (Swift 4.0), <code>TodayWidget</code> (Swift 5.0),<br>解决方法：<br>you can set the Swift version by including e.g. ENV[‘SWIFT_VERSION’] = ‘3’ at the top of your Podfile.</li>
-</ul><a id="more"></a>
+        <h3 id="1、报错场景"><a href="#1、报错场景" class="headerlink" title="1、报错场景"></a>1、报错场景</h3><p>在正确输入了MySQL用户名和密码后，phpMyAdmin连接MySQL8.0报错2054，无法登录MySQL服务器</p><h3 id="2、报错原因"><a href="#2、报错原因" class="headerlink" title="2、报错原因"></a>2、报错原因</h3><p>由于mysql8.0默认使用了新的密码验证插件<font color="red" size="4">caching_sha2_password</font>，而之前的PHP版本中所带的mysqlnd不能支持新的验证方式。</p><h3 id="3、解决方法"><a href="#3、解决方法" class="headerlink" title="3、解决方法"></a>3、解决方法</h3><a id="more"></a>
 
-
-<h2 id="2、carthage"><a href="#2、carthage" class="headerlink" title="2、carthage"></a>2、carthage</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">carthage update --no-use-binaries --platform ios</span><br></pre></td></tr></table></figure>
-<p>依赖于工程目录下的Cartfile文件</p>
-<h2 id="3、参考"><a href="#3、参考" class="headerlink" title="3、参考"></a>3、参考</h2><p><a href="https://www.jianshu.com/p/44e73dca395d" target="_blank" rel="noopener">https://www.jianshu.com/p/44e73dca395d</a></p>
-
+<p>删除创建的用户和授权</p>
+<h4 id="3-1、查看当前的密码验证方式"><a href="#3-1、查看当前的密码验证方式" class="headerlink" title="3.1、查看当前的密码验证方式"></a>3.1、查看当前的密码验证方式</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use mysql;</span><br><span class="line">mysql&gt; select User,plugin from user <span class="built_in">where</span> User = <span class="string">'root'</span>;</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| User | plugin                |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| root | caching_sha2_password |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">1 row <span class="keyword">in</span> <span class="built_in">set</span> (0.01 sec)</span><br></pre></td></tr></table></figure>
+<h4 id="3-2、修改验证方式"><a href="#3-2、修改验证方式" class="headerlink" title="3.2、修改验证方式"></a>3.2、修改验证方式</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br><span class="line">use mysql;</span><br><span class="line">ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED WITH mysql_native_password BY <span class="string">'你的密码'</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="3-3、查看当前的密码验证方式"><a href="#3-3、查看当前的密码验证方式" class="headerlink" title="3.3、查看当前的密码验证方式"></a>3.3、查看当前的密码验证方式</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use mysql;</span><br><span class="line">mysql&gt; select User,plugin from user <span class="built_in">where</span> User = <span class="string">'root'</span>;</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| User | plugin                |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| root | mysql_native_password |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">1 row <span class="keyword">in</span> <span class="built_in">set</span> (0.00 sec)</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -323,7 +314,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="http://youyanglam.github.io/2019/12/03/%E7%BC%96%E8%AF%91ios%E5%B7%A5%E7%A8%8B/" title="编译ios工程">http://youyanglam.github.io/2019/12/03/%E7%BC%96%E8%AF%91ios%E5%B7%A5%E7%A8%8B/</a>
+    <a href="http://youyanglam.github.io/2020/03/04/phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054/" title="phpMyAdmin连接MySQL8.0报错2054">http://youyanglam.github.io/2020/03/04/phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -334,7 +325,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/xcode/" rel="tag"># xcode</a>
+              <a href="/tags/phpMyAdmin/" rel="tag"># phpMyAdmin</a>
           </div>
 
         
@@ -343,13 +334,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/12/03/linux%E5%AE%89%E8%A3%85v2ray/" rel="prev" title="linux安装v2ray">
-      <i class="fa fa-chevron-left"></i> linux安装v2ray
+    <a href="/2020/03/01/%E5%88%A9%E7%94%A8scapy%E8%BF%9B%E8%A1%8Carp%E7%BC%93%E5%AD%98%E6%8A%95%E6%AF%92/" rel="prev" title="利用scapy进行arp缓存投毒">
+      <i class="fa fa-chevron-left"></i> 利用scapy进行arp缓存投毒
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/12/03/kali-2019-4-%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/" rel="next" title="kali 2019.4 中文乱码">
-      kali 2019.4 中文乱码 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -387,7 +375,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、pod"><span class="nav-text">1、pod</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、carthage"><span class="nav-text">2、carthage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、参考"><span class="nav-text">3、参考</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、报错场景"><span class="nav-text">1、报错场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、报错原因"><span class="nav-text">2、报错原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、解决方法"><span class="nav-text">3、解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1、查看当前的密码验证方式"><span class="nav-text">3.1、查看当前的密码验证方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2、修改验证方式"><span class="nav-text">3.2、修改验证方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3、查看当前的密码验证方式"><span class="nav-text">3.3、查看当前的密码验证方式</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

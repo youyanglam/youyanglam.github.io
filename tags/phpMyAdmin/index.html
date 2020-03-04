@@ -46,18 +46,16 @@
   };
 </script>
 
-  <meta name="description" content="1、pod1pod install依赖于工程目录下的Podfile文件 如果出现问题：[!] Unable to determine Swift version for the following pods:RealmSwift is integrated by multiple targets that use a different Swift version: Potatso (Swift">
-<meta name="keywords" content="xcode">
-<meta property="og:type" content="article">
-<meta property="og:title" content="编译ios工程">
-<meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;2019&#x2F;12&#x2F;03&#x2F;%E7%BC%96%E8%AF%91ios%E5%B7%A5%E7%A8%8B&#x2F;index.html">
+  <meta name="description" content="往者已矣，来者可追">
+<meta property="og:type" content="website">
+<meta property="og:title" content="YouYang&#39;s Bay">
+<meta property="og:url" content="http:&#x2F;&#x2F;youyanglam.github.io&#x2F;tags&#x2F;phpMyAdmin&#x2F;index.html">
 <meta property="og:site_name" content="YouYang&#39;s Bay">
-<meta property="og:description" content="1、pod1pod install依赖于工程目录下的Podfile文件 如果出现问题：[!] Unable to determine Swift version for the following pods:RealmSwift is integrated by multiple targets that use a different Swift version: Potatso (Swift">
+<meta property="og:description" content="往者已矣，来者可追">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-05T14:46:04.328Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://youyanglam.github.io/2019/12/03/%E7%BC%96%E8%AF%91ios%E5%B7%A5%E7%A8%8B/">
+<link rel="canonical" href="http://youyanglam.github.io/tags/phpMyAdmin/">
 
 
 <script id="page-configurations">
@@ -65,13 +63,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: true,
+    isPost: false,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>编译ios工程 | YouYang's Bay</title>
+  <title>Tag: phpMyAdmin | YouYang's Bay</title>
   
 
 
@@ -217,148 +215,50 @@
           <div class="content">
             
 
-  <div class="posts-expand">
-      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://youyanglam.github.io/2019/12/03/%E7%BC%96%E8%AF%91ios%E5%B7%A5%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="YouYang">
-      <meta itemprop="description" content="往者已矣，来者可追">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YouYang's Bay">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          编译ios工程
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <h1 class="collection-header">phpMyAdmin
+          <small>Tag</small>
         </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-12-03 13:16:45" itemprop="dateCreated datePublished" datetime="2019-12-03T13:16:45+08:00">2019-12-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-05 22:46:04" itemprop="dateModified" datetime="2019-12-05T22:46:04+08:00">2019-12-05</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ios/" itemprop="url" rel="index">
-                    <span itemprop="name">ios</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <h2 id="1、pod"><a href="#1、pod" class="headerlink" title="1、pod"></a>1、pod</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure><p>依赖于工程目录下的Podfile文件</p><ul>
-<li>如果出现问题：<br>[!] Unable to determine Swift version for the following pods:<br><code>RealmSwift</code> is integrated by multiple targets that use a different Swift version: <code>Potatso</code> (Swift 4.0), <code>TodayWidget</code> (Swift 5.0),<br>解决方法：<br>you can set the Swift version by including e.g. ENV[‘SWIFT_VERSION’] = ‘3’ at the top of your Podfile.</li>
-</ul><a id="more"></a>
-
-
-<h2 id="2、carthage"><a href="#2、carthage" class="headerlink" title="2、carthage"></a>2、carthage</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">carthage update --no-use-binaries --platform ios</span><br></pre></td></tr></table></figure>
-<p>依赖于工程目录下的Cartfile文件</p>
-<h2 id="3、参考"><a href="#3、参考" class="headerlink" title="3、参考"></a>3、参考</h2><p><a href="https://www.jianshu.com/p/44e73dca395d" target="_blank" rel="noopener">https://www.jianshu.com/p/44e73dca395d</a></p>
-
-    </div>
-
-    
-    
-    
-        <div class="reward-container">
-  <div>请我喝咖啡.</div>
-  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    Donate
-  </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
-        <img src="/images/wechatpay.png" alt="YouYang WeChat Pay">
-        <p>WeChat Pay</p>
       </div>
 
-  </div>
-</div>
-
-        
-
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>Post author:  </strong>YouYang
-  </li>
-  <li class="post-copyright-link">
-    <strong>Post link: </strong>
-    <a href="http://youyanglam.github.io/2019/12/03/%E7%BC%96%E8%AF%91ios%E5%B7%A5%E7%A8%8B/" title="编译ios工程">http://youyanglam.github.io/2019/12/03/%E7%BC%96%E8%AF%91ios%E5%B7%A5%E7%A8%8B/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
-  </li>
-</ul>
-</div>
-
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/xcode/" rel="tag"># xcode</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2019/12/03/linux%E5%AE%89%E8%A3%85v2ray/" rel="prev" title="linux安装v2ray">
-      <i class="fa fa-chevron-left"></i> linux安装v2ray
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/12/03/kali-2019-4-%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/" rel="next" title="kali 2019.4 中文乱码">
-      kali 2019.4 中文乱码 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      
+    <div class="collection-year">
+      <h1 class="collection-header">2020</h1>
     </div>
-      </footer>
-    
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-03-04T23:26:01+08:00"
+              content="2020-03-04">
+          03-04
+        </time>
+      </div>
+
+      <h2 class="post-title">
+          <a class="post-title-link" href="/2020/03/04/phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054/" itemprop="url">
+            <span itemprop="name">phpMyAdmin连接MySQL8.0报错2054</span>
+          </a>
+      </h2>
+
+    </header>
   </article>
+
+    </div>
+  </div>
   
   
   
 
-  </div>
+  
+
 
 
           </div>
@@ -387,7 +287,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、pod"><span class="nav-text">1、pod</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、carthage"><span class="nav-text">2、carthage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、参考"><span class="nav-text">3、参考</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youyanglam.github.io/"/>
-  <updated>2020-03-01T14:51:29.289Z</updated>
+  <updated>2020-03-04T15:42:55.973Z</updated>
   <id>http://youyanglam.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>phpMyAdmin连接MySQL8.0报错2054</title>
+    <link href="http://youyanglam.github.io/2020/03/04/phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054/"/>
+    <id>http://youyanglam.github.io/2020/03/04/phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054/</id>
+    <published>2020-03-04T15:26:01.000Z</published>
+    <updated>2020-03-04T15:42:55.973Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1、报错场景"><a href="#1、报错场景" class="headerlink" title="1、报错场景"></a>1、报错场景</h3><p>在正确输入了MySQL用户名和密码后，phpMyAdmin连接MySQL8.0报错2054，无法登录MySQL服务器</p><h3 id="2、报错原因"><a href="#2、报错原因" class="headerlink" title="2、报错原因"></a>2、报错原因</h3><p>由于mysql8.0默认使用了新的密码验证插件<font color="red" size="4">caching_sha2_password</font>，而之前的PHP版本中所带的mysqlnd不能支持新的验证方式。</p><h3 id="3、解决方法"><a href="#3、解决方法" class="headerlink" title="3、解决方法"></a>3、解决方法</h3><a id="more"></a><p>删除创建的用户和授权</p><h4 id="3-1、查看当前的密码验证方式"><a href="#3-1、查看当前的密码验证方式" class="headerlink" title="3.1、查看当前的密码验证方式"></a>3.1、查看当前的密码验证方式</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use mysql;</span><br><span class="line">mysql&gt; select User,plugin from user <span class="built_in">where</span> User = <span class="string">'root'</span>;</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| User | plugin                |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| root | caching_sha2_password |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">1 row <span class="keyword">in</span> <span class="built_in">set</span> (0.01 sec)</span><br></pre></td></tr></table></figure><h4 id="3-2、修改验证方式"><a href="#3-2、修改验证方式" class="headerlink" title="3.2、修改验证方式"></a>3.2、修改验证方式</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br><span class="line">use mysql;</span><br><span class="line">ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED WITH mysql_native_password BY <span class="string">'你的密码'</span>;</span><br></pre></td></tr></table></figure><h4 id="3-3、查看当前的密码验证方式"><a href="#3-3、查看当前的密码验证方式" class="headerlink" title="3.3、查看当前的密码验证方式"></a>3.3、查看当前的密码验证方式</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use mysql;</span><br><span class="line">mysql&gt; select User,plugin from user <span class="built_in">where</span> User = <span class="string">'root'</span>;</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| User | plugin                |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| root | mysql_native_password |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">1 row <span class="keyword">in</span> <span class="built_in">set</span> (0.00 sec)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1、报错场景&quot;&gt;&lt;a href=&quot;#1、报错场景&quot; class=&quot;headerlink&quot; title=&quot;1、报错场景&quot;&gt;&lt;/a&gt;1、报错场景&lt;/h3&gt;&lt;p&gt;在正确输入了MySQL用户名和密码后，phpMyAdmin连接MySQL8.0报错2054，无法登录MySQL服务器&lt;/p&gt;&lt;h3 id=&quot;2、报错原因&quot;&gt;&lt;a href=&quot;#2、报错原因&quot; class=&quot;headerlink&quot; title=&quot;2、报错原因&quot;&gt;&lt;/a&gt;2、报错原因&lt;/h3&gt;&lt;p&gt;由于mysql8.0默认使用了新的密码验证插件&lt;font color=&quot;red&quot; size=&quot;4&quot;&gt;caching_sha2_password&lt;/font&gt;，而之前的PHP版本中所带的mysqlnd不能支持新的验证方式。&lt;/p&gt;&lt;h3 id=&quot;3、解决方法&quot;&gt;&lt;a href=&quot;#3、解决方法&quot; class=&quot;headerlink&quot; title=&quot;3、解决方法&quot;&gt;&lt;/a&gt;3、解决方法&lt;/h3&gt;
+    
+    </summary>
+    
+    
+      <category term="mysql" scheme="http://youyanglam.github.io/categories/mysql/"/>
+    
+    
+      <category term="phpMyAdmin" scheme="http://youyanglam.github.io/tags/phpMyAdmin/"/>
+    
+  </entry>
   
   <entry>
     <title>利用scapy进行arp缓存投毒</title>
@@ -478,29 +501,6 @@
     
     
       <category term="xcode" scheme="http://youyanglam.github.io/tags/xcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux安装v2ray</title>
-    <link href="http://youyanglam.github.io/2019/12/03/linux%E5%AE%89%E8%A3%85v2ray/"/>
-    <id>http://youyanglam.github.io/2019/12/03/linux%E5%AE%89%E8%A3%85v2ray/</id>
-    <published>2019-12-03T03:51:38.000Z</published>
-    <updated>2019-12-03T06:08:41.852Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1、下载并安装v2ray"><a href="#1、下载并安装v2ray" class="headerlink" title="1、下载并安装v2ray"></a>1、下载并安装v2ray</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -Ls https://install.direct/go.sh | sudo bash</span><br></pre></td></tr></table></figure><h2 id="2、编辑配置文件"><a href="#2、编辑配置文件" class="headerlink" title="2、编辑配置文件"></a>2、编辑配置文件</h2><p>配置文件的位置为：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/v2ray/config.json</span><br></pre></td></tr></table></figure><h2 id="3、启动v2ray服务"><a href="#3、启动v2ray服务" class="headerlink" title="3、启动v2ray服务"></a>3、启动v2ray服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/v2ray/v2ray -config=/etc/v2ray/config.json</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="4、参考"><a href="#4、参考" class="headerlink" title="4、参考"></a>4、参考</h2><p><a href="https://www.v2ray.com/en/welcome/install.html" target="_blank" rel="noopener">https://www.v2ray.com/en/welcome/install.html</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;1、下载并安装v2ray&quot;&gt;&lt;a href=&quot;#1、下载并安装v2ray&quot; class=&quot;headerlink&quot; title=&quot;1、下载并安装v2ray&quot;&gt;&lt;/a&gt;1、下载并安装v2ray&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -Ls https://install.direct/go.sh | sudo bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&quot;2、编辑配置文件&quot;&gt;&lt;a href=&quot;#2、编辑配置文件&quot; class=&quot;headerlink&quot; title=&quot;2、编辑配置文件&quot;&gt;&lt;/a&gt;2、编辑配置文件&lt;/h2&gt;&lt;p&gt;配置文件的位置为：&lt;/p&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/etc/v2ray/config.json&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&quot;3、启动v2ray服务&quot;&gt;&lt;a href=&quot;#3、启动v2ray服务&quot; class=&quot;headerlink&quot; title=&quot;3、启动v2ray服务&quot;&gt;&lt;/a&gt;3、启动v2ray服务&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/usr/bin/v2ray/v2ray -config=/etc/v2ray/config.json&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="http://youyanglam.github.io/categories/linux/"/>
-    
-    
-      <category term="v2ray" scheme="http://youyanglam.github.io/tags/v2ray/"/>
     
   </entry>
   
