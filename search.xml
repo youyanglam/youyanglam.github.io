@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>ubuntu apt-get update NO_PUBKEY</title>
+    <url>/2020/03/05/ubuntu-apt-get-update-NO-PUBKEY/</url>
+    <content><![CDATA[<h3 id="1、错误描述"><a href="#1、错误描述" class="headerlink" title="1、错误描述"></a>1、错误描述</h3><p>sudo apt-get update,出现如下错误</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://dl.google.com/linux/chrome/deb stable Release: The following signatures couldn<span class="string">'t be verified because the public key is not available: NO_PUBKEY 78BD65473CB3BD13</span></span><br><span class="line"><span class="string">W: Failed to fetch http://dl.google.com/linux/chrome/deb/dists/stable/Release.gpg  The following signatures couldn'</span>t be verified because the public key is not available: NO_PUBKEY 78BD65473CB3BD13</span><br></pre></td></tr></table></figure><a id="more"></a>
+
+<h3 id="2、解决方法"><a href="#2、解决方法" class="headerlink" title="2、解决方法"></a>2、解决方法</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-key adv --refresh-keys --keyserver keyserver.ubuntu.com</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>phpMyAdmin连接MySQL8.0报错2054</title>
     <url>/2020/03/04/phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054/</url>
     <content><![CDATA[<h3 id="1、报错场景"><a href="#1、报错场景" class="headerlink" title="1、报错场景"></a>1、报错场景</h3><p>在正确输入了MySQL用户名和密码后，phpMyAdmin连接MySQL8.0报错2054，无法登录MySQL服务器</p><h3 id="2、报错原因"><a href="#2、报错原因" class="headerlink" title="2、报错原因"></a>2、报错原因</h3><p>由于mysql8.0默认使用了新的密码验证插件<font color="red" size="4">caching_sha2_password</font>，而之前的PHP版本中所带的mysqlnd不能支持新的验证方式。</p><h3 id="3、解决方法"><a href="#3、解决方法" class="headerlink" title="3、解决方法"></a>3、解决方法</h3><a id="more"></a>
