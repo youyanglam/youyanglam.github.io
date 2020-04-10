@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>v2ray订阅地址制作</title>
+    <url>/2020/04/10/v2ray%E8%AE%A2%E9%98%85%E5%9C%B0%E5%9D%80%E5%88%B6%E4%BD%9C/</url>
+    <content><![CDATA[<h3 id="1、index-html文件制作"><a href="#1、index-html文件制作" class="headerlink" title="1、index.html文件制作"></a>1、index.html文件制作</h3><p>将自己的vmess地址编码成base64字符串，保存为index.html</p><h3 id="2、搭建web站点"><a href="#2、搭建web站点" class="headerlink" title="2、搭建web站点"></a>2、搭建web站点</h3><p>这里以ubuntu服务器上安装lamp为例说明</p><h4 id="2-1、安装lamp"><a href="#2-1、安装lamp" class="headerlink" title="2.1、安装lamp"></a>2.1、安装lamp</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install lamp-server^</span><br></pre></td></tr></table></figure><p>出现错误（apache服务器启动失败）</p><a id="more"></a>
+
+
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@hwsrv-623577:~<span class="comment"># /etc/init.d/apache2 start</span></span><br><span class="line">[....] Starting apache2 (via systemctl): apache2.serviceJob <span class="keyword">for</span> apache2.service failed because the control process exited with error code.</span><br><span class="line">See <span class="string">"systemctl status apache2.service"</span> and <span class="string">"journalctl -xe"</span> <span class="keyword">for</span> details.</span><br><span class="line"> failed!</span><br><span class="line">root@hwsrv-623577:~<span class="comment"># systemctl status apache2.service</span></span><br><span class="line">● apache2.service - The Apache HTTP Server</span><br><span class="line">   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)</span><br><span class="line">  Drop-In: /lib/systemd/system/apache2.service.d</span><br><span class="line">           └─apache2-systemd.conf</span><br><span class="line">   Active: failed (Result: <span class="built_in">exit</span>-code) since Fri 2020-04-10 14:41:47 CST; 3min 30s ago</span><br><span class="line">  Process: 30938 ExecStart=/usr/sbin/apachectl start (code=exited, status=1/FAILURE)</span><br><span class="line"></span><br><span class="line">Apr 10 14:41:47 hwsrv-623577.hostwindsdns.com systemd[1]: Starting The Apache HTTP Server...</span><br><span class="line">Apr 10 14:41:47 hwsrv-623577.hostwindsdns.com apachectl[30938]: (98)Address already <span class="keyword">in</span> use: AH00072: make_sock: could no</span><br><span class="line">Apr 10 14:41:47 hwsrv-623577.hostwindsdns.com apachectl[30938]: (98)Address already <span class="keyword">in</span> use: AH00072: make_sock: could no</span><br><span class="line">Apr 10 14:41:47 hwsrv-623577.hostwindsdns.com apachectl[30938]: no listening sockets available, shutting down</span><br><span class="line">Apr 10 14:41:47 hwsrv-623577.hostwindsdns.com apachectl[30938]: AH00015: Unable to open logs</span><br><span class="line">Apr 10 14:41:47 hwsrv-623577.hostwindsdns.com apachectl[30938]: Action <span class="string">'start'</span> failed.</span><br><span class="line">Apr 10 14:41:47 hwsrv-623577.hostwindsdns.com apachectl[30938]: The Apache error <span class="built_in">log</span> may have more information.</span><br><span class="line">Apr 10 14:41:47 hwsrv-623577.hostwindsdns.com systemd[1]: apache2.service: Control process exited, code=exited status=1</span><br><span class="line">Apr 10 14:41:47 hwsrv-623577.hostwindsdns.com systemd[1]: apache2.service: Failed with result <span class="string">'exit-code'</span>.</span><br><span class="line">Apr 10 14:41:47 hwsrv-623577.hostwindsdns.com systemd[1]: Failed to start The Apache HTTP Server.</span><br></pre></td></tr></table></figure>
+<p>说明80端口被用<br>终端：  ps -ef|grep httpd察看占用的进程或者用netstat -lnp|grep 80</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@hwsrv-623577:~<span class="comment"># netstat -lnp|grep 80</span></span><br><span class="line">tcp6       0      0 :::80                   :::*                    LISTEN      740/v2ray</span><br></pre></td></tr></table></figure>
+<p>这是因为我vps上v2ray服务占用了80端口<br>将apache2的默认端口修改成8080</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/apache2/ports.conf</span><br><span class="line">listen 8080</span><br></pre></td></tr></table></figure>
+<p>启动apache2</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/apache2 start</span><br></pre></td></tr></table></figure>
+<h4 id="2-2、替换index-html"><a href="#2-2、替换index-html" class="headerlink" title="2.2、替换index.html"></a>2.2、替换index.html</h4><p>web站点搭建好后，用上面的index.html文件替换掉默认的index.html文件（web目录为/var/www）</p>
+<h3 id="3、配置订阅"><a href="#3、配置订阅" class="headerlink" title="3、配置订阅"></a>3、配置订阅</h3><p>将站点地址填入代理app的订阅地址中</p>
+<h3 id="4、参考"><a href="#4、参考" class="headerlink" title="4、参考"></a>4、参考</h3><p><a href="https://yangwenqing.com/archives/748/" target="_blank" rel="noopener">https://yangwenqing.com/archives/748/</a></p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>v2ray</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>wireshark过滤规则</title>
     <url>/2020/03/06/wireshark%E8%BF%87%E6%BB%A4%E8%A7%84%E5%88%99/</url>
     <content><![CDATA[<h3 id="1、http返回状态码过滤"><a href="#1、http返回状态码过滤" class="headerlink" title="1、http返回状态码过滤"></a>1、http返回状态码过滤</h3><p>http.response.code==302</p>]]></content>
