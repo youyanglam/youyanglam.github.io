@@ -15,7 +15,7 @@
 <p>启动apache2</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/apache2 start</span><br></pre></td></tr></table></figure>
 <h4 id="2-2、替换index-html"><a href="#2-2、替换index-html" class="headerlink" title="2.2、替换index.html"></a>2.2、替换index.html</h4><p>web站点搭建好后，用上面的index.html文件替换掉默认的index.html文件（web目录为/var/www）</p>
-<h3 id="3、配置订阅"><a href="#3、配置订阅" class="headerlink" title="3、配置订阅"></a>3、配置订阅</h3><p>将站点地址填入代理app的订阅地址中</p>
+<h3 id="3、配置订阅"><a href="#3、配置订阅" class="headerlink" title="3、配置订阅"></a>3、配置订阅</h3><p>将站点地址填入代理app(小火箭等)的订阅地址中<br>(因为v2ray的vmss协议官方没规定格式，所以v2rayN和quantumult的格式不一样，使用如下网页工具<br><a href="https://quan.eicky.com/" target="_blank" rel="noopener">https://quan.eicky.com/</a><br>可以将v2ray的vmess转换为Quantumult_Vmess)</p>
 <h3 id="4、参考"><a href="#4、参考" class="headerlink" title="4、参考"></a>4、参考</h3><p><a href="https://yangwenqing.com/archives/748/" target="_blank" rel="noopener">https://yangwenqing.com/archives/748/</a></p>
 ]]></content>
       <categories>
