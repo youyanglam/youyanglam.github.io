@@ -53,7 +53,7 @@
 <meta property="og:site_name" content="YouYang&#39;s Bay">
 <meta property="og:description" content="1、vim命令1.1、复制粘贴 方法1使用v进入可视模式复制命令是y（yank提起）12y10 &#x2F;&#x2F;复制当前及紧跟的10行10y &#x2F;&#x2F;复制第10行 方法2（加j）1y10j &#x2F;&#x2F;复制当前行和接下来的10行 粘贴为p（put放下）1.2、查看文件编码1:set fileencoding 2、字符串、文件查找 字符串查找1find . -name &quot;*.go&quot; | xargs grep &quot;index.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-03T14:05:19.161Z">
+<meta property="og:updated_time" content="2020-05-09T04:23:47.398Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://youyanglam.github.io/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/">
@@ -257,7 +257,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-03 22:05:19" itemprop="dateModified" datetime="2019-12-03T22:05:19+08:00">2019-12-03</time>
+                <time title="Modified: 2020-05-09 12:23:47" itemprop="dateModified" datetime="2020-05-09T12:23:47+08:00">2020-05-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -332,7 +332,9 @@
 <li>查看文件夹大小<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -h --max-depth=1</span><br></pre></td></tr></table></figure></li>
 <li>依赖安装<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get -f install</span><br></pre></td></tr></table></figure></li>
 <li>挂载/system为可读写<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -o remount,rw /system</span><br></pre></td></tr></table></figure></li>
-<li>查看系统是32位还是64位(3个命令都可以)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getconf LONG_BIT 或 getconf WORD_BIT</span><br><span class="line">file /bin/ls</span><br><span class="line">lsb_release  -a</span><br></pre></td></tr></table></figure></li>
+<li>查看系统是32位还是64位(3个命令都可以)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getconf LONG_BIT 或 getconf WORD_BIT</span><br><span class="line">file /bin/ls</span><br><span class="line">lsb_release  -a</span><br></pre></td></tr></table></figure>
+<h2 id="5、压缩解压"><a href="#5、压缩解压" class="headerlink" title="5、压缩解压"></a>5、压缩解压</h2><h3 id="5-1-tar-gz"><a href="#5-1-tar-gz" class="headerlink" title="5.1 tar.gz"></a>5.1 tar.gz</h3>压缩(可先切换到当前目录下，压缩文件名和被压缩文件名都可加入路径)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zcvf 压缩文件名 .tar.gz 被压缩文件名</span><br></pre></td></tr></table></figure>
+解压(解压缩后的文件只能放在当前的目录)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf 压缩文件名.tar.gz</span><br></pre></td></tr></table></figure></li>
 </ul>
 
     </div>
@@ -428,7 +430,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、vim命令"><span class="nav-text">1、vim命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1、复制粘贴"><span class="nav-text">1.1、复制粘贴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2、查看文件编码"><span class="nav-text">1.2、查看文件编码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、字符串、文件查找"><span class="nav-text">2、字符串、文件查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、网络相关"><span class="nav-text">3、网络相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、其他指令"><span class="nav-text">4、其他指令</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、vim命令"><span class="nav-text">1、vim命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1、复制粘贴"><span class="nav-text">1.1、复制粘贴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2、查看文件编码"><span class="nav-text">1.2、查看文件编码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、字符串、文件查找"><span class="nav-text">2、字符串、文件查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、网络相关"><span class="nav-text">3、网络相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、其他指令"><span class="nav-text">4、其他指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、压缩解压"><span class="nav-text">5、压缩解压</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-tar-gz"><span class="nav-text">5.1 tar.gz</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

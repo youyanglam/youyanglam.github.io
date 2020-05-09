@@ -477,7 +477,9 @@
 <li>查看文件夹大小<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">du -h --max-depth=1</span><br></pre></td></tr></table></figure></li>
 <li>依赖安装<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get -f install</span><br></pre></td></tr></table></figure></li>
 <li>挂载/system为可读写<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mount -o remount,rw /system</span><br></pre></td></tr></table></figure></li>
-<li>查看系统是32位还是64位(3个命令都可以)<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">getconf LONG_BIT 或 getconf WORD_BIT</span><br><span class="line">file /bin/ls</span><br><span class="line">lsb_release  -a</span><br></pre></td></tr></table></figure></li>
+<li>查看系统是32位还是64位(3个命令都可以)<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">getconf LONG_BIT 或 getconf WORD_BIT</span><br><span class="line">file /bin/ls</span><br><span class="line">lsb_release  -a</span><br></pre></td></tr></table></figure>
+<h2 id="5、压缩解压"><a href="#5、压缩解压" class="headerlink" title="5、压缩解压"></a>5、压缩解压</h2><h3 id="5-1-tar-gz"><a href="#5-1-tar-gz" class="headerlink" title="5.1 tar.gz"></a>5.1 tar.gz</h3>压缩(可先切换到当前目录下，压缩文件名和被压缩文件名都可加入路径)<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zcvf 压缩文件名 .tar.gz 被压缩文件名</span><br></pre></td></tr></table></figure>
+解压(解压缩后的文件只能放在当前的目录)<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf 压缩文件名.tar.gz</span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <categories>
