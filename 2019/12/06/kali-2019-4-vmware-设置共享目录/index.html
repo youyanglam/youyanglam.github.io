@@ -53,7 +53,7 @@
 <meta property="og:site_name" content="YouYang&#39;s Bay">
 <meta property="og:description" content="1、添加共享目录在mac上vmware给kali虚拟机添加共享目录2、映射到共享目录2.1、查看共享目录1root@kali:~# vmware-hgfsclient2.2、新建目录1root@kali:~# mkdir &#x2F;mnt&#x2F;hgfs2.3、创建映射1&#x2F;usr&#x2F;bin&#x2F;vmhgfs-fuse .host:&#x2F; &#x2F;mnt&#x2F;hgfs -o subtype=vmhgfs-fuse,allow_oth">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-06T08:43:31.142Z">
+<meta property="og:updated_time" content="2020-07-27T04:43:41.380Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://youyanglam.github.io/2019/12/06/kali-2019-4-vmware-%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/">
@@ -245,10 +245,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2019-12-06 16:37:59 / Modified: 16:43:31" itemprop="dateCreated datePublished" datetime="2019-12-06T16:37:59+08:00">2019-12-06</time>
+              <time title="Created: 2019-12-06 16:37:59" itemprop="dateCreated datePublished" datetime="2019-12-06T16:37:59+08:00">2019-12-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-27 12:43:41" itemprop="dateModified" datetime="2020-07-27T12:43:41+08:00">2020-07-27</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -279,7 +285,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1、添加共享目录"><a href="#1、添加共享目录" class="headerlink" title="1、添加共享目录"></a>1、添加共享目录</h3><p>在mac上vmware给kali虚拟机添加共享目录</p><h3 id="2、映射到共享目录"><a href="#2、映射到共享目录" class="headerlink" title="2、映射到共享目录"></a>2、映射到共享目录</h3><h4 id="2-1、查看共享目录"><a href="#2-1、查看共享目录" class="headerlink" title="2.1、查看共享目录"></a>2.1、查看共享目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># vmware-hgfsclient</span></span><br></pre></td></tr></table></figure><h4 id="2-2、新建目录"><a href="#2-2、新建目录" class="headerlink" title="2.2、新建目录"></a>2.2、新建目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># mkdir /mnt/hgfs</span></span><br></pre></td></tr></table></figure><h4 id="2-3、创建映射"><a href="#2-3、创建映射" class="headerlink" title="2.3、创建映射"></a>2.3、创建映射</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure>
+        <h3 id="1、添加共享目录"><a href="#1、添加共享目录" class="headerlink" title="1、添加共享目录"></a>1、添加共享目录</h3><p>在mac上vmware给kali虚拟机添加共享目录</p><h3 id="2、映射到共享目录"><a href="#2、映射到共享目录" class="headerlink" title="2、映射到共享目录"></a>2、映射到共享目录</h3><h4 id="2-1、查看共享目录"><a href="#2-1、查看共享目录" class="headerlink" title="2.1、查看共享目录"></a>2.1、查看共享目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># vmware-hgfsclient</span></span><br></pre></td></tr></table></figure><h4 id="2-2、新建目录"><a href="#2-2、新建目录" class="headerlink" title="2.2、新建目录"></a>2.2、新建目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment"># mkdir /mnt/hgfs</span></span><br></pre></td></tr></table></figure><h4 id="2-3、创建映射"><a href="#2-3、创建映射" class="headerlink" title="2.3、创建映射"></a>2.3、创建映射</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure><a id="more"></a>
+
+
+
+<h4 id="2-4、设置，使每次开机启动，自动挂载共享文件夹"><a href="#2-4、设置，使每次开机启动，自动挂载共享文件夹" class="headerlink" title="2.4、设置，使每次开机启动，自动挂载共享文件夹"></a>2.4、设置，使每次开机启动，自动挂载共享文件夹</h4><p>需要在/etc/fstab的末尾添加多一行</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.<span class="string">host:</span><span class="regexp">/Downloads /</span>mnt<span class="regexp">/hgfs/</span>Downloads fuse.vmhgfs-fuse allow_other <span class="number">0</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h3 id="3、设置软连接"><a href="#3、设置软连接" class="headerlink" title="3、设置软连接"></a>3、设置软连接</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s <span class="regexp">/mnt/</span>hgfs<span class="regexp">/Downloads/</span> ~<span class="regexp">/HostShare</span></span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -374,7 +386,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、添加共享目录"><span class="nav-text">1、添加共享目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、映射到共享目录"><span class="nav-text">2、映射到共享目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1、查看共享目录"><span class="nav-text">2.1、查看共享目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2、新建目录"><span class="nav-text">2.2、新建目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3、创建映射"><span class="nav-text">2.3、创建映射</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、添加共享目录"><span class="nav-text">1、添加共享目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、映射到共享目录"><span class="nav-text">2、映射到共享目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1、查看共享目录"><span class="nav-text">2.1、查看共享目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2、新建目录"><span class="nav-text">2.2、新建目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3、创建映射"><span class="nav-text">2.3、创建映射</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4、设置，使每次开机启动，自动挂载共享文件夹"><span class="nav-text">2.4、设置，使每次开机启动，自动挂载共享文件夹</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、设置软连接"><span class="nav-text">3、设置软连接</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
